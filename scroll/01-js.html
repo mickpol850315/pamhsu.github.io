@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=
+    , initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+
+            padding: 20px;
+            height: 200vh;
+        }
+
+        .box {
+            width: 100px;
+            height: 200px;
+            border: 1px solid black;
+            position: fixed;
+            /* top: 200px; */
+            /* left: 0px; */
+        }
+
+        .year1 {
+            /* width: 200px;
+            height: 20px; */
+            /* background: blue; */
+            /* border-radius: 100pt; */
+            margin-top: 50vh;
+            position: absolute;
+        }
+
+        .year2 {
+            /* width: 200px;
+            height: 20px; */
+            /* background: blue; */
+            /* border-radius: 100pt; */
+            margin-top: 60vh;
+            position: absolute;
+        }
+
+        .year3 {
+            /* width: 200px;
+            height: 20px; */
+            /* background: blue; */
+            /* border-radius: 100pt; */
+            margin-top: 70vh;
+            position: absolute;
+        }
+
+        .year4 {
+            /* width: 200px;
+            height: 20px; */
+            /* background: blue; */
+            /* border-radius: 100pt; */
+            margin-top: 80vh;
+            position: absolute;
+        }
+
+
+        .year5 {
+            /* width: 200px;
+            height: 20px; */
+            /* background: blue; */
+            /* border-radius: 100pt; */
+            margin-top: 90vh;
+            position: absolute;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- <p class="lax" data-lax-preset="spin fadeInOut">Look at me goooooo!</p> -->
+    <!-- <p class="lax" data-lax-opacity="0 1, 100 1, 200 0 | loop=200">
+        I start to fade out after the window scrolls 100px
+        and then I'm gone by 200px!
+    </p> -->
+    <div id="app">
+        <button v-on:click="showBubble = !showBubble">Click Me</button>
+        <p>{{ showBubble ? "..now scroll down.." : "^ press the button ^" }}</p>
+
+        <div class="box"></div>
+            <div v-if="showBubble">
+                <year1></year1>
+                <year2></year2>
+                <year3></year3>
+                <year4></year4>
+                <year5></year5>
+            </div>
+        
+
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/lax.js"></script>
+
+    <script>
+        window.onload = function () {
+            Vue.component('year1', {
+                template: '<div class="year1" data-lax-opacity="300 0,200 0.3, 100 1, 0 1" data-lax-anchor="self">{{text}}</div>',
+                data() {
+                    return {
+                        text: '1990第一間店'
+                    }
+                },
+                mounted: function () {
+                    lax.addElement(this.$el) // add your element to lax when it mounts
+                },
+
+            })
+            Vue.component('year2', {
+                template: '<div class="year2" data-lax-opacity="400 0,300 0.3, 200 0.5, 100 1 ,50 1" data-lax-anchor="self">{{year2text}}</div>',
+                data() {
+                    return {
+                        year2text: '1992第一間店'
+                    }
+                },
+                mounted: function () {
+                    lax.addElement(this.$el) // add your element to lax when it mounts
+                },
+
+            })
+
+            Vue.component('year3', {
+                template: '<div class="year3" data-lax-opacity="500 0,300 0.3, 200 1, 100 1" data-lax-anchor="self">{{year3text}}</div>',
+                data() {
+                    return {
+                        year3text: '1995第一間店'
+                    }
+                },
+                mounted: function () {
+                    lax.addElement(this.$el) // add your element to lax when it mounts
+                },
+
+            })
+            Vue.component('year4', {
+                template: '<div class="year4" data-lax-opacity="400 0,300 0.3, 200 0.5, 100 1 ,50 1" data-lax-anchor="self">{{year4text}}</div>',
+                data() {
+                    return {
+                        year4text: '1998第一間店'
+                    }
+                },
+                mounted: function () {
+                    lax.addElement(this.$el) // add your element to lax when it mounts
+                },
+
+            })
+
+            Vue.component('year5', {
+                template: '<div class="year5" data-lax-opacity="400 0,300 0.3, 200 0.5, 100 1 ,50 1" data-lax-anchor="self">{{year5text}}</div>',
+                data() {
+                    return {
+                        year5text: '2000第一間店'
+                    }
+                },
+                mounted: function () {
+                    lax.addElement(this.$el) // add your element to lax when it mounts
+                },
+
+            })
+
+            var app = new Vue({
+                el: '#app',
+                data: {
+                    showBubble: false
+                },
+                created() {
+
+                    // setup lax
+                    lax.setup()
+
+                    document.addEventListener('scroll', function (x) {
+                        lax.update(window.scrollY)
+                    }, false)
+                },
+            })
+            // lax.setup() // init
+
+            // const updateLax = () => {
+            //     lax.update(window.scrollY)
+            //     window.requestAnimationFrame(updateLax)
+            // }
+
+            // window.requestAnimationFrame(updateLax)
+            // console.log(window.scrollY);
+
+        }
+
+
+
+    </script>
+</body>
+
+</html>
