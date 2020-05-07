@@ -1,0 +1,90 @@
+body{
+    margin:0;
+    /* height:200vh; */
+}
+
+.left_navbar{
+    width:175px;
+    height:100vh;
+    background-color: black;
+    position:fixed;
+    top:0;
+    /* 未展開效果 */
+    left:-75px;
+    /* 展開效果 */
+    /* left:0px;  */
+    z-index: 99;
+    color:white;
+    animation-duration:5s;
+    animation-fill-mode:forwards;
+}
+
+/* hover位置 */
+.left_navbar .logo{ 
+    margin-top: 50px;
+    position: relative;
+    /* 未展開效果 */
+    left:97px;
+    /* 展開效果 */
+    /* left:59.5px; */
+
+    animation-duration:5s;
+}
+
+.left_navbar img{ 
+    width:56px;
+}
+
+.left_navbar .navitems{
+    /* 未展開效果 */
+    opacity: 0;   
+}
+.left_navbar .navitems.active{
+ display: block;   
+}
+
+.left_navbar ul{
+    list-style:none;
+    font-family:"Adobe 仿宋 Std R";
+    font-size:20px;
+
+    padding: 0;
+    margin: 0 auto;
+    display: table;
+    margin-top: 50px;
+}
+
+.left_navbar a{
+    color:white;    
+}
+
+a{
+     text-decoration:none;  
+ 
+}
+
+.left_navbar li{
+    margin-bottom: 50px;
+
+    /* background-color: blue; */
+}
+
+.letterSpace{
+    letter-spacing: 0.35em;
+}
+
+.right_content{
+    width:calc(100% - 100px);
+    height:100vh;
+    margin-left:100px;
+    background-color: chocolate;
+}
+
+footer{
+    height:100px;
+    background-color: gray;
+    text-align: center;
+    font-size:21px;
+    line-height: 100px;
+    margin-left: 100px;
+}
