@@ -31,8 +31,12 @@
 .right_content .contact_box .mar_top .form-control {
   border: none;
   border-bottom: 2px solid black;
-  padding: 50px 0;
+  padding: 30px 0;
   background-color: unset;
+}
+
+.right_content .contact_box .mar_top .textarea_border {
+  border: 2px solid #383838;
 }
 
 .right_content .btn_box {
