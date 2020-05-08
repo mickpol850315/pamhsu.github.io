@@ -71,7 +71,7 @@ a{
 
 .right_content{
     width:calc(100% - 100px);
-    height:100vh;
+    /* height:100vh; */
     margin-left:100px;
     background-color: chocolate;
 }
