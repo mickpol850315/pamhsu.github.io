@@ -1,0 +1,39 @@
+.right_content{
+    background-color: rgb(209, 202, 202);
+    height:100vh;
+    .store_locations{
+        width: 100%;        
+        position: relative;
+    }
+    .contact_box{
+        width: 480px;       
+        position: absolute;
+        top: 169px;
+        right: 255px;
+        transform: translate(-169px,-255px);
+        padding: 117px 0 0 0;
+        .contact_size{
+            font-size: 120px;
+            text-shadow: 4px 4px 3px #333333;
+            letter-spacing: 0.05em;
+        }  
+        .mar_top{
+            margin-top: 50px;
+            .form-control{
+                border: none;
+                border-bottom: 2px solid rgb(0, 0, 0);
+                padding: 50px 0;
+                background-color: unset;
+            }      
+        }         
+    }
+    .btn_box{
+        display: flex;
+        justify-content: flex-end;
+        .btn-primary{
+            background-color: white;
+            border: 1px solid black;
+            color: black;
+        }
+    }
+}

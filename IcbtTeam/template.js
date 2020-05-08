@@ -21,7 +21,7 @@ $('.left_navbar').mouseenter(function() {
 
 });
 
-	開
+	
 	function openMenu(){
 		TweenLite.to( $('.left_navbar'), 0.5, {css:{'left':0} ,ease:Power2.easeOut});
 		TweenLite.to( $('.logo'), 0.3, {css:{'left':59.5} ,ease:Power2.easeOut});
