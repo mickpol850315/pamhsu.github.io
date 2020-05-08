@@ -1,3 +1,10 @@
+@font-face {
+    font-family:'TEST';
+    src: url('a.woff') format("woff"),
+    url('./font/a.ttf') format("truetype"),
+    url('./font/a.eot') format("embedded-opentype");
+  }
+
 body{
     margin:0;
     /* height:200vh; */
@@ -41,7 +48,7 @@ body{
 
 .left_navbar ul{
     list-style:none;
-    font-family:"Adobe 仿宋 Std R";
+    
     font-size:20px;
 
     padding: 0;
@@ -49,6 +56,8 @@ body{
     display: table;
     margin-top: 50px;
 }
+
+
 
 .left_navbar a{
     color:white;    
@@ -71,7 +80,7 @@ a{
 
 .right_content{
     width:calc(100% - 100px);
-    height:100vh;
+    /* height:100vh; */
     margin-left:100px;
     background-color: chocolate;
 }
@@ -84,3 +93,4 @@ footer{
     line-height: 100px;
     margin-left: 100px;
 }
+
