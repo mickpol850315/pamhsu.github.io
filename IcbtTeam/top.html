@@ -45,22 +45,20 @@
             left: 50%;
             transform: translate(-50%, -50%);
             color: white;
-           
             display: none;
         }
 
-
+/* 移動到圖片時文字顯示 */
         .bgm1:hover + #text1 ,.bgm2:hover + #text2,.bgm3:hover + #text3 {
-            display: block;
-            
+            display: block;           
         }
-
+/* 亮度變暗 */
         .bgm1,
         .bgm2,
         .bgm3 {
             filter: brightness(40%);
         }
-
+/* 亮度正常 */
         .bgm1:hover,
         .bgm2:hover,
         .bgm3:hover {
@@ -98,6 +96,7 @@
     <section id="Top" class="right_content5">
         <!-- 輸入該區域的HTML內容 -->
         <div class="myContainer">
+            <!-- 切三塊COL 設為4欄 -->
             <div class="row">
                 <div class="col col-md-4 bg_red">
                     <img class="bgm1" src="img/drinks/可可拿鐵(左).png" alt="">
