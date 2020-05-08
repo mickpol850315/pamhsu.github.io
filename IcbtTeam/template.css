@@ -1,9 +1,4 @@
-@font-face {
-    font-family:'TEST';
-    src: url('a.woff') format("woff"),
-    url('./font/a.ttf') format("truetype"),
-    url('./font/a.eot') format("embedded-opentype");
-  }
+
 
 body{
     margin:0;
@@ -42,9 +37,9 @@ body{
     /* 未展開效果 */
     opacity: 0;   
 }
-.left_navbar .navitems.active{
+/* .left_navbar .navitems.active{
  display: block;   
-}
+} */
 
 .left_navbar ul{
     list-style:none;

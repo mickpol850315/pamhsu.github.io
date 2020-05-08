@@ -5,7 +5,104 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <!-- bootstrap -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+        integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <link href='https://fonts.googleapis.com/css?family=Asap:400,700' rel='stylesheet' type='text/css'>
+    <!-- swiper css -->
+    <link rel="stylesheet" href="https://unpkg.com/swiper/css/swiper.min.css">
+    <!-- 樣版css -->
+    <!-- <link rel="stylesheet" href="template.css"> -->
     <style>
+        .index_left_navbar {
+            width: 175px;
+            height: 100vh;
+            background-color: #EDC680;
+            position: fixed;
+            top: 0;
+            /* 未展開效果 */
+            left: -175px;
+            /* 展開效果 */
+            /* left: 0px; */
+            opacity: 0;
+            z-index: 98;
+            animation: navbar_slider 0.5s 6s 1;
+            animation-fill-mode: forwards;
+
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        @keyframes navbar_slider {
+            0% {
+                opacity: 0;
+                left: -175px;
+            }
+
+            100% {
+                opacity: 1;
+                left: 0px;
+            }
+        }
+
+
+
+        .cornerlogo {
+            position: relative;
+            margin-top: 50px;
+            /* 未展開效果 */
+            /* left: 0px; */
+            /* 展開效果 */
+            left: 35px;
+            opacity: 0;
+            z-index: 99;
+            animation: logoshow 0.5s 6s 1;
+            animation-fill-mode: forwards;
+        }
+
+        @keyframes logoshow {
+            0% {
+                opacity: 0;
+                left: -100px;
+            }
+
+            100% {
+                opacity: 1;
+                left: 35px;
+
+            }
+        }
+
+        .index_left_navbar .index_navitems {
+
+            /* 未展開效果 */
+            /* opacity: 0; */
+        }
+
+        .index_left_navbar ul {
+            list-style: none;
+            font-size: 20px;
+            padding: 0;
+            margin: 0 auto;
+            display: table;
+            /* margin-top: 50px; */
+            color: #3B465D;
+
+        }
+
+        .index_left_navbar a {
+            color: #3B465D;
+        }
+
+        .index_left_navbar li {
+            margin-bottom: 30px;
+        }
+
+        .letterSpace {
+            letter-spacing: 0.35em;
+        }
+
         /* banner */
         #banner_section .bgiSlider {
             height: 100%;
@@ -14,7 +111,7 @@
             position: absolute;
             top: 0;
             left: 0;
-        
+
         }
 
 
@@ -66,12 +163,12 @@
         }
 
         #banner_section .main_img:nth-of-type(3) {
-            background-image: url("./img/banner/two.jpg");
+            background-image: url("./img/banner/greenmilk.jpg");
             animation-delay: 12s;
         }
 
         #banner_section .main_img:nth-of-type(4) {
-            background-image: url("./img/banner/greenmilk.jpg");
+            background-image: url("./img/banner/two.jpg");
             animation-delay: 18s;
         }
 
@@ -81,19 +178,56 @@
             animation-delay: 24s;
         } */
 
-        .logo {
+        .centerlogo {
             position: absolute;
             left: 50%;
             top: 50%;
-            transform: translate(-50%, -50%); 
-             z-index: 99;
+            transform: translate(-50%, -50%);
+            z-index: 99;
+            animation: logohidden 6s 0s 1;
+            animation-fill-mode: forwards;
         }
 
+        @keyframes logohidden {
+            0% {
+                opacity: 1;
+            }
 
+            90% {
+                opacity: 1;
+            }
+
+            100% {
+                opacity: 0;
+            }
+        }
     </style>
 </head>
 
 <body>
+
+    <!-- 首頁左側navbar -->
+    <div class="index_left_navbar ">
+
+        <div class="index_navitems">
+            <ul>
+                <a href="test.html">
+                    <li>關於五十嵐</li>
+                </a>
+
+                <li>五十嵐嚴選</li>
+                <li class="letterSpace">最新消息</li>
+                <li class="letterSpace">精選飲品</li>
+                <li class="letterSpace">門市據點</li>
+                <li class="letterSpace">聯絡我們</li>
+            </ul>
+        </div>
+    </div>
+    <div class="cornerlogo">
+        <img src="./img/logo_blue.svg" style="width: 108px;" alt="">
+    </div>
+
+    <!-- banner -->
     <section id="banner_section">
         <div class="bgiSlider">
             <div class="main_img"></div>
@@ -105,10 +239,34 @@
 
     </section>
 
-    <div class="logo">
-
-        <img src="./img/logo_white.png" style="width:400px;"  alt="" >
+    <!-- 中間logo -->
+    <div class="centerlogo">
+        <img src="./img/logo_white.svg" style="width:400px;" alt="">
     </div>
+
+    <!-- jquery -->
+    <script src="https://code.jquery.com/jquery-3.5.0.min.js"
+        integrity="sha256-xNzN2a4ltkB44Mc/Jz3pT4iU1cmeR0FkXs4pru/JxaQ=" crossorigin="anonymous"></script>
+
+    <!-- bootstrap -->
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+        integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
+        integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
+        crossorigin="anonymous"></script>
+    <!-- GSAP - GreenSock -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.0.1/TweenMax.min.js"></script>
+    <!-- swiper -->
+    <script src="https://unpkg.com/swiper/js/swiper.min.js"></script>
+    <!-- 樣版js -->
+    <script src="template.js"></script>
+
+    <script>
+        // TweenLite.to( $('.index_left_navbar'),7, {css:{ 'opacity':1} ,ease:Power2.easeOut});
+		// TweenLite.to( $('.logo'), 0.3, {css:{'left':59.5} ,ease:Power2.easeOut});
+		// TweenLite.to( $('.navitems'), 0.5, {css:{'opacity':1} ,ease:Power2.easeOut});
+    </script>
 </body>
 
 </html>
