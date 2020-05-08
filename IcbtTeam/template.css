@@ -15,7 +15,6 @@ body{
     /* left:0px;  */
     z-index: 99;
     color:white;
-    /* animation-fill-mode:forwards; */
 }
 
 /* hover位置 */
@@ -26,9 +25,18 @@ body{
     left:97px;
     /* 展開效果 */
     /* left:59.5px; */
-
-    /* animation-duration:5s; */
 }
+
+.left_navbar img{ 
+    width:56px;
+}
+
+.left_navbar .navitems{
+    /* 未展開效果 */
+    opacity: 0;   
+}
+.left_navbar .navitems.active{
+ display: block;   
 }
 
 .left_navbar ul{
