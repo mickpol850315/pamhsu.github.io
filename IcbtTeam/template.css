@@ -15,8 +15,10 @@ body{
     left:-75px;
     /* 展開效果 */
     /* left:0px;  */
-    z-index: 99;
+    z-index: 98;
     color:white;
+    -webkit-box-shadow: 7px 1px 10px #595858;
+    box-shadow: 7px 1px 10px #595858;
 }
 
 /* hover位置 */
@@ -36,7 +38,37 @@ body{
 .left_navbar .navitems{
     /* 未展開效果 */
     opacity: 0;   
+    /* 未展開效果 */
+    /* opacity: 1;    */
+
 }
+
+.left_navbar .item{
+    position: relative;
+}
+
+.left_navbar .navitems .nav_icon.active{
+    width:14px;
+    height:14px;
+
+    background-image: url("./img/leaves.svg");
+    background-repeat: no-repeat;
+    display: block;
+    position: absolute;
+    top: 10px;
+    left: -20px;
+ 
+    /* opacity: 0;   */
+   
+     
+}
+
+ .item:hover{
+    opacity: 1;
+
+ 
+}
+
 /* .left_navbar .navitems.active{
  display: block;   
 } */
@@ -61,6 +93,11 @@ body{
 a{
      text-decoration:none;  
  
+}
+
+.left_navbar .navitems img{
+    width:100px;
+    z-index: 99;
 }
 
 .left_navbar li{
