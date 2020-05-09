@@ -1,0 +1,44 @@
+.row,
+.col {
+    padding: 0;
+}
+
+.myContainer {
+    width: 100%;
+}
+
+/* 右邊內容 */
+.right_content5 {
+    width: calc(100% - 100px);
+    margin-left: 100px;
+    background-color: blueviolet;
+}
+
+img {
+    width: 100%;
+}
+
+/* 初始化 */
+.right_content5 .myContainer .row {
+    margin-right: 0px;
+    margin-left: 0px;
+}
+
+/* 圖片內的文字 */
+#text1,#text2,#text3 {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: yellowgreen;
+    display: none;
+}
+.bg_red{
+    background-color: red;
+}
+.bg_blue{
+    background-color: blue;
+}
+.bg_gray{
+    background-color: green;
+}

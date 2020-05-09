@@ -10,63 +10,10 @@
         integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
     <link rel="stylesheet" href="https://unpkg.com/swiper/css/swiper.min.css">
     <link rel="stylesheet" href="template.css">
-
+    <link rel="stylesheet" href="top.css">
     <style>
-        .row,
-        .col {
-            padding: 0;
-        }
 
-        .myContainer {
-            width: 100%;
-        }
 
-        /* 右邊內容 */
-        .right_content5 {
-            width: calc(100% - 100px);
-            margin-left: 100px;
-            background-color: blueviolet;
-        }
-
-        img {
-            width: 100%;
-        }
-
-        /* 初始化 */
-        .right_content5 .myContainer .row {
-            margin-right: 0px;
-            margin-left: 0px;
-        }
-
-        /* 圖片內的文字 */
-        #text1,#text2,#text3 {
-            position: absolute;
-            top: 50%;
-            left: 50%;
-            transform: translate(-50%, -50%);
-            color: white;
-            display: none;
-        }
-        #text1:hover,#text2:hover,#text3:hover{
-            display: block;
-        }
-
-/* 移動到圖片時文字顯示 */
-        .bgm1:hover + #text1 ,.bgm2:hover + #text2,.bgm3:hover + #text3 {
-            display: block;       
-        }
-/* 亮度變暗 */
-        .bgm1,
-        .bgm2,
-        .bgm3 {
-            filter: brightness(100%);
-        }
-/* 亮度正常 */
-        .bgm1:hover,
-        .bgm2:hover,
-        .bgm3:hover {
-            filter: brightness(40%);
-        }
     </style>
 
 
@@ -110,16 +57,16 @@
                 </div>
                 <div class="col col-md-4 bg_blue">
                     <img class="bgm2" src="img/drinks/珍奶(左).png" alt="">
-                    <div  id="text2"class="text">
+                    <div id="text2" class="text">
                         <h1>波霸奶茶</h1>
-                       <p> 圓潤飽滿、滑溜Q彈的「黑糖珍珠」，沖入帶著微微紅茶香的香濃奶茶，給予意想不到的新風味。</p>
+                        <p> 圓潤飽滿、滑溜Q彈的「黑糖珍珠」，沖入帶著微微紅茶香的香濃奶茶，給予意想不到的新風味。</p>
                     </div>
                 </div>
                 <div class="col col-md-4 bg_gray">
                     <img class="bgm3" src="img/drinks/紅茶拿鐵(左).png" alt="">
                     <div id="text3" class="text">
                         <h1>紅茶拿鐵</h1>
-                       <p>特選「阿薩姆紅茶」為湯底與香醇濃郁奶香融合，綿密滑順，協調相融，雙層滋味。</p> 
+                        <p>特選「阿薩姆紅茶」為湯底與香醇濃郁奶香融合，綿密滑順，協調相融，雙層滋味。</p>
                     </div>
                 </div>
             </div>
@@ -143,9 +90,10 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.0.1/TweenMax.min.js"></script>
     <script src="https://unpkg.com/swiper/js/swiper.min.js"></script>
     <script src="template.js"></script>
-
+    <script src="top.js"></script>
     <script>
         // 程式碼
+
     </script>
 
 </body>

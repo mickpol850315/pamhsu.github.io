@@ -1,0 +1,22 @@
+ //當滑鼠移到圖片時變亮度暗並顯示文字
+ $(".bgm1").hover(function(){
+    $(".bgm1").css("filter","brightness(40%)");
+    $("#text1").css("display","block");
+},function(){
+    $(".bgm1").css("filter","brightness(100%)");
+    $("#text1").css("display","none");
+})
+$(".bgm2").hover(function(){
+    $(".bgm2").css("filter","brightness(40%)");
+    $("#text2").css("display","block");
+},function(){
+    $(".bgm2").css("filter","brightness(100%)");
+    $("#text2").css("display","none");
+})
+$(".bgm3").hover(function(){
+    $(".bgm3").css("filter","brightness(40%)");
+    $("#text3").css("display","block");
+},function(){
+    $(".bgm3").css("filter","brightness(100%)");
+    $("#text3").css("display","none");
+})
