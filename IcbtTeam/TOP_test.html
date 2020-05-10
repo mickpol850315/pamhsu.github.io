@@ -5,98 +5,154 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <link href='https://fonts.googleapis.com/css?family=Asap:400,700' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+        integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://unpkg.com/swiper/css/swiper.min.css">
+    <link rel="stylesheet" href="template.css">
+
     <style>
-        /* SIBLING FADE: fade out siblings around a hovered item */
-
-        .sibling-fade {
-            visibility: hidden;
+        .row,
+        .col {
+            padding: 0;
         }
 
-        /* Prevents :hover from triggering in the gaps between items */
-
-        .sibling-fade>* {
-            visibility: visible;
+        .myContainer {
+            width: 100%;
         }
 
-        /* Brings the child items back in, even though the parent is `hidden` */
-
-        .sibling-fade>* {
-            transition: opacity 150ms linear 100ms, transform 150ms ease-in-out 100ms;
+        /* 右邊內容 */
+        .right_content5 {
+            width: calc(100% - 100px);
+            margin-left: 100px;
+            background-color: blueviolet;
         }
 
-        /* Makes the fades smooth with a slight delay to prevent jumps as the mouse moves between items */
-
-        .sibling-fade:hover>* {
-            opacity: 0.4;
-            transform: scale(0.9);
+        img {
+            width: 100%;
         }
 
-        /* Fade out all items when the parent is hovered */
-
-        .sibling-fade>*:hover {
-            opacity: 1;
-            transform: scale(1);
-            transition-delay: 0ms, 0ms;
+        /* 初始化 */
+        .right_content5 .myContainer .row {
+            margin-right: 0px;
+            margin-left: 0px;
         }
 
-        /* Fade in the currently hovered item */
-
-        /* Presentational Styles */
-        html {
-            display: flex;
-            height: 100%;
+        /* 圖片內的文字 */
+        #text1,#text2,#text3 {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            color: yellowgreen;
+            display: none;
         }
 
-        body {
-            background: #f05555;
-            padding: 10px;
-            max-width: 40em;
-            margin: auto;
-        }
 
-        .sibling-fade {
-            display: flex;
-            flex-wrap: wrap;
-        }
 
-        .sibling-fade>* {
-            background: white;
-            padding: 1em;
-            flex: auto;
-            margin: 0.3em;
-            text-align: center;
-            color: #f05555;
-            font-size: 1.5em;
-            text-decoration: none;
-        }
-
-        /**/
     </style>
+
+
 </head>
 
 <body>
-    <div class="sibling-fade">
-        <a href="#">Lorem</a>
-        <a href="#">Dolor</a>
-        <a href="#">Repellat</a>
-        <a href="#">Quisquam</a>
-        <a href="#">Quidem</a>
-        <a href="#">Quae</a>
-        <a href="#">Maiores</a>
-        <a href="#">Suscipit</a>
-        <a href="#">Minima</a>
-        <a href="#">Aliquam</a>
-        <a href="#">Sapiente</a>
-        <a href="#">Sequi</a>
-        <a href="#">Sit</a>
-        <a href="#">Molestias</a>
-        <a href="#">Neque</a>
-        <a href="#">Deleniti</a>
-        <a href="#">Sint</a>
-        <a href="#">Id</a>
-        <a href="#">Facilis</a>
-        <a href="#">Facere</a>
+
+
+    <div class="left_navbar ">
+        <div class="logo">
+            <img src="./img/logo.png" alt="">
+        </div>
+        <div class="navitems">
+            <ul>
+                <a href="test.html">
+                    <li>關於五十嵐</li>
+                </a>
+
+                <li>五十嵐嚴選</li>
+                <li class="letterSpace">最新消息</li>
+                <li class="letterSpace">精選飲品</li>
+                <li class="letterSpace">門市據點</li>
+                <li class="letterSpace">聯絡我們</li>
+            </ul>
+        </div>
     </div>
+
+
+
+    <section id="Top" class="right_content5">
+        <!-- 輸入該區域的HTML內容 -->
+        <div class="myContainer">
+            <!-- 切三塊COL 設為4欄 -->
+            <div class="row">
+                <div class="col col-md-4 bg_red">
+                    <img class="bgm1" src="img/drinks/可可拿鐵(左).png" alt="">
+                    <div id="text1" class="text">
+                        <h1>阿華田拿鐵</h1>
+                        <p>濃郁的可可風味，配上來自優質牧場提供的純淨鮮奶，呈現出雙色分明的幸福感。</p>
+                    </div>
+                </div>
+                <div class="col col-md-4 bg_blue">
+                    <img class="bgm2" src="img/drinks/珍奶(左).png" alt="">
+                    <div  id="text2"class="text">
+                        <h1>波霸奶茶</h1>
+                       <p> 圓潤飽滿、滑溜Q彈的「黑糖珍珠」，沖入帶著微微紅茶香的香濃奶茶，給予意想不到的新風味。</p>
+                    </div>
+                </div>
+                <div class="col col-md-4 bg_gray">
+                    <img class="bgm3" src="img/drinks/紅茶拿鐵(左).png" alt="">
+                    <div id="text3" class="text">
+                        <h1>紅茶拿鐵</h1>
+                       <p>特選「阿薩姆紅茶」為湯底與香醇濃郁奶香融合，綿密滑順，協調相融，雙層滋味。</p> 
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        © 2020 五十嵐 DESIGN BY ICBT
+    </footer>
+
+
+    <script src="https://code.jquery.com/jquery-3.5.0.min.js"
+        integrity="sha256-xNzN2a4ltkB44Mc/Jz3pT4iU1cmeR0FkXs4pru/JxaQ=" crossorigin="anonymous"></script>
+
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+        integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
+        integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.0.1/TweenMax.min.js"></script>
+    <script src="https://unpkg.com/swiper/js/swiper.min.js"></script>
+    <script src="template.js"></script>
+
+    <script>
+        // 程式碼
+        //當滑鼠移到圖片時變亮度暗並顯示文字
+        $(".bgm1").hover(function(){
+            $(".bgm1").css("filter","brightness(40%)");
+            $("#text1").css("display","block");
+        },function(){
+            $(".bgm1").css("filter","brightness(100%)");
+            $("#text1").css("display","none");
+        })
+        $(".bgm2").hover(function(){
+            $(".bgm2").css("filter","brightness(40%)");
+            $("#text2").css("display","block");
+        },function(){
+            $(".bgm2").css("filter","brightness(100%)");
+            $("#text2").css("display","none");
+        })
+        $(".bgm3").hover(function(){
+            $(".bgm3").css("filter","brightness(40%)");
+            $("#text3").css("display","block");
+        },function(){
+            $(".bgm3").css("filter","brightness(100%)");
+            $("#text3").css("display","none");
+        })
+    </script>
+
 </body>
 
 </html>
