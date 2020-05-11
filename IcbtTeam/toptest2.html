@@ -16,6 +16,13 @@
 
     <style>
         /* 自訂樣式 */
+        .myContainer {
+            width: 1140px;
+            margin: auto;
+        }
+        img {
+            width: 100%;
+        }
     </style>
 
 
@@ -79,6 +86,23 @@
 
     <section class="right_content">
         <!-- 輸入該區域的HTML內容 -->
+        <div class="myContainer">
+            <div class="swiper-container">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide">
+                        <img data-depth="0.2" class="bgm2" src="img/drinks/珍奶(中).png" alt=""> </div>
+                    <div class="swiper-slide">
+                        <img data-depth="0.2" class="bgm5" src="img/drinks/可可拿鐵(中).png" alt=""> </div>
+                    <div class="swiper-slide">
+                        <img data-depth="0.2" class="bgm8" src="img/drinks/紅茶拿鐵(中).png" alt=""> </div>
+                </div>
+                <!-- Add Pagination -->
+                <div class="swiper-pagination"></div>
+                <!-- Add Arrows -->
+                <div class="swiper-button-next"></div>
+                <div class="swiper-button-prev"></div>
+            </div>
+        </div>
     </section>
 
     <footer>
@@ -103,9 +127,47 @@
     <script src="https://unpkg.com/swiper/js/swiper.min.js"></script>
     <!-- 樣版js -->
     <script src="template.js"></script>
+    <!-- parallax js -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/parallax/3.1.0/parallax.min.js"></script>
 
     <script>
         // 程式碼
+        var swiper = new Swiper('.swiper-container', {
+            slidesPerView: 3,
+            spaceBetween: 30,
+            slidesPerGroup: 1,
+            loop: true,
+            loopFillGroupWithBlank: true,
+            pagination: {
+                el: '.swiper-pagination',
+                clickable: true,
+            },
+            navigation: {
+                nextEl: '.swiper-button-next',
+                prevEl: '.swiper-button-prev',
+            },
+            autoplay: {
+                delay: 2000,
+                disableOnInteraction: false,
+            }, speed: 1500,
+        });
+
+        var bg_red = document.querySelector('.bg_red');
+        var parallaxInstance = new Parallax(bg_red, {
+                relativeInput: true
+               
+        });
+
+        var bg_blue = document.querySelector('.bg_blue');
+        var parallaxInstance = new Parallax(bg_blue, {
+                relativeInput: true
+        });
+
+        var bg_gray = document.querySelector('.bg_gray');
+        var parallaxInstance = new Parallax(bg_gray, {
+                relativeInput: true
+        });
+
     </script>
 
 </body>

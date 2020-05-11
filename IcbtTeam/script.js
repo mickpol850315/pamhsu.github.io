@@ -1,22 +1,22 @@
 const slideData = [
 {
   index: 0,
-  headline: '可可拿鐵',
-
-  src: 'img/drinks/可可拿鐵(中).png' },
+  headline: '阿華田拿鐵',
+  line:'圓潤飽滿、滑溜Q彈的「黑',
+  src: 'img/drinks/阿華田拿鐵.png' },
   
 
 {
   index: 1,
-  headline: 'In The Wilderness',
+  headline: '波霸奶茶 圓潤飽滿、滑溜Q彈的「黑糖珍珠」，沖入帶著微微紅茶香的香濃奶茶，給予意想不到的新風味。',
  
-  src: 'img/drinks/珍奶(中).png' },
+  src: 'img/drinks/珍珠奶茶.png' },
 
 {
   index: 2,
-  headline: 'For Your Current Mood',
+  headline: '紅茶拿鐵 特選「阿薩姆紅茶」為湯底與香醇濃郁奶香融合，綿密滑順，協調相融，雙層滋味。',
  
-  src: 'img/drinks/紅茶拿鐵(中).png' },
+  src: 'img/drinks/紅茶拿鐵.png' },
 
 ];
 
@@ -56,7 +56,7 @@ class Slide extends React.Component {
   }
 
   imageLoaded(event) {
-    event.target.style.opacity = 1;
+    event.target.style.opacity = 0.7;
   }
 
   render() {
