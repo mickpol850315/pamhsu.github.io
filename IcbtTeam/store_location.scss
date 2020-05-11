@@ -1,0 +1,47 @@
+.right_content {
+    height: 100vh;
+    background-color: unset;
+
+    .store_out {
+        width: 100%;
+
+        .mapBox {
+            // width: 100%;
+            margin-top: 20px;
+            position: relative;
+
+            .map_border {
+                width: 80%;
+                height: 900px;
+
+            }
+
+            .img_top {
+                position: absolute;
+                width: 260px;
+                height: 280px;
+                top: 0;
+                left: 200px;
+                opacity: 0.6;
+
+            }
+
+            .img_center {
+                position: absolute;
+                width: 431px;
+                height: 474px;
+                top: 130px;
+                left: -10px;
+                opacity: 0.6;
+            }
+
+
+        }
+
+        .shopBox {
+            hr {
+                border: 1px solid rgb(71, 71, 71);
+            }
+        }
+    }
+}

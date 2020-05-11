@@ -1,0 +1,41 @@
+.right_content {
+  height: 100vh;
+  background-color: unset;
+}
+
+.right_content .store_out {
+  width: 100%;
+}
+
+.right_content .store_out .mapBox {
+  margin-top: 20px;
+  position: relative;
+}
+
+.right_content .store_out .mapBox .map_border {
+  width: 80%;
+  height: 900px;
+}
+
+.right_content .store_out .mapBox .img_top {
+  position: absolute;
+  width: 260px;
+  height: 280px;
+  top: 0;
+  left: 200px;
+  opacity: 0.6;
+}
+
+.right_content .store_out .mapBox .img_center {
+  position: absolute;
+  width: 431px;
+  height: 474px;
+  top: 130px;
+  left: -10px;
+  opacity: 0.6;
+}
+
+.right_content .store_out .shopBox hr {
+  border: 1px solid #474747;
+}
+/*# sourceMappingURL=store_location.css.map */
