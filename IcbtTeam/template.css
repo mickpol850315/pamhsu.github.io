@@ -47,6 +47,11 @@ body{
     position: relative;
 }
 
+.left_navbar .navitems a:hover {
+
+    text-decoration: none;
+}
+
 .left_navbar .navitems .nav_icon.active{
     width:14px;
     height:14px;
@@ -56,18 +61,12 @@ body{
     display: block;
     position: absolute;
     top: 10px;
-    left: -20px;
- 
-    /* opacity: 0;   */
-   
-     
+    left: -20px;   
 }
 
- .item:hover{
-    opacity: 1;
-
- 
-}
+ /* .item:hover{
+    opacity: 1; 
+} */
 
 /* .left_navbar .navitems.active{
  display: block;   
