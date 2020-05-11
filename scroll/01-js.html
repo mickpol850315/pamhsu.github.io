@@ -11,15 +11,25 @@
 
             padding: 20px;
             height: 200vh;
+            background-color: #CCCCCC;
         }
 
         .box {
-            width: 100px;
+            /* width: 100px;
             height: 200px;
-            border: 1px solid black;
+            border: 1px solid black; */
+
             position: fixed;
-            /* top: 200px; */
-            /* left: 0px; */
+            top: 200px;
+            left: 200px;
+            width:500px;
+            height:500px;
+        }
+
+        .box .drinkimg {
+            position: absolute;
+            top: 0;
+            left: 0;
         }
 
         .year1 {
@@ -29,6 +39,8 @@
             /* border-radius: 100pt; */
             margin-top: 50vh;
             position: absolute;
+
+            background: url(drink.jpg) no-repeat 0 0;
         }
 
         .year2 {
@@ -67,6 +79,79 @@
             margin-top: 90vh;
             position: absolute;
         }
+
+        .drinkimg.active {
+            display: block;
+        }
+
+        .drinkimg.none {
+            display: none;
+        }
+
+        .boxyear {
+            /* position: relative; */
+        }
+
+        .year1994 {
+            display: none;
+            position: absolute;
+            /* 未展開 */
+            right:0;
+            /* 展開 */
+            /* right: -255px; */
+            top: 0;
+            z-index: 99;
+        }
+
+        .year1997 {
+            display: none;
+
+            position: absolute;
+            /* 未展開 */
+            left:0;
+            /* 展開 */
+            /* left: -165px */
+            top: 30px;
+            z-index: 99;
+        }
+
+        .year2000 {
+            display: none;
+
+            position: absolute;
+            /* 未展開 */
+            right:0;
+            /* 展開 */
+            /* right: -200px; */
+            top: 60px;
+            z-index: 99;
+        }
+
+        .year2002 {
+            display: none;
+
+            position: absolute;
+            /* 未展開 */
+            left:0;
+            /* 展開 */
+            /* left: -255px */
+ 
+            top: 90px;
+            z-index: 99; 
+        }
+
+        .year2003 {
+            display: none;
+
+            position: absolute;
+            /* 未展開 */
+            right:0;
+            /* 展開 */
+            /* right: -280px; */
+
+            top: 120px;
+            z-index: 99;
+        }
     </style>
 </head>
 
@@ -80,24 +165,46 @@
         <button v-on:click="showBubble = !showBubble">Click Me</button>
         <p>{{ showBubble ? "..now scroll down.." : "^ press the button ^" }}</p>
 
-        <div class="box"></div>
-            <div v-if="showBubble">
-                <year1></year1>
-                <year2></year2>
-                <year3></year3>
-                <year4></year4>
-                <year5></year5>
+        <div class="box">
+            <img src="./1.jpg" style="height:500px;" class="drinkimg active" alt="">
+            <img src="./2.jpg" style="height:500px;" class="drinkimg none" alt="">
+            <img src="./3.jpg" style="height:500px;" class="drinkimg none" alt="">
+            <img src="./4.jpg" style="height:500px;" class="drinkimg none" alt="">
+            <img src="./5.jpg" style="height:500px;" class="drinkimg none" alt="">
+            <div class="boxyear">
+                <img class="year1994" src="1994.png" alt="">
+                <img class="year1997" src="1997.png" alt="">
+                <img class="year2000" src="2000.png" alt="">
+                <img class="year2002" src="2002.png" alt="">
+                <img class="year2003" src="2003.png" alt="">
             </div>
-        
+
+        </div>
+
+
+
+        <div v-if="showBubble">
+            <year1></year1>
+            <year2></year2>
+            <year3></year3>
+            <year4></year4>
+            <year5></year5>
+        </div>
+
 
     </div>
+    <!-- jquery -->
+    <script src="https://code.jquery.com/jquery-3.5.0.min.js"
+        integrity="sha256-xNzN2a4ltkB44Mc/Jz3pT4iU1cmeR0FkXs4pru/JxaQ=" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/lax.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.0.1/TweenMax.min.js"></script>
 
     <script>
+        // data-lax-opacity="300 0,200 0.3, 100 1"  
         window.onload = function () {
             Vue.component('year1', {
-                template: '<div class="year1" data-lax-opacity="300 0,200 0.3, 100 1, 0 1" data-lax-anchor="self">{{text}}</div>',
+                template: '<div class="year1"  data-lax-translate-y="(vh*0.7) 0, 0 200, -500 0" data-lax-anchor="self">{{text}}</div>',
                 data() {
                     return {
                         text: '1990第一間店'
@@ -170,7 +277,62 @@
                     lax.setup()
 
                     document.addEventListener('scroll', function (x) {
+                        console.log(window.scrollY)
+
                         lax.update(window.scrollY)
+                        if (scrollY > 400) {
+                            var pos = 4;
+                            var posnext = pos + 1;
+                            var img1 = document.querySelector(".box img:nth-child(" + pos + ")");
+                            $(img1).removeClass("active");
+                            $(img1).addClass("none");
+
+                            var imgnext = document.querySelector(".box img:nth-child(" + posnext + ")");
+                            $(imgnext).removeClass("none");
+                            $(imgnext).addClass("active");
+                            TweenLite.to( $('.year2003'), 1, {css:{'right':-280, display:'block'} ,ease:Power2.easeOut});
+                        }
+                        else if (scrollY > 350) {
+                            var pos = 3;
+                            var posnext = pos + 1;
+                            var img1 = document.querySelector(".box img:nth-child(" + pos + ")");
+                            $(img1).removeClass("active");
+                            $(img1).addClass("none");
+
+                            var imgnext = document.querySelector(".box img:nth-child(" + posnext + ")");
+                            $(imgnext).removeClass("none");
+                            $(imgnext).addClass("active");
+                            TweenLite.to( $('.year2002'), 1, {css:{'left':-255, display:'block'} ,ease:Power2.easeOut});
+                        }
+                        else if (scrollY > 300) {
+                            var pos = 2;
+                            var posnext = pos + 1;
+                            var img1 = document.querySelector(".box img:nth-child(" + pos + ")");
+                            $(img1).removeClass("active");
+                            $(img1).addClass("none");
+
+                            var imgnext = document.querySelector(".box img:nth-child(" + posnext + ")");
+                            $(imgnext).removeClass("none");
+                            $(imgnext).addClass("active");
+                            TweenLite.to( $('.year2000'), 1, {css:{'right':-200, display:'block'} ,ease:Power2.easeOut});
+                        }
+                        else if (scrollY > 250) {
+                            var pos = 1;
+                            var posnext = pos + 1;
+                            var img1 = document.querySelector(".box img:nth-child(" + pos + ")");
+                            $(img1).removeClass("active");
+                            $(img1).addClass("none");
+
+                            var imgnext = document.querySelector(".box img:nth-child(" + posnext + ")");
+                            $(imgnext).removeClass("none");
+                            $(imgnext).addClass("active");
+                            TweenLite.to( $('.year1997'), 1, {css:{'left':-165, display:'block'} ,ease:Power2.easeOut});
+                        }
+                        else if (scrollY > 200) {
+      
+                            TweenLite.to( $('.year1994'), 1, {css:{'right':-255 , display:'block'} ,ease:Power2.easeOut});
+                        }
+
                     }, false)
                 },
             })
