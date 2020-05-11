@@ -5,62 +5,16 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+        integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
 
     <link href='https://fonts.googleapis.com/css?family=Asap:400,700' rel='stylesheet' type='text/css'>
     <link rel="stylesheet" href="https://unpkg.com/swiper/css/swiper.min.css">
     <link rel="stylesheet" href="template.css">
-
+    <link rel="stylesheet" href="news.css">
 
     <style>
-        /* 自訂樣式 */
-        h1{
-            text-align: center;
-            position: relative;
-            top: 80px;
-        }
-        .new{
-            position: relative;
-            width: 500px;
-            height: 30px;
-            margin: auto;
-            top: 10%;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-        }
-        .border1{
-            width: 150px;
-            height: 2px;
-            background-color: black;
-        }
-        .border2{
-            width: 150px;
-            height: 2px;
-            background-color: black;
-        }
-        h5{
-            /* text-align: center;   */
-            margin: 0;
-        }
-        .right_content{
-            height:100vh;
-            position: relative;
 
-        }
-        .swiper-container {
-        position: absolute;
-        top: 50%;
-        left: 50%;
-        transform: translate(-50%,-50%);
-        width: 100%;
-        height: 400px;
-        }
-        .swiper-slide {      
-        background-position: center;
-        background-size: cover;
-        }
-   
     </style>
 
 
@@ -70,20 +24,52 @@
 
 
     <div class="left_navbar ">
-        <div class="logo">
-            <img src="./img/logo.png" alt="">
-        </div>
+        <a href="index.html">
+            <div class="logo">
+                <img src="./img/logo.png">
+            </div>
+        </a>
         <div class="navitems">
             <ul>
-                <a href="test.html">
-                    <li>關於五十嵐</li>
-                </a>
+                <div class="item">
+                    <a href="about.html">
+                        <div class="nav_icon"></div>
+                        <li>關於五十嵐</li>
+                    </a>
+                </div>
+                <div class="item">
+                    <a href="">
+                        <div class="nav_icon"></div>
+                        <li>五十嵐嚴選</li>
+                    </a>
+                </div>
+                <div class="item">
+                    <a href="news.html">
+                        <div class="nav_icon"></div>
+                        <li class="letterSpace">最新消息</li>
+                    </a>
+                </div>
+                <div class="item">
+                    <a href="top.html">
+                        <div class="nav_icon"></div>
+                        <li class="letterSpace">精選飲品</li>
+                    </a>
+                </div>
+                <div class="item">
+                    <a href="">
+                        <div class="nav_icon"></div>
+                        <li class="letterSpace">門市據點</li>
+                    </a>
+                </div>
 
-                <li>五十嵐嚴選</li>
-                <li class="letterSpace">最新消息</li>
-                <li class="letterSpace">精選飲品</li>
-                <li class="letterSpace">門市據點</li>
-                <li class="letterSpace">聯絡我們</li>
+                <div class="item">
+                    <a href="contact.html">
+                        <div class="nav_icon"></div>
+                        <li class="letterSpace">聯絡我們</li>
+                    </a>
+                </div>
+
+
             </ul>
         </div>
     </div>
@@ -95,32 +81,38 @@
         <h1>最新消息</h1>
         <div class="new">
             <div class="border1"></div>
-            <h5>LATEST  NEWS</h5>
+            <h5>LATEST NEWS</h5>
             <div class="border2"></div>
         </div>
-          <!-- Swiper -->
-          <div class="container">
-            <!-- Content here -->
-  <div class="swiper-container">
-    <div class="swiper-wrapper">
-      <div class="swiper-slide" style="background-image: url('https://cdn.hk01.com/di/media/images/1748908/org/9ab92913858a9777ad41b22d5106e1b1.jpg/3Sr8HAlz0PniqgXVD3-Zwm68ETQnL6F-4vUMs-L1DLM?v=w1920'); width: 50px;"></div>
-      <div class="swiper-slide" style="background-image: url('https://loveupets.com/upload/20181028040328.jpg');"></div>
-      <div class="swiper-slide" style="background-image: url('https://i2.wp.com/www.spaceadvisor.com/blog/wp-content/uploads/2018/08/animal-corgi-dog-58997.jpg?fit=2048%2C1365&ssl=1');"></div>
-      <div class="swiper-slide" style="background-image: url('https://cdn.hk01.com/di/media/images/1748908/org/9ab92913858a9777ad41b22d5106e1b1.jpg/3Sr8HAlz0PniqgXVD3-Zwm68ETQnL6F-4vUMs-L1DLM?v=w1920'); width: 50px;"></div>
-      <div class="swiper-slide" style="background-image: url('https://loveupets.com/upload/20181028040328.jpg');"></div>
-      <div class="swiper-slide" style="background-image: url('https://i2.wp.com/www.spaceadvisor.com/blog/wp-content/uploads/2018/08/animal-corgi-dog-58997.jpg?fit=2048%2C1365&ssl=1');"></div>
-      <!-- <div class="swiper-slide">Slide 4</div>
+        <!-- Swiper -->
+
+        <!-- Content here -->
+        <!-- <div class="swiper-father"> -->
+        <div class="swiper-container">
+            <div class="swiper-wrapper">
+                <div class="swiper-slide img1 mh12" style="background-image: url('/img/news/logo.jpg');"></div>
+                <div class="swiper-slide img2" style="background-image: url('/img/news/logo.jpg');"></div>
+                <div class="swiper-slide img3" style="background-image: url('/img/news/logo.jpg');"></div>
+                <div class="swiper-slide img4" style="background-image: url('/img/news/logo.jpg');"></div>
+                <div class="swiper-slide img5" style="background-image: url('/img/news/logo.jpg');"></div>
+                <div class="swiper-slide img6" style="background-image: url('/img/news/logo.jpg');"></div>
+                <!-- <div class="swiper-slide">Slide 4</div>
       <div class="swiper-slide">Slide 5</div>
       <div class="swiper-slide">Slide 6</div>
       <div class="swiper-slide">Slide 7</div>
       <div class="swiper-slide">Slide 8</div>
       <div class="swiper-slide">Slide 9</div>
       <div class="swiper-slide">Slide 10</div> -->
-    </div>
-    <!-- Add Pagination -->
-    <div class="swiper-pagination"></div>
-  </div>
-</div>
+            </div>
+
+        </div>
+        <!-- Add Pagination -->
+        <div class="swiper-pagination"></div>
+        <!-- Add Arrows -->
+        <!-- <div class="swiper-button-next"></div>
+        <div class="swiper-button-prev"></div> -->
+        <!-- </div> -->
+
 
     </section>
 
@@ -141,21 +133,8 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.0.1/TweenMax.min.js"></script>
     <script src="https://unpkg.com/swiper/js/swiper.min.js"></script>
     <script src="template.js"></script>
-
+    <script src="news.js"></script>
     <script>
-        // 程式碼
-
-        var swiper = new Swiper('.swiper-container', {
-      slidesPerView: 3,
-    //   slidesPerGroup: 3,
-      loop:true,
-      spaceBetween: 30,
-      pagination: {
-        el: '.swiper-pagination',
-        clickable: true,
-      },
-      
-    });
 
     </script>
 
