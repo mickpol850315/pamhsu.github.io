@@ -1,41 +1,73 @@
 .right_content {
-  height: 100vh;
-  background-color: unset;
-}
-
-.right_content .store_out {
-  width: 100%;
+  background-color: #3c586e;
+  color: #ffffff;
+  letter-spacing: 1px;
 }
 
 .right_content .store_out .mapBox {
-  margin-top: 20px;
   position: relative;
 }
 
 .right_content .store_out .mapBox .map_border {
-  width: 80%;
-  height: 900px;
+  width: 525px;
 }
 
 .right_content .store_out .mapBox .img_top {
   position: absolute;
-  width: 260px;
-  height: 280px;
-  top: 0;
-  left: 200px;
-  opacity: 0.6;
+  width: 292px;
+  top: 0px;
+  left: 233px;
 }
 
 .right_content .store_out .mapBox .img_center {
   position: absolute;
-  width: 431px;
-  height: 474px;
-  top: 130px;
-  left: -10px;
-  opacity: 0.6;
+  width: 352px;
+  top: 155px;
+  left: 28px;
+  opacity: 0.1;
+}
+
+.right_content .store_out .mapBox .img_south {
+  position: absolute;
+  width: 272px;
+  top: 489px;
+  left: 1px;
+  opacity: 0.1;
+}
+
+.right_content .store_out .mapBox .img_east {
+  position: absolute;
+  width: 272px;
+  top: 270px;
+  left: 197px;
+  opacity: 0.1;
+}
+
+.right_content .store_out .align {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.right_content .store_out .shopBox .shop {
+  padding: 30px 10px;
+}
+
+.right_content .store_out .shopBox .shop h4 {
+  font-size: 26px;
+}
+
+.right_content .store_out .shopBox .shop p {
+  font-size: 20px;
 }
 
 .right_content .store_out .shopBox hr {
-  border: 1px solid #474747;
+  border: 1px solid #ffffff;
 }
 /*# sourceMappingURL=store_location.css.map */
