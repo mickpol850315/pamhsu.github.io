@@ -37,7 +37,7 @@ img {
     opacity: 0;
 }
 .bg_red{
-    background-color: white;
+    background-color: #9DB6BB;
     transition: 2s;
 }
 .bg_red:hover img{
@@ -48,7 +48,7 @@ filter: brightness(40%);
     }
 
 .bg_blue{
-    background-color:white;
+    background-color:#3C586E;
     transition: 2s;
 }
 .bg_blue:hover img{
@@ -58,7 +58,7 @@ filter: brightness(40%);
         opacity: 1;
 }
 .bg_gray{
-    background-color:white;
+    background-color:#9DB6BB;
     transition: 2s;
 }
 .bg_gray:hover img{
