@@ -17,6 +17,15 @@
   width: 292px;
   top: 0px;
   left: 233px;
+  opacity: 0;
+  -webkit-transition: 0.6s;
+  transition: 0.6s;
+  pointer-events: none;
+}
+
+.right_content .store_out .mapBox .img_top.active {
+  opacity: 1;
+  pointer-events: default;
 }
 
 .right_content .store_out .mapBox .img_center {
@@ -24,7 +33,15 @@
   width: 352px;
   top: 155px;
   left: 28px;
-  opacity: 0.1;
+  opacity: 0;
+  -webkit-transition: 0.6s;
+  transition: 0.6s;
+  pointer-events: none;
+}
+
+.right_content .store_out .mapBox .img_center.active {
+  opacity: 1;
+  pointer-events: default;
 }
 
 .right_content .store_out .mapBox .img_south {
@@ -32,7 +49,15 @@
   width: 272px;
   top: 489px;
   left: 1px;
-  opacity: 0.1;
+  opacity: 0;
+  -webkit-transition: 0.6s;
+  transition: 0.6s;
+  pointer-events: none;
+}
+
+.right_content .store_out .mapBox .img_south.active {
+  opacity: 1;
+  pointer-events: default;
 }
 
 .right_content .store_out .mapBox .img_east {
@@ -40,19 +65,19 @@
   width: 272px;
   top: 270px;
   left: 197px;
-  opacity: 0.1;
+  opacity: 0;
+  -webkit-transition: 0.6s;
+  transition: 0.6s;
+  pointer-events: none;
+}
+
+.right_content .store_out .mapBox .img_east.active {
+  opacity: 1;
+  pointer-events: default;
 }
 
 .right_content .store_out .align {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  padding-top: 200px;
 }
 
 .right_content .store_out .shopBox .shop {
