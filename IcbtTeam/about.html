@@ -16,39 +16,70 @@
 
     <style>
         /* 自訂樣式 */
-
-        .about{
-            padding:122px 0;
+        body {
+            height: 600vh;
         }
 
-        .about h1{
-            margin:0;
+        .about {
+            padding: 122px 0;
+        }
+
+        .about h1 {
+            margin: 0;
             font-size: 60px;
         }
 
-        .about h6{
-            margin:0;
+        .about h6 {
+            margin: 0;
             font-size: 26px;
-            padding:60px 0 30px 0;
+            padding: 60px 0 30px 0;
         }
 
-        .about p{
-            margin:0;
-        
+        .about p {
+            margin: 0;
+
         }
 
-        .about .margin_bottom_p{
+        .about .margin_bottom_p {
 
             margin-bottom: 23px;
         }
 
-        .box{
-            width:180px;
-            height:188px;
-            background-image: url("./img/about/drink.jpg");
-            background-size:contain;
-            background-position: 0 0;
-            background-repeat: no-repeat;
+        .timeline {
+
+        }
+
+        .drinking {}
+
+        .box .drinkimg {
+            position: absolute;
+            top: 0;
+            left: 0;
+        }
+
+
+        .drinkimg.active {
+            display: block;
+        }
+
+        .drinkimg.none {
+            display: none;
+        }
+
+        .year {
+     
+            position: absolute;
+            /* 未展開 */
+            right:0;
+            /* 展開 */
+            /* right: -255px; */
+            top: 0;
+           
+        }
+
+        nav {
+            position: sticky;
+            top: 0;
         }
 
         /* 0511 */
@@ -121,8 +152,8 @@
 
     <section class="right_content">
         <div class="about text-center">
-            <h1  >關於50嵐</h1>
-            <h6  >連鎖體系</h6>
+            <h1>關於50嵐</h1>
+            <h6>連鎖體系</h6>
             <p class="margin_bottom_p">50嵐綠茶連鎖體系於1994年由創辦人馬先生自台南成立</p>
             <p>進而自高雄區、中區(含雲、嘉)、台北區、桃竹苗區陸續拓點。</p>
             <h6>採取全國分區經營模式</h6>
@@ -137,6 +168,39 @@
              </div>
         </div>
     </section>
+
+    <nav>
+     <div class="timeline ">
+        <div class="drinking">
+            <img src="./img/about/drinking.png" style="width:540px;" class="drinkimg active" alt="">
+            <img src="./img/about/drinking1.png" style="height:540px;" class="drinkimg none" alt="">
+            <img src="./img/about/drinking2.png" style="height:540px;" class="drinkimg none" alt="">
+            <img src="./img/about/drinking3.png" style="height:540px;" class="drinkimg none" alt="">
+            <img src="./img/about/drinking4.png" style="height:540px;" class="drinkimg none" alt="">
+            <img src="./img/about/drinking5.png" style="height:540px;" class="drinkimg none" alt="">
+            <img src="./img/about/drinking6.png" style="height:540px;" class="drinkimg none" alt="">
+            <img src="./img/about/drinking7.png" style="height:540px;" class="drinkimg none" alt="">
+            <img src="./img/about/drinking8.png" style="height:540px;" class="drinkimg none" alt="">
+            <img src="./img/about/drinking9.png" style="height:540px;" class="drinkimg none" alt="">
+            <img src="./img/about/drinking10.png" style="height:540px;" class="drinkimg none" alt="">
+            <img src="./img/about/drinking10.png" style="height:540px;" class="drinkimg none" alt="">
+ 
+                <img class="year year1994" src="./img/about/1994.png" style="width:25%;" alt="">
+                <img class="year year1997" src="./img/about/1997.png" style="width:25%;" alt="">
+                <img class="year year2000" src="./img/about/2000.png" style="width:25%;" alt="">
+                <img class="year year2002" src="./img/about/2002.png" style="width:25%;" alt="">
+                <img class="year year2003" src="./img/about/2003.png" style="width:25%;" alt="">
+                <img class="year year2005" src="./img/about/2005.png" style="width:25%;" alt="">
+                <img class="year year2006" src="./img/about/2006.png" style="width:25%;" alt="">
+                <img class="year year2012" src="./img/about/2012.png" style="width:25%;" alt="">
+                <img class="year year2016" src="./img/about/2016.png" style="width:25%;" alt="">
+                <img class="year year2017" src="./img/about/2017.png" style="width:25%;" alt="">
+
+        </div>
+    </div>
+       
+    </nav>
+
 
     <footer>
         © 2020 五十嵐 DESIGN BY ICBT
@@ -163,6 +227,65 @@
 
     <script>
         // 程式碼
+        document.addEventListener('scroll', function (x) {
+                        console.log(window.scrollY)
+
+            
+                        if (scrollY > 400) {
+                            var pos = 4;
+                            var posnext = pos + 1;
+                            var img1 = document.querySelector(".drinking .dringimg:nth-child(" + pos + ")");
+                            $(img1).removeClass("active");
+                            $(img1).addClass("none");
+
+                            var imgnext = document.querySelector(".drinking .dringimg:nth-child(" + posnext + ")");
+                            $(imgnext).removeClass("none");
+                            $(imgnext).addClass("active");
+                            TweenLite.to( $('.year2003'), 1, {css:{'right':-280, display:'block'} ,ease:Power2.easeOut});
+                        }
+                        else if (scrollY > 350) {
+                            var pos = 3;
+                            var posnext = pos + 1;
+                            var img1 = document.querySelector(".drinking .dringimg:nth-child(" + pos + ")");
+                            $(img1).removeClass("active");
+                            $(img1).addClass("none");
+
+                            var imgnext = document.querySelector(".drinking .dringimg:nth-child(" + posnext + ")");
+                            $(imgnext).removeClass("none");
+                            $(imgnext).addClass("active");
+                            TweenLite.to( $('.year2002'), 1, {css:{'left':-255, display:'block'} ,ease:Power2.easeOut});
+                        }
+                        else if (scrollY > 300) {
+                            var pos = 2;
+                            var posnext = pos + 1;
+                            var img1 = document.querySelector(".drinking .dringimg:nth-child(" + pos + ")");
+                            $(img1).removeClass("active");
+                            $(img1).addClass("none");
+
+                            var imgnext = document.querySelector(".drinking .dringimg:nth-child(" + posnext + ")");
+                            $(imgnext).removeClass("none");
+                            $(imgnext).addClass("active");
+                            TweenLite.to( $('.year2000'), 1, {css:{'right':-200, display:'block'} ,ease:Power2.easeOut});
+                        }
+                        else if (scrollY > 250) {
+                            var pos = 1;
+                            var posnext = pos + 1;
+                            var img1 = document.querySelector(".drinking .dringimg:nth-child(" + pos + ")");
+                            console.log(img1);
+                            $(img1).removeClass("active");
+                            $(img1).addClass("none");
+
+                            var imgnext = document.querySelector(".drinking .dringimg:nth-child(" + posnext + ")");
+                            $(imgnext).removeClass("none");
+                            $(imgnext).addClass("active");
+                            TweenLite.to( $('.year1997'), 1, {css:{'left':-165, display:'block'} ,ease:Power2.easeOut});
+                        }
+                        else if (scrollY > 200) {
+      
+                            TweenLite.to( $('.year1994'), 1, {css:{'right':-255 , display:'block'} ,ease:Power2.easeOut});
+                        }
+
+                    }, false)
     </script>
 
 </body>
