@@ -1,46 +1,80 @@
+$font_size_shopName:26px;
+$font_size_number:22px;
+$font_size_addres:20px;
+$color:#ffffff;
+$letter-spacing:1px;
+
+
 .right_content {
-    height: 100vh;
-    background-color: unset;
+
+    background-color: #3c586e;
+    color: $color;
+    letter-spacing: $letter-spacing;
+    
 
     .store_out {
-        width: 100%;
+
 
         .mapBox {
-            // width: 100%;
-            margin-top: 20px;
+
             position: relative;
 
             .map_border {
-                width: 80%;
-                height: 900px;
+                width: 525px;
 
             }
 
             .img_top {
                 position: absolute;
-                width: 260px;
-                height: 280px;
-                top: 0;
-                left: 200px;
-                opacity: 0.6;
-
+                width: 292px;
+                top: 0px;
+                left: 233px;
             }
 
             .img_center {
                 position: absolute;
-                width: 431px;
-                height: 474px;
-                top: 130px;
-                left: -10px;
-                opacity: 0.6;
+                width: 352px;
+                top: 155px;
+                left: 28px;
+                opacity: 0.1;
             }
 
+            .img_south {
+                position: absolute;
+                width: 272px;
+                top: 489px;
+                left: 1px;
+                opacity: 0.1;
+            }
 
+            .img_east {
+                position: absolute;
+                width: 272px;
+                top: 270px;
+                left: 197px;
+                opacity: 0.1;
+            }
+        }
+
+        .align {
+            display: flex;
+            justify-content: center;
+            align-items: center;
         }
 
         .shopBox {
+            .shop{
+                padding: 30px 10px;
+
+                h4{
+                    font-size: $font_size_shopName;
+                }
+                p{
+                    font-size: $font_size_addres;
+                }
+            }
             hr {
-                border: 1px solid rgb(71, 71, 71);
+                border: 1px solid $color;
             }
         }
     }
