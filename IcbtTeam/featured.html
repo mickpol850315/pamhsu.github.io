@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!-- bootstrap -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+        integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <link href='https://fonts.googleapis.com/css?family=Asap:400,700' rel='stylesheet' type='text/css'>
+    <!-- swiper css -->
+    <link rel="stylesheet" href="https://unpkg.com/swiper/css/swiper.min.css">
+    <!-- 樣版css -->
+    <link rel="stylesheet" href="template.css">
+
+    <style>
+        /* 自訂樣式 */
+        .right_content {
+            height: calc(100vh - 50px);
+            position: relative;
+            background-image: url(/img/featured/背景圖1.jpg);
+            background-size: cover;
+            background-position: center;
+        }
+
+        .title {
+            /* position: fixed; */
+            /* top: 357px; */
+            /* right: 344px; */
+        }
+
+        .title h1 {
+            position: fixed;
+            font-size: 40px;
+            top: 280px;
+            right: 610px;
+            color: white;
+            letter-spacing: 5px;
+        }
+
+        .title p {
+            position: fixed;
+            font-size: 20px;
+            top: 384px;
+            right: 344px;
+            color: white;
+            line-height: 40px;
+            letter-spacing: 5px;
+        }
+
+        .box {
+            display: none;
+        }
+
+        .box h1 {
+            position: fixed;
+            font-size: 28px;
+            bottom: 400px;
+            right: 792px;
+            color: rgb(233, 135, 6);
+            letter-spacing: 5px;
+        }
+
+        .box p {
+            position: fixed;
+            font-size: 20px;
+            top: 560px;
+            right: 344px;
+            line-height: 40px;
+            color: white;
+            letter-spacing: 5px;
+        }
+
+        .right_content .a_box {
+            padding: 0;
+            list-style: none;
+            font-size: 20px;
+            position: fixed;
+            bottom: 200px;
+            right: 78px;
+            line-height: 40px;
+            letter-spacing: 5px;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .a_box li {
+            color: white;
+            text-decoration: none;
+        }
+
+        .a_box li .icon {
+            width: 25px;
+            height: 25px;
+            float: right;
+            margin-top: 10px;
+            margin-left: 10px;
+            background-image: url(/img/featured/珍奶ICON.png);
+            background-size: cover;
+            background-position: center;
+        }
+
+        .atv {
+            display: block;
+        }
+    </style>
+
+
+</head>
+
+<body>
+    <!-- <div class="box" style="background-color: red;">
+        <img src="./img/leaves.svg" alt="">
+    </div> -->
+
+    <div class="left_navbar ">
+        <a href="index.html">
+            <div class="logo">
+                <img src="./img/logo.png">
+            </div>
+        </a>
+
+        <div class="navitems">
+            <ul>
+                <div class="item">
+                    <a href="about.html">
+                        <div class="nav_icon"></div>
+                        <li>關於五十嵐</li>
+                    </a>
+                </div>
+                <div class="item">
+                    <a href="">
+                        <div class="nav_icon"></div>
+                        <li>五十嵐嚴選</li>
+                    </a>
+                </div>
+                <div class="item">
+                    <a href="news.html">
+                        <div class="nav_icon"></div>
+                        <li class="letterSpace">最新消息</li>
+                    </a>
+                </div>
+                <div class="item">
+                    <a href="top.html">
+                        <div class="nav_icon"></div>
+                        <li class="letterSpace">精選飲品</li>
+                    </a>
+                </div>
+                <div class="item">
+                    <a href="store_location.html">
+                        <div class="nav_icon"></div>
+                        <li class="letterSpace">門市據點</li>
+                    </a>
+                </div>
+
+                <div class="item">
+                    <a href="contact.html">
+                        <div class="nav_icon"></div>
+                        <li class="letterSpace">聯絡我們</li>
+                    </a>
+                </div>
+
+
+            </ul>
+        </div>
+    </div>
+
+
+
+    <section class="right_content">
+        <!-- 輸入該區域的HTML內容 -->
+        <div class="title">
+            <h1>手搖茶第一品牌</h1>
+            <p>五十嵐品牌文化著重在「原料的挑選」、「製茶的過<br>程」、「產品的精準口感」、以及「熱情的服務」。</p>
+        </div>
+        <div class="box1 box atv">
+            <h1>嚴選原料</h1>
+            <p>茶葉，仔細逐一挑選每片茶葉，因為我們堅信，唯有<br>新鮮茶葉泡的茶，才能完全戰勝所有挑剔味蕾。<br>
+                珍珠，為了保持每顆黃金珍珠的透明飽滿，堅持珍珠<br>以天然原料製成，並藉著不同水交替作用，確保每顆<br>珍珠都能快樂彈跳入口中。</p>
+        </div>
+        <div class="box2 box">
+            <h1>職人製茶</h1>
+            <p>堅持使用自製專屬茶壺煮茶，水量及茶葉的完美比例<br>皆控制固定的溫度，使調茶師能精準掌握每一口茶湯<br>的絕佳口感，即使身處世界各地也能在悠閒午後喝到<br>最傳統原始的好茶。</p>
+        </div>
+        <div class="box3 box">
+            <h1>精準口感</h1>
+            <p>為了達到從第一口到最後都能是令人愉悅，訓練調茶<br>師必須從冰塊量至舀糖手勢角度，多次皆能保持一致<br>不變，為了那能不失完美的襯托出如同徜徉於茶田中<br>的自然茶香，不斷在口中忘返留香。</p>
+        </div>
+        <div class="box4 box">
+            <h1>熱情服務</h1>
+            <p>希望我們創造出友善及熱情的環境，將每位客人視為<br>家人般真誠對待，儘管在繁忙的日子裡，只要駐足於<br>店門口享受每一杯客製化的飲料，啜飲著我們真摯對<br>待的溫暖，即可深刻感受被茶香簇擁的幸福。</p>
+        </div>
+        <ul class="a_box">
+            <li class="btn1">嚴選原料 <div class="icon"></div>
+            </li>
+            <li class="btn2">職人製茶 <div class="icon"></div>
+            </li>
+            <li class="btn3">精準口感 <div class="icon"></div>
+            </li>
+            <li class="btn4">熱情服務 <div class="icon"></div>
+            </li>
+        </ul>
+    </section>
+
+    <footer>
+        © 2020 五十嵐 DESIGN BY ICBT
+    </footer>
+
+
+    <!-- jquery -->
+    <script src="https://code.jquery.com/jquery-3.5.0.min.js"
+        integrity="sha256-xNzN2a4ltkB44Mc/Jz3pT4iU1cmeR0FkXs4pru/JxaQ=" crossorigin="anonymous"></script>
+
+    <!-- bootstrap -->
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+        integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
+        integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
+        crossorigin="anonymous"></script>
+    <!-- GSAP - GreenSock -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.0.1/TweenMax.min.js"></script>
+    <!-- swiper -->
+    <script src="https://unpkg.com/swiper/js/swiper.min.js"></script>
+    <!-- 樣版js -->
+    <script src="template.js"></script>
+
+    <script>
+        // 程式碼
+        // $(function () {
+        //     $('.a2').click(function () {
+        //         $(".right_content").attr('src', "img/featured/背景圖2.jpg");
+        //     });
+        // });
+
+        //找到4個按鈕
+        var btn1 = document.querySelector(".btn1");
+        var btn2 = document.querySelector(".btn2");
+        var btn3 = document.querySelector(".btn3");
+        var btn4 = document.querySelector(".btn4");
+        //找個4個內容
+        var box1 = document.querySelector(".box1");
+        var box2 = document.querySelector(".box2");
+        var box3 = document.querySelector(".box3");
+        var box4 = document.querySelector(".box4");
+        //找到背景 跟照片
+       
+        //按下對應按鈕時
+        btn1.onclick = function () {
+            var atv = document.querySelector(".atv")
+            atv.classList.remove("atv")
+            box1.classList.add("atv")
+        }
+        btn2.onclick = function () {
+            var atv = document.querySelector(".atv")
+            atv.classList.remove("atv")
+            box2.classList.add("atv")
+        }
+        btn3.onclick = function () {
+            var atv = document.querySelector(".atv")
+            atv.classList.remove("atv")
+            box3.classList.add("atv")  
+        }
+        btn4.onclick = function () {
+            var atv = document.querySelector(".atv")
+            atv.classList.remove("atv")
+            box4.classList.add("atv")
+        }
+//移除所有atv
+//且在對應內容上加上atv
+//在style的background上改變字串
+
+    </script>
+
+</body>
+
+</html>
