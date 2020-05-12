@@ -23,17 +23,28 @@
             /* 未展開效果 */
             left: -175px;
             /* 展開效果 */
-            /* left: 0px; */
+            /* left: 0px;  */
             opacity: 0;
             z-index: 98;
-            animation: navbar_slider 0.5s 6s 1;
+
+            animation: navbar_slider 1s 23s 1;
             animation-fill-mode: forwards;
 
             display: flex;
             justify-content: center;
             align-items: center;
+            -webkit-box-shadow: 7px 1px 10px #595858;
+            box-shadow: 7px 1px 10px #595858;
+            transition: 1s;
         }
 
+        .index_left_navbar.active {
+            left: 0px;
+            opacity: 1;
+            animation: none;
+        }
+
+        /* 左側navbar滑出 */
         @keyframes navbar_slider {
             0% {
                 opacity: 0;
@@ -43,24 +54,37 @@
             100% {
                 opacity: 1;
                 left: 0px;
+                z-index: 99;
             }
         }
 
-
-
-        .cornerlogo {
-            position: relative;
-            margin-top: 50px;
-            /* 未展開效果 */
-            /* left: 0px; */
-            /* 展開效果 */
-            left: 35px;
-            opacity: 0;
-            z-index: 99;
-            animation: logoshow 0.5s 6s 1;
-            animation-fill-mode: forwards;
+        .button:active {
+            background-color: #3e8e41;
+            box-shadow: 0 5px #666;
+            transform: translateY(4px);
         }
 
+        .cornerlogo {
+            position: fixed;
+            margin-top: 50px;
+            /* 未展開效果 */
+            left: 0px;
+            /* 展開效果 */
+            /* left: 35px; */
+            opacity: 0;
+            z-index: 99;
+            animation: logoshow 1s 23s 1;
+            animation-fill-mode: forwards;
+            transition: 1s;
+        }
+
+        .cornerlogo.active {
+            left: 35px;
+            opacity: 1;
+            animation: none;
+        }
+
+        /* 左上角log顯示 */
         @keyframes logoshow {
             0% {
                 opacity: 0;
@@ -79,6 +103,39 @@
             /* 未展開效果 */
             /* opacity: 0; */
         }
+
+        .index_left_navbar .item {
+            position: relative;
+        }
+
+        .index_navitems a:hover {
+
+            text-decoration: none;
+        }
+
+
+        .index_left_navbar .index_navitems .nav_icon.active {
+            width: 14px;
+            height: 14px;
+            background-image: url("./img/leaves.svg");
+            background-repeat: no-repeat;
+            display: block;
+            position: absolute;
+            /* 展開 */
+            top: 10px;
+            left: -20px;
+
+            /* 未展開 */
+            /* top: 0px;
+            left: 0px;*/
+
+
+        }
+
+        /* .item:hover {
+            opacity: 1;
+        }
+ */
 
         .index_left_navbar ul {
             list-style: none;
@@ -104,6 +161,86 @@
         }
 
         /* banner */
+        #banner_section {
+            width: 100%;
+            height: 100vh
+        }
+
+        #banner_section .bgfirst {
+            height: 100%;
+            width: 100%;
+            background-color: black;
+            overflow: hidden;
+            position: absolute;
+            top: 0;
+            left: 0;
+            animation: animeBlack 3s 0s 1;
+            animation-fill-mode: forwards;
+        }
+
+        /*  */
+        @keyframes animeBlack {
+            0% {
+                background-color: black;
+                opacity: 1;
+
+            }
+
+            90% {
+                background-color: black;
+                opacity: 1;
+
+            }
+
+
+            100% {
+                background-color: transparent;
+
+
+            }
+
+
+        }
+
+        /* #banner_section .main_img101 {
+            z-index: 1;
+            opacity: 0;
+            width: 100%;
+            height: 100%;
+            background-position: center center;
+            background-repeat: no-repeat;
+            background-size: cover;
+            position: absolute;
+            left: 0;
+            top: 0;
+            animation: anime101 6s 1s 1;
+        } */
+
+        /* banner101圖片縮放，只播放1次 */
+        /* @keyframes anime101 {
+            0% {
+                opacity: 0;
+            }
+
+            10% {
+                opacity: 1;
+            }
+
+            20% {
+                opacity: 1;
+            }
+
+            0% {
+                opacity: 0;
+                transform: scale(1.1);
+                z-index: 0;
+            }
+
+            100% {
+                opacity: 0;
+            }
+        } */
+
         #banner_section .bgiSlider {
             height: 100%;
             width: 100%;
@@ -116,7 +253,7 @@
 
 
         #banner_section .main_img {
-            z-index: 1;
+            z-index: 0;
             opacity: 0;
             width: 100%;
             height: 100%;
@@ -126,7 +263,8 @@
             position: absolute;
             left: 0;
             top: 0;
-            animation: anime 24s 0s infinite;
+            animation: anime 27s 0s 1;
+            animation-fill-mode: forwards;
         }
 
         @keyframes anime {
@@ -144,7 +282,7 @@
 
             30% {
                 opacity: 0;
-                transform: scale(1.1);
+                transform: scale(1.2);
                 z-index: 0;
             }
 
@@ -153,23 +291,83 @@
             }
         }
 
+        #banner_section .bglast {
+            height: 100%;
+            width: 100%;
+            overflow: hidden;
+            position: absolute;
+            top: 0;
+            left: 0;
+
+        }
+
+
+        #banner_section .main_imglast {
+            z-index: 0;
+            opacity: 0;
+            width: 100%;
+            height: 100%;
+            background-position: center center;
+            background-repeat: no-repeat;
+            background-size: cover;
+            position: absolute;
+            left: 0;
+            top: 0;
+            animation: animelast 34s 20s 1;
+            /*28*/
+            animation-fill-mode: forwards;
+        }
+
+
+
+        /* banner最後一張圖片縮放 */
+        @keyframes animelast {
+            0% {
+                opacity: 0;
+            }
+
+            10% {
+                opacity: 1;
+            }
+
+            20% {
+                opacity: 1;
+            }
+
+            30% {
+                opacity: 1;
+                transform: scale(1.2);
+                z-index: 1;
+            }
+
+            100% {
+                opacity: 1;
+                transform: scale(1.2);
+            }
+        }
+
+
+
         #banner_section .main_img:nth-of-type(1) {
             background-image: url("./img/banner/101.jpg");
+            animation-delay: 1.5s;
         }
 
         #banner_section .main_img:nth-of-type(2) {
-            background-image: url("./img/banner/drinks.jpeg");
-            animation-delay: 6s;
+            background-image: url("./img/banner/leaves garden.jpg");
+            animation-delay: 7.5s;
+
         }
 
         #banner_section .main_img:nth-of-type(3) {
-            background-image: url("./img/banner/greenmilk.jpg");
-            animation-delay: 12s;
+            background-image: url("./img/banner/boba.jpg");
+            animation-delay: 13.5s;
         }
 
-        #banner_section .main_img:nth-of-type(4) {
-            background-image: url("./img/banner/two.jpg");
-            animation-delay: 18s;
+
+        #banner_section .main_imglast {
+            background-image: url("./img/banner/drinks.jpeg");
+
         }
 
         /* 
@@ -184,22 +382,61 @@
             top: 50%;
             transform: translate(-50%, -50%);
             z-index: 99;
-            animation: logohidden 6s 0s 1;
+            animation: logohidden 9s 0s 1;
             animation-fill-mode: forwards;
         }
 
+        /* 中間logo隱藏 */
         @keyframes logohidden {
             0% {
                 opacity: 1;
             }
 
-            90% {
+            80% {
                 opacity: 1;
             }
 
             100% {
                 opacity: 0;
             }
+        }
+
+        .enter {
+            position: absolute;
+            left: 50%;
+            bottom: 25px;
+            transform: translate(-50%, 0);
+            opacity: 0.65;
+            animation: shineEnter 5s 0s infinite;
+            cursor:pointer;
+        }
+
+        /* 中間logo隱藏 */
+        @keyframes shineEnter {
+            0% {
+                opacity: 0.3;
+            }
+
+            20% {
+                opacity: 0.65;
+            }
+
+            40% {
+                opacity: 0.3;
+            }
+
+            60% {
+                opacity: 0.65;
+            }
+
+            80% {
+                opacity: 0.3;
+            }
+
+            100% {
+                opacity: 0.65;
+            }
+
         }
     </style>
 </head>
@@ -208,33 +445,71 @@
 
     <!-- 首頁左側navbar -->
     <div class="index_left_navbar ">
-
         <div class="index_navitems">
             <ul>
-                <a href="test.html">
-                    <li>關於五十嵐</li>
-                </a>
+                <div class="item">
+                    <a href="about.html">
+                        <div class="nav_icon"></div>
+                        <li>關於五十嵐</li>
+                    </a>
+                </div>
+                <div class="item">
+                    <a href="">
+                        <div class="nav_icon"></div>
+                        <li>五十嵐嚴選</li>
+                    </a>
+                </div>
+                <div class="item">
+                    <a href="news.html">
+                        <div class="nav_icon"></div>
+                        <li class="letterSpace">最新消息</li>
+                    </a>
+                </div>
+                <div class="item">
+                    <a href="">
+                        <div class="nav_icon"></div>
+                        <li class="letterSpace">精選飲品</li>
+                    </a>
+                </div>
+                <div class="item">
+                    <a href="">
+                        <div class="nav_icon"></div>
+                        <li class="letterSpace">門市據點</li>
+                    </a>
+                </div>
 
-                <li>五十嵐嚴選</li>
-                <li class="letterSpace">最新消息</li>
-                <li class="letterSpace">精選飲品</li>
-                <li class="letterSpace">門市據點</li>
-                <li class="letterSpace">聯絡我們</li>
+                <div class="item">
+                    <a href="contact.html">
+                        <div class="nav_icon"></div>
+                        <li class="letterSpace">聯絡我們</li>
+                    </a>
+                </div>
+
+
             </ul>
         </div>
     </div>
-    <div class="cornerlogo">
-        <img src="./img/logo_blue.svg" style="width: 108px;" alt="">
-    </div>
+
+    <!-- 左上角logo -->
+    <a href="index.html">
+        <div class="cornerlogo">
+            <img src="./img/logo_blue.svg" style="width: 108px;" alt="">
+        </div>
+    </a>
+
 
     <!-- banner -->
     <section id="banner_section">
+        <div class="bgfirst">
+        </div>
         <div class="bgiSlider">
             <div class="main_img"></div>
             <div class="main_img"></div>
             <div class="main_img"></div>
-            <div class="main_img"></div>
-            <!-- <div class="main_img"></div> -->
+        </div>
+
+        <div class="bglast">
+            <div class="main_imglast"></div>
         </div>
 
     </section>
@@ -242,6 +517,11 @@
     <!-- 中間logo -->
     <div class="centerlogo">
         <img src="./img/logo_white.svg" style="width:400px;" alt="">
+    </div>
+
+    <!-- enter icon -->
+    <div class="enter">
+        <img src="./img/banner/enter.png" alt="">
     </div>
 
     <!-- jquery -->
@@ -263,9 +543,36 @@
     <script src="template.js"></script>
 
     <script>
-        // TweenLite.to( $('.index_left_navbar'),7, {css:{ 'opacity':1} ,ease:Power2.easeOut});
-		// TweenLite.to( $('.logo'), 0.3, {css:{'left':59.5} ,ease:Power2.easeOut});
-		// TweenLite.to( $('.navitems'), 0.5, {css:{'opacity':1} ,ease:Power2.easeOut});
+        // 左側navbar的每個項目hover會有一個icon
+        var nav_items = document.querySelectorAll(".index_navitems .item");
+        nav_items.forEach(function (item, index) {
+            $(item).hover(
+                function () {
+                    // console.log(item);
+                    var nav_icon = item.querySelector('.nav_icon');
+                    console.log(nav_icon);
+                    $(nav_icon).addClass("active");
+                }, function () {
+                    // console.log(item);
+                    var nav_icon = item.querySelector('.nav_icon');
+                    console.log(nav_icon);
+                    $(nav_icon).removeClass("active");
+                }
+            );
+
+        });
+
+        // //設定秒數關閉enter icon
+        // var timeoutID = setTimeout(closeEnter, 22000);
+        // function closeEnter() {
+        //     document.getElementsByClassName("enter").style.display = "none";
+        // }
+
+        $(".enter").click(function () {
+            $('.index_left_navbar').addClass("active");
+            $('.cornerlogo').addClass("active");
+            $( ".enter" ).hide();
+        });
     </script>
 </body>
 
