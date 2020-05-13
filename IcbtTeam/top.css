@@ -18,8 +18,9 @@ body{
 
 /* 右邊內容 */
 .right_content5 {
-    width: calc(100% - 100px);
+    width: calc(100vw - 100px);
     margin-left: 100px;
+    height: 100vh;
 }
 .row{
     height: 100vh;
