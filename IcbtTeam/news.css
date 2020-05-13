@@ -73,34 +73,6 @@ position: absolute;
 left: 50px;
 top: 50% ;
 }
-.mh6{
-    transition: all 0.5s;
-    position: relative; 
-    }
-    
-    .mh6 span{
-    z-index: 2; 
-    display: block;
-    position: absolute;
-    width: 100%;
-    height: 100%;   
-    }
-    .mh6:before{
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    z-index: 1;
-    opacity: 0;
-    transition: all 0.4s;
-    transform: scale(1, 0.5);
-    }
-    .mh6:hover::before{
-    opacity: 1;
-    transform: scale(1, 1);
-    }
 .img1:hover{
     background-image: url("/img/news/地球日\(圖\).jpg") !important;
     background-position: center;
@@ -113,7 +85,7 @@ top: 50% ;
 }
 .img3:hover{
     background-image: url("/img/news/新品上市\(圖\).jpg") !important;
-    background-position: center;
+    background-position: initial;
     background-size: cover;
 }
 .img4:hover{
@@ -128,6 +100,6 @@ top: 50% ;
 }
 .img6:hover{
     background-image: url("/img/news/新品上市\(圖\).jpg") !important;
-    background-position: center;
+    background-position: initial;
     background-size: cover;
 }
