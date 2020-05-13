@@ -408,7 +408,7 @@
             transform: translate(-50%, 0);
             opacity: 0.65;
             animation: shineEnter 5s 0s infinite;
-            cursor:pointer;
+            cursor: pointer;
         }
 
         /* 中間logo隱藏 */
@@ -437,6 +437,14 @@
                 opacity: 0.65;
             }
 
+        }
+
+        .menu_icon {
+            position: fixed;
+            right: 10px;
+            bottom: 10px;
+            z-index: 99;
+            opacity: 0.7;
         }
     </style>
 </head>
@@ -523,6 +531,9 @@
         <img src="./img/banner/enter.png" alt="">
     </div>
 
+    <!-- menu icon -->
+    <div class="menu_icon"><a href="Menu.html"><img src="./img/menu/menu-icon.png" alt=""></a></div>
+
     <!-- jquery -->
     <script src="https://code.jquery.com/jquery-3.5.0.min.js"
         integrity="sha256-xNzN2a4ltkB44Mc/Jz3pT4iU1cmeR0FkXs4pru/JxaQ=" crossorigin="anonymous"></script>
@@ -570,7 +581,7 @@
         $(".enter").click(function () {
             $('.index_left_navbar').addClass("active");
             $('.cornerlogo').addClass("active");
-            $( ".enter" ).hide();
+            $(".enter").hide();
         });
     </script>
 </body>
