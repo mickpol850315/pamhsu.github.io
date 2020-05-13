@@ -16,6 +16,8 @@
 
     <style>
         /* 自訂樣式 */
+        .myMOUSE{
+            cursor: pointer; }
         .right_content {
             background-color: black;
             height: calc(100vh - 50px);
@@ -193,13 +195,13 @@
             <p>希望我們創造出友善及熱情的環境，將每位客人視為<br>家人般真誠對待，儘管在繁忙的日子裡，只要駐足於<br>店門口享受每一杯客製化的飲料，啜飲著我們真摯對<br>待的溫暖，即可深刻感受被茶香簇擁的幸福。</p>
         </div>
         <ul class="a_box">
-            <li class="btn1">嚴選原料 <div class="btnicon1 icon"></div>
+            <li class="btn1 myMOUSE">嚴選原料 <div class="btnicon1 icon"></div>
             </li>
-            <li class="btn2">職人製茶 <div class="btnicon2"></div>
+            <li class="btn2 myMOUSE">職人製茶 <div class="btnicon2"></div>
             </li>
-            <li class="btn3">精準口感 <div class="btnicon3"></div>
+            <li class="btn3 myMOUSE">精準口感 <div class="btnicon3"></div>
             </li>
-            <li class="btn4">熱情服務 <div class="btnicon4"></div>
+            <li class="btn4 myMOUSE">熱情服務 <div class="btnicon4"></div>
             </li>
         </ul>
     </section>
@@ -311,9 +313,9 @@
                     atv.classList.remove("atv")
                     $('.box' + img_index).addClass("atv");
                     //效果延遲
-                    // $('.btnicon' + img_index).delay(800).fadeIn( 400 );
-                    // $('.box' + img_index).delay(800);
-                    // $('.right_content').delay(800);
+                    // $('.btnicon' + img_index).delay(2000);
+                    // $('.box' + img_index).delay(2000);
+                    // $('.right_content').delay(5000);
                 }
             } // going down
             else {// going up
@@ -328,9 +330,10 @@
                     atv.classList.remove("atv")
                     $('.box' + img_index).addClass("atv");
                     //效果延遲
-                    // $('.btnicon' + img_index).delay(800).fadeIn( 400 );
-                    // $('.box' + img_index).delay(800);
-                    // $('.right_content').delay(800);
+                    // $('.btnicon' + img_index).delay(2000);
+                    // $('.box' + img_index).delay(2000);
+                    // $('.right_content').delay(5000);
+                    // setTimeout("alert('background-image');", 2000);
                 }
             }
         });

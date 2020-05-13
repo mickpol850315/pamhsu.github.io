@@ -35,7 +35,7 @@ h5{
 .right_content{
     height:calc(100vh - 50px);
     position: relative;
-
+    background-color: #0168B7;
 }
 .swiper-container {
 position: absolute;
@@ -59,16 +59,21 @@ display: flex;
 justify-content: space-around;
 width: 180px;
 }
+.swiper-pagination-bullet-active {
+background-color: #000;
+}
 .swiper-pagination-bullet{
-        height: 20px;
-        width: 20px;
-    }
+height: 20px;
+width: 20px;
+}
 .swiper-button-next{
+color: black;
 position: absolute;
 right: 50px;
 top: 50% ;
 }
 .swiper-button-prev{
+ color: black;
 position: absolute;
 left: 50px;
 top: 50% ;
