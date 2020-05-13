@@ -38,7 +38,7 @@ body{
 .bg_red:hover{
     background-color: #3F494B;
 }
-.bg_red:hover img{
+.bg_red:hover .bgm1{
 filter: brightness(40%);
 transition: 0.5s;
 }
@@ -55,7 +55,7 @@ transition: 0.5s;
     background-color:#1E2C35;
     transition: 0.5s;
 }
-.bg_blue:hover img{
+.bg_blue:hover .bgm2{
     filter: brightness(40%);
     transition: 0.5s;
 }
@@ -71,7 +71,7 @@ transition: 0.5s;
     background-color: #3F494B;
     transition: 0.5s;
 }
-.bg_gray:hover img{
+.bg_gray:hover .bgm3{
     filter: brightness(40%);
     transition: 0.5s;
 }
