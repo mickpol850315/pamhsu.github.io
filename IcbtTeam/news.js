@@ -14,9 +14,4 @@
       nextEl: '.swiper-button-next',
       prevEl: '.swiper-button-prev',
     },
-    breakpoints: {
-        1750: {
-          spaceBetween: 133,
-        }
-      }
   });

@@ -73,50 +73,61 @@ position: absolute;
 left: 50px;
 top: 50% ;
 }
-.mh12{
-/* color: rgba(255,255,255,1); */
-transition: all 0.8s;
-position: relative;
-}
-
-.mh12:before{
-content: '';
-position: absolute;
-top: 0;
-left: 0;
-width: 100%;
-height: 100%;
-z-index: 1;
-/* background-color: rgba(255,255,255,0.25); */
-transition: all 0.8s;
-
-}
-.mh12:hover:before{
-opacity: 0 ;
-transform: scale(0.5,0.5);
-}
-.mh12:after{
-content: '';
-position: absolute;
-top: 0;
-left: 0;
-width: 100%;
-height: 100%;
-z-index: 1;
-opacity: 0;
-transition: all 0.8s;
-border: 1px solid rgba(255,255,255,0.5);
-transform: scale(1.2,1.2);
-}
-.mh12:hover:after{
-opacity: 1;
-transform: scale(1,1);
-}
+.mh6{
+    transition: all 0.5s;
+    position: relative; 
+    }
+    
+    .mh6 span{
+    z-index: 2; 
+    display: block;
+    position: absolute;
+    width: 100%;
+    height: 100%;   
+    }
+    .mh6:before{
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+    opacity: 0;
+    transition: all 0.4s;
+    transform: scale(1, 0.5);
+    }
+    .mh6:hover::before{
+    opacity: 1;
+    transform: scale(1, 1);
+    }
 .img1:hover{
-    background-image: url("./img/news/pic1.jpg") !important;
+    background-image: url("/img/news/地球日\(圖\).jpg") !important;
+    background-position: center;
+    background-size: cover;
 }
-@media screen and (mix-width:1750px){
-.swiper-container{
-  width: 1467px;
+.img2:hover{
+    background-image: url("/img/news/疾病退散\(圖\).jpg") !important;
+    background-position: center;
+    background-size: cover;
 }
+.img3:hover{
+    background-image: url("/img/news/新品上市\(圖\).jpg") !important;
+    background-position: center;
+    background-size: cover;
+}
+.img4:hover{
+    background-image: url("/img/news/地球日\(圖\).jpg") !important;
+    background-position: center;
+    background-size: cover;
+}
+.img5:hover{
+    background-image: url("/img/news/疾病退散\(圖\).jpg") !important;
+    background-position: center;
+    background-size: cover;
+}
+.img6:hover{
+    background-image: url("/img/news/新品上市\(圖\).jpg") !important;
+    background-position: center;
+    background-size: cover;
 }
