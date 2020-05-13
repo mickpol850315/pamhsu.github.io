@@ -19,10 +19,12 @@
         body {
             /* height: 600vh; */
 
+
         }
 
         .right_content {
             background-color: transparent;
+            background-color: #3C586E;
         }
 
         .about {
@@ -51,7 +53,7 @@
         }
 
         .timeline {
-            padding-bottom: 60px;
+            /* padding-bottom:20px; */
         }
 
 
@@ -71,31 +73,66 @@
             display: none;
         }
 
-        .year {
-
-            position: absolute;
-            /* 未展開 */
-            right: 0;
-            /* 展開 */
-            /* right: -255px; */
-            top: 0;
+        .years {
+            /* font-size: 26px */
+                /* position: absolute; */
+                /* 未展開 */
+                /* right: 0; */
+                /* 展開 */
+                /* right: -255px; */
+                /* top: 0;
+            z-index: 99; */
 
         }
 
-        nav {
+        .year1{
+            width:320px;
+        }
+
+        .year2{
+            width:208px;
+        }
+
+        .line {
+            width: 100%;
+            border: 1px solid white;
+            margin: 0;
+        }
+
+        .circle {
+            width: 24px;
+            height: 24px;
+            background-color: white;
+            border-radius: 50%;
+            margin-top: -12px;
+        }
+
+        .lineT {
+            width:100%;
+            font-size: 26px;
+        }
+
+        .lineB {
+            width:100%;
+            font-size: 18px;
+        }
+
+        /* nav {
             position: sticky;
             top: 0;
-        }
+        } */
 
         /* 0.511 */
         .drinking {
+
             position: relative;
             z-index: 1;
-            background: url(./img/about/drink.png) 0 0 no-repeat;
-            width: 289px;
-            height: 539px;
+            background: url(./img/about/cup3.png) 0 0 no-repeat;
+            width: 436px;
+            height: 882px;
             margin: 0 auto;
-            background-position-y: -9163px;
+            background-position-y: -8819px;
+
 
         }
     </style>
@@ -109,9 +146,11 @@
     </div> -->
 
     <div class="left_navbar ">
-        <div class="logo">
-            <img src="./img/logo.png">
-        </div>
+        <a href="index.html">
+            <div class="logo">
+                <img src="./img/logo.png">
+            </div>
+        </a>
         <div class="navitems">
             <ul>
                 <div class="item">
@@ -133,13 +172,13 @@
                     </a>
                 </div>
                 <div class="item">
-                    <a href="">
+                    <a href="top.html">
                         <div class="nav_icon"></div>
                         <li class="letterSpace">精選飲品</li>
                     </a>
                 </div>
                 <div class="item">
-                    <a href="">
+                    <a href="store_location.html">
                         <div class="nav_icon"></div>
                         <li class="letterSpace">門市據點</li>
                     </a>
@@ -157,7 +196,7 @@
         </div>
     </div>
 
-
+    <div class="menu_icon"><a href="Menu.html"><img src="./img/menu/menu-icon.png" alt=""></a></div>
 
     <section class="right_content">
         <div class="about text-center">
@@ -171,44 +210,57 @@
             <p class="margin_bottom_p">50嵐綠茶連鎖體系截至2012年12月底全國總店數超越五百間門市，</p>
             <p>目前仍在陸續佈局中。</p>
         </div>
-        <div class="timeline d-flex ">
-            <div class="drink">
-                <img src="" alt="">
+
+        <div class="timeline ">
+            <div class="drinking">
+
+            </div>
+            <div class="years">
+                <div class="year1"> 
+                    <p class="lineT text-center">1994</p>
+                    <div class="line_content d-flex">
+                        <hr class="line">
+                        <div class="circle"></div>
+                    </div>
+                    <p class="lineB text-center">台南路邊小攤販起家</p>
+                </div>
+
+                <div class="year2"> 
+                    <p class="lineT text-center">1997</p>
+                    <div class="line_content d-flex">
+                        <hr class="line">
+                        <div class="circle"></div>
+                    </div>
+                    <p class="lineB text-center">成立新孝創始店</p>
+                </div>
+
+                <div class="year3"> 
+                    <p class="lineT text-center">2000</p>
+                    <div class="line_content d-flex">
+                        <hr class="line">
+                        <div class="circle"></div>
+                    </div>
+                    <p class="lineB text-center">成立高雄總店</p>
+                </div>
+
+                <!-- <img class="year year1994" src="./img/about/t1.png" style="width:500px" alt="">
+                <img class="year year1997" src="./img/about/t2.png" style="width:500px"  alt="">  -->
+                <!-- <img class="year year2000" src="./img/about/t3.png"  alt="">
+                <img class="year year2002" src="./img/about/t4.png"  alt="">
+                <img class="year year2003" src="./img/about/t5.png"  alt="">
+                <img class="year year2005" src="./img/about/t6.png"  alt="">
+                <img class="year year2006" src="./img/about/t7.png"  alt="">
+                <img class="year year2012" src="./img/about/t8.png"  alt="">
+                <img class="year year2016" src="./img/about/t9.png"  alt="">
+                <img class="year year2017" src="./img/about/t10.png"  alt="">
             </div>
         </div>
     </section>
 
-    <nav>
-        <div class="timeline ">
-            <div class="drinking">
-                <!-- <img src="./img/about/drinking.png" style="width:540px;" class="drinkimg active" alt="">
-            <img src="./img/about/drinking1.png" style="height:540px;" class="drinkimg none" alt="">
-            <img src="./img/about/drinking2.png" style="height:540px;" class="drinkimg none" alt="">
-            <img src="./img/about/drinking3.png" style="height:540px;" class="drinkimg none" alt="">
-            <img src="./img/about/drinking4.png" style="height:540px;" class="drinkimg none" alt="">
-            <img src="./img/about/drinking5.png" style="height:540px;" class="drinkimg none" alt="">
-            <img src="./img/about/drinking6.png" style="height:540px;" class="drinkimg none" alt="">
-            <img src="./img/about/drinking7.png" style="height:540px;" class="drinkimg none" alt="">
-            <img src="./img/about/drinking8.png" style="height:540px;" class="drinkimg none" alt="">
-            <img src="./img/about/drinking9.png" style="height:540px;" class="drinkimg none" alt="">
-            <img src="./img/about/drinking10.png" style="height:540px;" class="drinkimg none" alt="">
-            <img src="./img/about/drinking10.png" style="height:540px;" class="drinkimg none" alt=""> -->
-                <!--  
-                <img class="year year1994" src="./img/about/1994.png" style="width:25%;" alt="">
-                <img class="year year1997" src="./img/about/1997.png" style="width:25%;" alt="">
-                <img class="year year2000" src="./img/about/2000.png" style="width:25%;" alt="">
-                <img class="year year2002" src="./img/about/2002.png" style="width:25%;" alt="">
-                <img class="year year2003" src="./img/about/2003.png" style="width:25%;" alt="">
-                <img class="year year2005" src="./img/about/2005.png" style="width:25%;" alt="">
-                <img class="year year2006" src="./img/about/2006.png" style="width:25%;" alt="">
-                <img class="year year2012" src="./img/about/2012.png" style="width:25%;" alt="">
-                <img class="year year2016" src="./img/about/2016.png" style="width:25%;" alt="">
-                <img class="year year2017" src="./img/about/2017.png" style="width:25%;" alt=""> -->
 
-            </div>
-        </div>
 
-    </nav>
+
+
 
 
     <footer class="show">
@@ -217,64 +269,96 @@
 
 
     <!-- jquery -->
-    <script src="https://code.jquery.com/jquery-3.5.0.min.js"
-        integrity="sha256-xNzN2a4ltkB44Mc/Jz3pT4iU1cmeR0FkXs4pru/JxaQ=" crossorigin="anonymous"></script>
+                <script src="https://code.jquery.com/jquery-3.5.0.min.js"
+                    integrity="sha256-xNzN2a4ltkB44Mc/Jz3pT4iU1cmeR0FkXs4pru/JxaQ=" crossorigin="anonymous"></script>
 
-    <!-- bootstrap -->
-    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
-        integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
-        crossorigin="anonymous"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
-        integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
-        crossorigin="anonymous"></script>
-    <!-- GSAP - GreenSock -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.0.1/TweenMax.min.js"></script>
-    <!-- swiper -->
-    <script src="https://unpkg.com/swiper/js/swiper.min.js"></script>
-    <!-- 樣版js -->
-    <script src="template.js"></script>
+                <!-- bootstrap -->
+                <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+                    integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+                    crossorigin="anonymous"></script>
+                <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
+                    integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
+                    crossorigin="anonymous"></script>
+                <!-- GSAP - GreenSock -->
+                <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.0.1/TweenMax.min.js"></script>
+                <!-- swiper -->
+                <script src="https://unpkg.com/swiper/js/swiper.min.js"></script>
+                <!-- 樣版js -->
+                <script src="template.js"></script>
 
-    <script>
-        // 程式碼
-        var isStop = false;
+                <script>
+                    // 程式碼
+                    var isStop = false;
 
-        // 預設不顯示footer
-        if (isStop) {
-            $("footer").show();
-        } else {
-            $("footer").hide();
-        }
-
-
-        $(window).scroll(function () {
-
-            if ($(window).scrollTop() + $(window).height() == $(document).height()) {
-                document.querySelector("body").onwheel = function () {
-
-                    var bgPos = $('.drinking').css('background-position-y');
-                    var posValue = parseInt(bgPos.substring(0, bgPos.length - 2)) + 539;
-                    if (posValue > 0) {
-                        // 直到飲料喝完才顯示footer
-                        isStop = true;
-                        //取得目前未有footer的高度
-                        var oriTop = $(window).scrollTop();
-                        //延遲1s，顯示footer，主要是讓user 滾動滑鼠時，不要一次到底，停留在喝完飲料的畫面
-                        setTimeout(function () {
-                            $("footer").show();
-                        }, 1000)
-                        //1s後，footer出現，要讓footer在螢幕可視範圍的下方
-                        $(window).scrollTop(oriTop)
-
+                    // 預設不顯示footer
+                    if (isStop) {
+                        $("footer").show();
                     } else {
-                        // 飲料未喝完繼續喝飲料
-                        $('.drinking').css('background-position-y', posValue + 'px');
+                        $("footer").hide();
                     }
 
+                    //預設滑鼠滾輪次數
+                    var imgIndex = 1;
 
-                };
-            }
 
-        });
+                    $(window).scroll(function () {
+                        console.log($(window).scrollTop());
+                        if ($(window).scrollTop() + $(window).height() == $(document).height()) {
+                            $(window).on('wheel', function (e) {
+
+                                var delta = e.originalEvent.deltaY;
+                                if (delta > 0) {
+                                    console.log("down");
+                                    var bgPos = $('.drinking').css('background-position-y');
+                                    var posValue = parseInt(bgPos.substring(0, bgPos.length - 2)) + 882;
+                                    if (posValue > 882) {
+                                        // 直到飲料喝完才顯示footer
+                                        isStop = true;
+                                        //取得目前未有footer的高度
+                                        var oriTop = $(window).scrollTop();
+                                        //延遲1s，顯示footer，主要是讓user 滾動滑鼠時，不要一次到底，停留在喝完飲料的畫面
+                                        setTimeout(function () {
+                                            $("footer").show();
+                                        }, 1000)
+                                        //1s後，footer出現，要讓footer在螢幕可視範圍的下方
+                                        $(window).scrollTop(oriTop)
+
+                                    } else {
+                                        // 飲料未喝完繼續喝飲料
+                                        $('.drinking').css('background-position-y', posValue + 'px');
+                                        // TweenLite.to( $('t' + imgIndex), 1, {css:{'right':-280, display:'block'} ,ease:Power2.easeOut});
+                                    }
+                                }
+                                else {// going up
+                                    console.log("up");
+                                }
+                            });
+
+                            // document.querySelector("body").onwheel = function () {
+                            //     var bgPos = $('.drinking').css('background-position-y');
+                            //     var posValue = parseInt(bgPos.substring(0, bgPos.length - 2)) + 539;
+                            //     if (posValue > 0) {
+                            //         // 直到飲料喝完才顯示footer
+                            //         isStop = true;
+                            //         //取得目前未有footer的高度
+                            //         var oriTop = $(window).scrollTop();
+                            //         //延遲1s，顯示footer，主要是讓user 滾動滑鼠時，不要一次到底，停留在喝完飲料的畫面
+                            //         setTimeout(function () {
+                            //             $("footer").show();
+                            //         }, 1000)
+                            //         //1s後，footer出現，要讓footer在螢幕可視範圍的下方
+                            //         $(window).scrollTop(oriTop)
+
+                            //     } else {
+                            //         // 飲料未喝完繼續喝飲料
+                            //         $('.drinking').css('background-position-y', posValue + 'px');
+                            //     }
+
+
+                            // };
+                        }
+
+                    });
 
 
         // document.addEventListener('scroll', function (x) {
@@ -336,7 +420,7 @@
         //     }
 
         // }, false)
-    </script>
+                </script>
 
 </body>
 
