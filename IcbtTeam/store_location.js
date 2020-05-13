@@ -152,26 +152,45 @@ var stores = {
         },
     ]
 }
+
+
 $('#poly_top').hover(function () {
+    $('.img_top, .img_center, .img_south, .img_east').removeClass('active');
+
     $('.img_top').addClass('active');
+
+    console.log("test");
+    
+
 }, function () {
+
     $('.img_top').removeClass('active');
+    console.log("test2");
 });
 
 $('#poly_center').hover(function () {
+    $('.img_top, .img_center, .img_south, .img_east').removeClass('active');
+
     $('.img_center').addClass('active');
+
 }, function () {
     $('.img_center').removeClass('active');
 });
 
 $('#poly_south').hover(function () {
+    $('.img_top, .img_center, .img_south, .img_east').removeClass('active');
+
     $('.img_south').addClass('active');
+
 }, function () {
     $('.img_south').removeClass('active');
 });
 
 $('#poly_east').hover(function () {
+    $('.img_top, .img_center, .img_south, .img_east').removeClass('active');
+
     $('.img_east').addClass('active');
+
 }, function () {
     $('.img_east').removeClass('active');
 });
@@ -179,20 +198,21 @@ $('#poly_east').hover(function () {
 $("#poly_top").click(function () {
     $('.shopBox .row').html('');
 
+    $('.img_top, .img_center, .img_south, .img_east').removeClass('click_active');
+
+    $('.img_top').addClass('click_active');    
     var row = $('.shopBox .row').html();
-
     var store_array = stores.north;
-
     getStoreData(store_array);
-
-
 });
 
 $("#poly_center").click(function () {
     $('.shopBox .row').html('');
+   $('.img_top, .img_center, .img_south, .img_east').removeClass('click_active');
+
+    $('.img_center').addClass('click_active');
     var row = $('.shopBox .row').html();
-
-
+ 
     var store_array = stores.central;
 
     getStoreData(store_array);
@@ -201,8 +221,10 @@ $("#poly_center").click(function () {
 
 $("#poly_south").click(function () {
     $('.shopBox .row').html('');
-    var row = $('.shopBox .row').html();
+    $('.img_top, .img_center, .img_south, .img_east').removeClass('click_active');
 
+    $('.img_south').addClass('click_active');
+    var row = $('.shopBox .row').html();
 
     var store_array = stores.South;
 
@@ -211,8 +233,10 @@ $("#poly_south").click(function () {
 });
 $("#poly_east").click(function () {
     $('.shopBox .row').html('');
-    var row = $('.shopBox .row').html();
+    $('.img_top, .img_center, .img_south, .img_east').removeClass('click_active');
 
+    $('.img_east').addClass('click_active');
+    var row = $('.shopBox .row').html();
 
     var store_array = stores.east;
 
@@ -220,12 +244,10 @@ $("#poly_east").click(function () {
 
 });
 
-
 function getStoreData(store_array) {
     $(store_array).each(function (index, item) {
 
         var row = document.querySelector('.shopBox .row');
-
 
         row.innerHTML +=
             ` <div class="col-6  col-md-4">

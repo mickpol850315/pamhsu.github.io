@@ -31,7 +31,7 @@ $letter-spacing:1px;
                 width: 292px;
                 top: 0px;
                 left: 233px;
-                opacity: 0;
+                opacity: 1;
                 transition: 0.6s;
                 pointer-events: none;
 
@@ -60,8 +60,8 @@ $letter-spacing:1px;
             .img_south {
                 position: absolute;
                 width: 272px;
-                top: 489px;
-                left: 1px;
+                top: 490px;
+                left: 0;
                 opacity: 0;
                 transition: 0.6s;
                 pointer-events: none;
@@ -76,7 +76,7 @@ $letter-spacing:1px;
                 position: absolute;
                 width: 272px;
                 top: 270px;
-                left: 197px;
+                left: 196px;
                 opacity: 0;
                 transition: 0.6s;
                 pointer-events: none;
