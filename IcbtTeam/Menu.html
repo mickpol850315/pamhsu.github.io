@@ -16,8 +16,37 @@
 
     <style>
         /* 自訂樣式 */
-        img{
-            width: 100%;
+        /* .menu {
+            /* width: 100%;
+            height: calc(1080px- 100px);
+            background-image: url(/img/menu/菜單.jpg);
+            background-size: auto;
+            background-repeat: no-repeat; 
+
+        }*/
+        div img {
+            display: none;
+            max-width: 100%;
+            height: auto;
+        }
+
+        div img:nth-child(1) {
+            display: block;
+        }
+
+        div{max-width: 100%;min-height: 100%;}
+        @media (min-width: 992px){
+    div img:nth-child(1){display: block;}
+}
+        @media(max-width: 768px) {
+            div img:nth-child(1) {
+                display: none;
+            }
+
+            div img:nth-child(2) {
+                display: block;
+            }
+
         }
     </style>
 
@@ -85,7 +114,10 @@
 
     <section class="right_content">
         <!-- 輸入該區域的HTML內容 -->
-        <img src="img/menu/菜單(正常).jpg" alt="">
+        <div>
+            <img src="./img/menu/菜單.jpg">
+            <img src="./img/menu/手機板菜單.png">
+        </div>
     </section>
 
     <footer>
