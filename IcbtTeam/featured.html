@@ -16,7 +16,10 @@
 
     <style>
         /* 自訂樣式 */
+        .myMOUSE{
+            cursor: pointer; }
         .right_content {
+            background-color: black;
             height: calc(100vh - 50px);
             position: relative;
             background-image: url(/img/featured/背景圖1.jpg);
@@ -113,7 +116,7 @@
     <!-- <div class="box" style="background-color: red;">
         <img src="./img/leaves.svg" alt="">
     </div> -->
-
+    <div class="menu_icon"><a href="Menu.html"><img src="./img/menu/menu-icon.png" alt=""></a></div>
     <div class="left_navbar ">
         <a href="index.html">
             <div class="logo">
@@ -192,13 +195,13 @@
             <p>希望我們創造出友善及熱情的環境，將每位客人視為<br>家人般真誠對待，儘管在繁忙的日子裡，只要駐足於<br>店門口享受每一杯客製化的飲料，啜飲著我們真摯對<br>待的溫暖，即可深刻感受被茶香簇擁的幸福。</p>
         </div>
         <ul class="a_box">
-            <li class="btn1">嚴選原料 <div class="icon"></div>
+            <li class="btn1 myMOUSE">嚴選原料 <div class="btnicon1 icon"></div>
             </li>
-            <li class="btn2">職人製茶 <div class="icon"></div>
+            <li class="btn2 myMOUSE">職人製茶 <div class="btnicon2"></div>
             </li>
-            <li class="btn3">精準口感 <div class="icon"></div>
+            <li class="btn3 myMOUSE">精準口感 <div class="btnicon3"></div>
             </li>
-            <li class="btn4">熱情服務 <div class="icon"></div>
+            <li class="btn4 myMOUSE">熱情服務 <div class="btnicon4"></div>
             </li>
         </ul>
     </section>
@@ -228,12 +231,13 @@
 
     <script>
         // 程式碼
-        // $(function () {
-        //     $('.a2').click(function () {
-        //         $(".right_content").attr('src', "img/featured/背景圖2.jpg");
-        //     });
-        // });
-
+        //抓到icon
+        var btnicon1 = document.querySelector(".btnicon1 ")
+        var btnicon2 = document.querySelector(".btnicon2 ")
+        var btnicon3 = document.querySelector(".btnicon3 ")
+        var btnicon4 = document.querySelector(".btnicon4 ")
+        //圖片索引值預設
+        var img_index = 1;
         //找到4個按鈕
         var btn1 = document.querySelector(".btn1");
         var btn2 = document.querySelector(".btn2");
@@ -244,33 +248,95 @@
         var box2 = document.querySelector(".box2");
         var box3 = document.querySelector(".box3");
         var box4 = document.querySelector(".box4");
-        //找到背景 跟照片
-       
+        //找到icon
+
         //按下對應按鈕時
         btn1.onclick = function () {
             var atv = document.querySelector(".atv")
+            var icon = document.querySelector(".icon");
             atv.classList.remove("atv")
             box1.classList.add("atv")
+            icon.classList.remove("icon")
+            btnicon1.classList.add("icon")
+            $('.right_content').css('background-image', 'url("/img/featured/背景圖1.jpg")');
+            img_index = 1;
         }
+
         btn2.onclick = function () {
             var atv = document.querySelector(".atv")
+            var icon = document.querySelector(".icon");
             atv.classList.remove("atv")
             box2.classList.add("atv")
+            icon.classList.remove("icon")
+            btnicon2.classList.add("icon")
+            $('.right_content').css('background-image', 'url("/img/featured/背景圖2.jpg")');
+            img_index = 2;
         }
         btn3.onclick = function () {
             var atv = document.querySelector(".atv")
+            var icon = document.querySelector(".icon");
             atv.classList.remove("atv")
-            box3.classList.add("atv")  
+            box3.classList.add("atv")
+            icon.classList.remove("icon")
+            btnicon3.classList.add("icon")
+            $('.right_content').css('background-image', 'url("/img/featured/背景圖3.jpg")');
+            img_index = 3;
         }
+
         btn4.onclick = function () {
             var atv = document.querySelector(".atv")
+            var icon = document.querySelector(".icon");
             atv.classList.remove("atv")
             box4.classList.add("atv")
+            icon.classList.remove("icon")
+            btnicon4.classList.add("icon")
+            $('.right_content').css('background-image', 'url("/img/featured/背景圖4.jpg")');
+            img_index = 4;
         }
-//移除所有atv
-//且在對應內容上加上atv
-//在style的background上改變字串
+        //移除所有atv
+        //且在對應內容上加上atv
+        //在style的background上改變字串
 
+        $(window).on('wheel', function (e) {
+
+            var delta = e.originalEvent.deltaY;
+
+            if (delta > 0) {
+                console.log("down");
+                if (img_index < 4) {
+                    img_index += 1;
+                    $('.right_content').css('background-image', `url("/img/featured/背景圖${img_index}.jpg")`);
+                    var icon = document.querySelector(".icon");
+                    icon.classList.remove("icon")
+                    $('.btnicon' + img_index).addClass("icon");
+                    var atv = document.querySelector(".atv")
+                    atv.classList.remove("atv")
+                    $('.box' + img_index).addClass("atv");
+                    //效果延遲
+                    // $('.btnicon' + img_index).delay(2000);
+                    // $('.box' + img_index).delay(2000);
+                    // $('.right_content').delay(5000);
+                }
+            } // going down
+            else {// going up
+                console.log("up");
+                if (img_index > 1) {
+                    img_index -= 1;
+                    $('.right_content').css('background-image', `url("/img/featured/背景圖${img_index}.jpg")`);
+                    var icon = document.querySelector(".icon");
+                    icon.classList.remove("icon")
+                    $('.btnicon' + img_index).addClass("icon");
+                    var atv = document.querySelector(".atv")
+                    atv.classList.remove("atv")
+                    $('.box' + img_index).addClass("atv");
+                    //效果延遲
+                    // $('.btnicon' + img_index).delay(2000);
+                    // $('.box' + img_index).delay(2000);
+                    // $('.right_content').delay(5000);
+                    // setTimeout("alert('background-image');", 2000);
+                }
+            }
+        });
     </script>
 
 </body>
