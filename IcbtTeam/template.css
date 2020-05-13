@@ -9,6 +9,7 @@ body{
     right: 10px;
     bottom: 10px;
     z-index: 99;
+    opacity: 0.7;
 }
 .left_navbar{
     width:175px;
