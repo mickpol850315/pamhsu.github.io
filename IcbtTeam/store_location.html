@@ -79,26 +79,41 @@
         <div class="store_out">
             <div class="container-fluid">
                 <div class="row">
-                    <div class="col-12  col-md-4 ">
+                    <div class="col-12   col-md-4 ">
                         <div class="mapBox">
-                            <img class="map_border" src="./img/taiwan_map/taiwan_all.png" alt="">
+                            <img class="map_border" src="./img/taiwan_map/taiwan_all.png" alt=""
+                                usemap="#taiwan_workmap">
 
-                            <img class="img_top" src="./img/taiwan_map/taiwan_north.png" alt="">
+                            <map name="taiwan_workmap">
+                                <area id="poly_top" shape="poly"
+                                    coords="283,227,326,231,339,250,368,270,413,283,433,278,469,286,481,258,489,242,496,226,497,208,484,182,484,137,509,106,526,87,511,67,497,50,451,36,426,7,378,18,402,2,417,0,369,28,329,52,281,71,263,93,244,127,234,156,252,172">
 
-                            <img class="img_center" src="./img/taiwan_map/central.png" alt="">
+                                <area id="poly_center" shape="poly"
+                                    coords="233,157,264,188,284,225,322,235,347,253,379,276,349,327,339,344,346,360,332,387,331,425,322,449,328,485,297,521,273,542,264,554,218,540,203,511,182,505,146,502,104,491,84,505,46,521,27,519,33,489,56,432,122,324,151,261,199,188">
 
-                            <img class="img_south" src="./img/taiwan_map/south.png" alt="">
+                                <area id="poly_south" shape="poly"
+                                    coords="27,519,52,525,73,510,99,500,127,500,164,506,194,509,202,521,218,541,257,547,256,570,266,586,239,606,231,647,221,695,232,727,234,749,208,761,198,800,199,845,197,869,208,890,228,900,236,919,238,949,226,969,217,994,202,987,177,987,173,919,169,919,174,919,173,919,144,860,102,831,59,786,33,691,7,634,8,636,22,582,9,662">
 
-                            <img class="img_east" src="./img/taiwan_map/east.png" alt="">
+                                <area id="poly_east" shape="poly"
+                                    coords="426,280,389,276,374,288,357,321,347,364,332,399,327,431,326,473,311,511,294,530,264,560,276,584,247,611,242,644,234,678,227,705,248,740,238,768,216,775,202,810,211,839,209,859,206,878,227,893,231,898,238,895,271,783,309,746,342,691,372,614,397,548,419,441,432,358,452,311,467,289">
+                            </map>
+
+                            <img class="img_top" src="./img/taiwan_map/taiwan_north.svg" alt="">
+
+                            <img class="img_center" src="./img/taiwan_map/taiwan_central.svg" alt="">
+
+                            <img class="img_south" src="./img/taiwan_map/taiwan_south.svg" alt="">
+
+                            <img class="img_east" src="./img/taiwan_map/taiwan_east.svg" alt="">
 
                         </div>
 
                     </div>
 
-                    <div class="col-12 col-md-8  align">
+                    <div class="col-12  col-md-8  align">
                         <div class="shopBox">
                             <div class="row">
-                                <div class="col-6 col-md-4">
+                                <div class="col-6  col-md-4">
                                     <div class="shop">
                                         <h4> 基隆廟口店</h4>
                                         <p> 02-24211682</p>
@@ -170,7 +185,7 @@
                                         <p>新竹縣竹北市中正西路124號</p>
                                         <hr>
                                     </div>
-                                </div>
+                                </div>  
                             </div>
                         </div>
                     </div>
@@ -202,8 +217,8 @@
     <!-- 樣版js -->
     <script src="template.js"></script>
 
-    <script>
-        // 程式碼
+    <script src="store_location.js">
+
     </script>
 
 </body>

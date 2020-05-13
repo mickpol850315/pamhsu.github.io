@@ -27,12 +27,21 @@
             opacity: 0;
             z-index: 98;
 
-            animation: navbar_slider 0.5s 24s 1;
+            animation: navbar_slider 1s 23s 1;
             animation-fill-mode: forwards;
 
             display: flex;
             justify-content: center;
             align-items: center;
+            -webkit-box-shadow: 7px 1px 10px #595858;
+            box-shadow: 7px 1px 10px #595858;
+            transition: 1s;
+        }
+
+        .index_left_navbar.active {
+            left: 0px;
+            opacity: 1;
+            animation: none;
         }
 
         /* 左側navbar滑出 */
@@ -45,6 +54,7 @@
             100% {
                 opacity: 1;
                 left: 0px;
+                z-index: 99;
             }
         }
 
@@ -58,13 +68,20 @@
             position: fixed;
             margin-top: 50px;
             /* 未展開效果 */
-            /* left: 0px; */
+            left: 0px;
             /* 展開效果 */
-            left: 35px;
+            /* left: 35px; */
             opacity: 0;
             z-index: 99;
-            animation: logoshow 0.5s 24s 1;
+            animation: logoshow 1s 23s 1;
             animation-fill-mode: forwards;
+            transition: 1s;
+        }
+
+        .cornerlogo.active {
+            left: 35px;
+            opacity: 1;
+            animation: none;
         }
 
         /* 左上角log顯示 */
@@ -111,6 +128,8 @@
             /* 未展開 */
             /* top: 0px;
             left: 0px;*/
+
+
         }
 
         /* .item:hover {
@@ -150,35 +169,40 @@
         #banner_section .bgfirst {
             height: 100%;
             width: 100%;
-            /* background-color: black; */
+            background-color: black;
             overflow: hidden;
             position: absolute;
             top: 0;
             left: 0;
-            /* animation: animetowhite 3s 0s 1;
-            animation-fill-mode: forwards; */
+            animation: animeBlack 3s 0s 1;
+            animation-fill-mode: forwards;
         }
 
         /*  */
-        /* @keyframes animetowhite {
+        @keyframes animeBlack {
             0% {
                 background-color: black;
-              
+                opacity: 1;
+
             }
 
             90% {
                 background-color: black;
-              
+                opacity: 1;
+
             }
+
 
             100% {
-                background-color: white;
-                
+                background-color: transparent;
+
+
             }
 
-        } */
 
-        #banner_section .main_img101 {
+        }
+
+        /* #banner_section .main_img101 {
             z-index: 1;
             opacity: 0;
             width: 100%;
@@ -189,11 +213,11 @@
             position: absolute;
             left: 0;
             top: 0;
-            animation: anime101 12s 0s 1;
-        }
+            animation: anime101 6s 1s 1;
+        } */
 
         /* banner101圖片縮放，只播放1次 */
-        @keyframes anime101 {
+        /* @keyframes anime101 {
             0% {
                 opacity: 0;
             }
@@ -206,7 +230,7 @@
                 opacity: 1;
             }
 
-            30% {
+            0% {
                 opacity: 0;
                 transform: scale(1.1);
                 z-index: 0;
@@ -215,7 +239,7 @@
             100% {
                 opacity: 0;
             }
-        }
+        } */
 
         #banner_section .bgiSlider {
             height: 100%;
@@ -239,10 +263,10 @@
             position: absolute;
             left: 0;
             top: 0;
-            animation: anime 18s 0s infinite;
+            animation: anime 27s 0s 1;
+            animation-fill-mode: forwards;
         }
 
-        /* banner圖片縮放 */
         @keyframes anime {
             0% {
                 opacity: 0;
@@ -258,7 +282,7 @@
 
             30% {
                 opacity: 0;
-                transform: scale(1.1);
+                transform: scale(1.2);
                 z-index: 0;
             }
 
@@ -267,26 +291,83 @@
             }
         }
 
-
-
-        #banner_section .main_img101 {
-            background-image: url("./img/banner/101.jpg");
+        #banner_section .bglast {
+            height: 100%;
+            width: 100%;
+            overflow: hidden;
+            position: absolute;
+            top: 0;
+            left: 0;
 
         }
 
+
+        #banner_section .main_imglast {
+            z-index: 0;
+            opacity: 0;
+            width: 100%;
+            height: 100%;
+            background-position: center center;
+            background-repeat: no-repeat;
+            background-size: cover;
+            position: absolute;
+            left: 0;
+            top: 0;
+            animation: animelast 34s 20s 1;
+            /*28*/
+            animation-fill-mode: forwards;
+        }
+
+
+
+        /* banner最後一張圖片縮放 */
+        @keyframes animelast {
+            0% {
+                opacity: 0;
+            }
+
+            10% {
+                opacity: 1;
+            }
+
+            20% {
+                opacity: 1;
+            }
+
+            30% {
+                opacity: 1;
+                transform: scale(1.2);
+                z-index: 1;
+            }
+
+            100% {
+                opacity: 1;
+                transform: scale(1.2);
+            }
+        }
+
+
+
         #banner_section .main_img:nth-of-type(1) {
-            background-image: url("./img/banner/leaves garden.jpg");
-            animation-delay: 3s;
+            background-image: url("./img/banner/101.jpg");
+            animation-delay: 1.5s;
         }
 
         #banner_section .main_img:nth-of-type(2) {
-            background-image: url("./img/banner/boba.jpg");
-            animation-delay: 12s;
+            background-image: url("./img/banner/leaves garden.jpg");
+            animation-delay: 7.5s;
+
         }
 
         #banner_section .main_img:nth-of-type(3) {
+            background-image: url("./img/banner/boba.jpg");
+            animation-delay: 13.5s;
+        }
+
+
+        #banner_section .main_imglast {
             background-image: url("./img/banner/drinks.jpeg");
-            animation-delay: 18s;
+
         }
 
         /* 
@@ -301,7 +382,7 @@
             top: 50%;
             transform: translate(-50%, -50%);
             z-index: 99;
-            animation: logohidden 6s 0s 1;
+            animation: logohidden 9s 0s 1;
             animation-fill-mode: forwards;
         }
 
@@ -311,13 +392,51 @@
                 opacity: 1;
             }
 
-            90% {
+            80% {
                 opacity: 1;
             }
 
             100% {
                 opacity: 0;
             }
+        }
+
+        .enter {
+            position: absolute;
+            left: 50%;
+            bottom: 25px;
+            transform: translate(-50%, 0);
+            opacity: 0.65;
+            animation: shineEnter 5s 0s infinite;
+            cursor:pointer;
+        }
+
+        /* 中間logo隱藏 */
+        @keyframes shineEnter {
+            0% {
+                opacity: 0.3;
+            }
+
+            20% {
+                opacity: 0.65;
+            }
+
+            40% {
+                opacity: 0.3;
+            }
+
+            60% {
+                opacity: 0.65;
+            }
+
+            80% {
+                opacity: 0.3;
+            }
+
+            100% {
+                opacity: 0.65;
+            }
+
         }
     </style>
 </head>
@@ -370,21 +489,27 @@
             </ul>
         </div>
     </div>
-    <div class="cornerlogo">
-        <img src="./img/logo_blue.svg" style="width: 108px;" alt="">
-    </div>
+
+    <!-- 左上角logo -->
+    <a href="index.html">
+        <div class="cornerlogo">
+            <img src="./img/logo_blue.svg" style="width: 108px;" alt="">
+        </div>
+    </a>
+
 
     <!-- banner -->
     <section id="banner_section">
         <div class="bgfirst">
-            <div class="main_img101"></div>
         </div>
         <div class="bgiSlider">
+            <div class="main_img"></div>
+            <div class="main_img"></div>
+            <div class="main_img"></div>
+        </div>
 
-            <div class="main_img"></div>
-            <div class="main_img"></div>
-            <div class="main_img"></div>
-            <!-- <div class="main_img"></div> -->
+        <div class="bglast">
+            <div class="main_imglast"></div>
         </div>
 
     </section>
@@ -392,6 +517,11 @@
     <!-- 中間logo -->
     <div class="centerlogo">
         <img src="./img/logo_white.svg" style="width:400px;" alt="">
+    </div>
+
+    <!-- enter icon -->
+    <div class="enter">
+        <img src="./img/banner/enter.png" alt="">
     </div>
 
     <!-- jquery -->
@@ -430,6 +560,18 @@
                 }
             );
 
+        });
+
+        // //設定秒數關閉enter icon
+        // var timeoutID = setTimeout(closeEnter, 22000);
+        // function closeEnter() {
+        //     document.getElementsByClassName("enter").style.display = "none";
+        // }
+
+        $(".enter").click(function () {
+            $('.index_left_navbar').addClass("active");
+            $('.cornerlogo').addClass("active");
+            $( ".enter" ).hide();
         });
     </script>
 </body>

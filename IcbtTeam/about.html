@@ -17,7 +17,12 @@
     <style>
         /* 自訂樣式 */
         body {
-            height: 600vh;
+            /* height: 600vh; */
+
+        }
+
+        .right_content {
+            background-color: transparent;
         }
 
         .about {
@@ -46,10 +51,10 @@
         }
 
         .timeline {
-
+            padding-bottom: 60px;
         }
 
-        .drinking {}
+
 
         .box .drinkimg {
             position: absolute;
@@ -67,14 +72,14 @@
         }
 
         .year {
-     
+
             position: absolute;
             /* 未展開 */
-            right:0;
+            right: 0;
             /* 展開 */
             /* right: -255px; */
             top: 0;
-           
+
         }
 
         nav {
@@ -82,11 +87,15 @@
             top: 0;
         }
 
-        /* 0511 */
-        .drink{
-            width:500px;
-            height:500px;
-            background-color: brown;
+        /* 0.511 */
+        .drinking {
+            position: relative;
+            z-index: 1;
+            background: url(./img/about/drink.png) 0 0 no-repeat;
+            width: 289px;
+            height: 539px;
+            margin: 0 auto;
+            background-position-y: -9163px;
 
         }
     </style>
@@ -112,7 +121,7 @@
                     </a>
                 </div>
                 <div class="item">
-                    <a href="">
+                    <a href="featured.html">
                         <div class="nav_icon"></div>
                         <li>五十嵐嚴選</li>
                     </a>
@@ -162,17 +171,17 @@
             <p class="margin_bottom_p">50嵐綠茶連鎖體系截至2012年12月底全國總店數超越五百間門市，</p>
             <p>目前仍在陸續佈局中。</p>
         </div>
-        <div class="timeline d-flex " >
-             <div class="drink">
+        <div class="timeline d-flex ">
+            <div class="drink">
                 <img src="" alt="">
-             </div>
+            </div>
         </div>
     </section>
 
     <nav>
-     <div class="timeline ">
-        <div class="drinking">
-            <img src="./img/about/drinking.png" style="width:540px;" class="drinkimg active" alt="">
+        <div class="timeline ">
+            <div class="drinking">
+                <!-- <img src="./img/about/drinking.png" style="width:540px;" class="drinkimg active" alt="">
             <img src="./img/about/drinking1.png" style="height:540px;" class="drinkimg none" alt="">
             <img src="./img/about/drinking2.png" style="height:540px;" class="drinkimg none" alt="">
             <img src="./img/about/drinking3.png" style="height:540px;" class="drinkimg none" alt="">
@@ -183,8 +192,8 @@
             <img src="./img/about/drinking8.png" style="height:540px;" class="drinkimg none" alt="">
             <img src="./img/about/drinking9.png" style="height:540px;" class="drinkimg none" alt="">
             <img src="./img/about/drinking10.png" style="height:540px;" class="drinkimg none" alt="">
-            <img src="./img/about/drinking10.png" style="height:540px;" class="drinkimg none" alt="">
- 
+            <img src="./img/about/drinking10.png" style="height:540px;" class="drinkimg none" alt=""> -->
+                <!--  
                 <img class="year year1994" src="./img/about/1994.png" style="width:25%;" alt="">
                 <img class="year year1997" src="./img/about/1997.png" style="width:25%;" alt="">
                 <img class="year year2000" src="./img/about/2000.png" style="width:25%;" alt="">
@@ -194,15 +203,15 @@
                 <img class="year year2006" src="./img/about/2006.png" style="width:25%;" alt="">
                 <img class="year year2012" src="./img/about/2012.png" style="width:25%;" alt="">
                 <img class="year year2016" src="./img/about/2016.png" style="width:25%;" alt="">
-                <img class="year year2017" src="./img/about/2017.png" style="width:25%;" alt="">
+                <img class="year year2017" src="./img/about/2017.png" style="width:25%;" alt=""> -->
 
+            </div>
         </div>
-    </div>
-       
+
     </nav>
 
 
-    <footer>
+    <footer class="show">
         © 2020 五十嵐 DESIGN BY ICBT
     </footer>
 
@@ -227,65 +236,106 @@
 
     <script>
         // 程式碼
-        document.addEventListener('scroll', function (x) {
-                        console.log(window.scrollY)
+        var isStop = false;
 
-            
-                        if (scrollY > 400) {
-                            var pos = 4;
-                            var posnext = pos + 1;
-                            var img1 = document.querySelector(".drinking .dringimg:nth-child(" + pos + ")");
-                            $(img1).removeClass("active");
-                            $(img1).addClass("none");
+        // 預設不顯示footer
+        if (isStop) {
+            $("footer").show();
+        } else {
+            $("footer").hide();
+        }
 
-                            var imgnext = document.querySelector(".drinking .dringimg:nth-child(" + posnext + ")");
-                            $(imgnext).removeClass("none");
-                            $(imgnext).addClass("active");
-                            TweenLite.to( $('.year2003'), 1, {css:{'right':-280, display:'block'} ,ease:Power2.easeOut});
-                        }
-                        else if (scrollY > 350) {
-                            var pos = 3;
-                            var posnext = pos + 1;
-                            var img1 = document.querySelector(".drinking .dringimg:nth-child(" + pos + ")");
-                            $(img1).removeClass("active");
-                            $(img1).addClass("none");
 
-                            var imgnext = document.querySelector(".drinking .dringimg:nth-child(" + posnext + ")");
-                            $(imgnext).removeClass("none");
-                            $(imgnext).addClass("active");
-                            TweenLite.to( $('.year2002'), 1, {css:{'left':-255, display:'block'} ,ease:Power2.easeOut});
-                        }
-                        else if (scrollY > 300) {
-                            var pos = 2;
-                            var posnext = pos + 1;
-                            var img1 = document.querySelector(".drinking .dringimg:nth-child(" + pos + ")");
-                            $(img1).removeClass("active");
-                            $(img1).addClass("none");
+        $(window).scroll(function () {
 
-                            var imgnext = document.querySelector(".drinking .dringimg:nth-child(" + posnext + ")");
-                            $(imgnext).removeClass("none");
-                            $(imgnext).addClass("active");
-                            TweenLite.to( $('.year2000'), 1, {css:{'right':-200, display:'block'} ,ease:Power2.easeOut});
-                        }
-                        else if (scrollY > 250) {
-                            var pos = 1;
-                            var posnext = pos + 1;
-                            var img1 = document.querySelector(".drinking .dringimg:nth-child(" + pos + ")");
-                            console.log(img1);
-                            $(img1).removeClass("active");
-                            $(img1).addClass("none");
+            if ($(window).scrollTop() + $(window).height() == $(document).height()) {
+                document.querySelector("body").onwheel = function () {
 
-                            var imgnext = document.querySelector(".drinking .dringimg:nth-child(" + posnext + ")");
-                            $(imgnext).removeClass("none");
-                            $(imgnext).addClass("active");
-                            TweenLite.to( $('.year1997'), 1, {css:{'left':-165, display:'block'} ,ease:Power2.easeOut});
-                        }
-                        else if (scrollY > 200) {
-      
-                            TweenLite.to( $('.year1994'), 1, {css:{'right':-255 , display:'block'} ,ease:Power2.easeOut});
-                        }
+                    var bgPos = $('.drinking').css('background-position-y');
+                    var posValue = parseInt(bgPos.substring(0, bgPos.length - 2)) + 539;
+                    if (posValue > 0) {
+                        // 直到飲料喝完才顯示footer
+                        isStop = true;
+                        //取得目前未有footer的高度
+                        var oriTop = $(window).scrollTop();
+                        //延遲1s，顯示footer，主要是讓user 滾動滑鼠時，不要一次到底，停留在喝完飲料的畫面
+                        setTimeout(function () {
+                            $("footer").show();
+                        }, 1000)
+                        //1s後，footer出現，要讓footer在螢幕可視範圍的下方
+                        $(window).scrollTop(oriTop)
 
-                    }, false)
+                    } else {
+                        // 飲料未喝完繼續喝飲料
+                        $('.drinking').css('background-position-y', posValue + 'px');
+                    }
+
+
+                };
+            }
+
+        });
+
+
+        // document.addEventListener('scroll', function (x) {
+        //     console.log(window.scrollY)
+
+
+        //     if (scrollY > 400) {
+        //         var pos = 4;
+        //         var posnext = pos + 1;
+        //         var img1 = document.querySelector(".drinking .dringimg:nth-child(" + pos + ")");
+        //         $(img1).removeClass("active");
+        //         $(img1).addClass("none");
+
+        //         var imgnext = document.querySelector(".drinking .dringimg:nth-child(" + posnext + ")");
+        //         $(imgnext).removeClass("none");
+        //         $(imgnext).addClass("active");
+        //         TweenLite.to($('.year2003'), 1, { css: { 'right': -280, display: 'block' }, ease: Power2.easeOut });
+        //     }
+        //     else if (scrollY > 350) {
+        //         var pos = 3;
+        //         var posnext = pos + 1;
+        //         var img1 = document.querySelector(".drinking .dringimg:nth-child(" + pos + ")");
+        //         $(img1).removeClass("active");
+        //         $(img1).addClass("none");
+
+        //         var imgnext = document.querySelector(".drinking .dringimg:nth-child(" + posnext + ")");
+        //         $(imgnext).removeClass("none");
+        //         $(imgnext).addClass("active");
+        //         TweenLite.to($('.year2002'), 1, { css: { 'left': -255, display: 'block' }, ease: Power2.easeOut });
+        //     }
+        //     else if (scrollY > 300) {
+        //         var pos = 2;
+        //         var posnext = pos + 1;
+        //         var img1 = document.querySelector(".drinking .dringimg:nth-child(" + pos + ")");
+        //         $(img1).removeClass("active");
+        //         $(img1).addClass("none");
+
+        //         var imgnext = document.querySelector(".drinking .dringimg:nth-child(" + posnext + ")");
+        //         $(imgnext).removeClass("none");
+        //         $(imgnext).addClass("active");
+        //         TweenLite.to($('.year2000'), 1, { css: { 'right': -200, display: 'block' }, ease: Power2.easeOut });
+        //     }
+        //     else if (scrollY > 250) {
+        //         var pos = 1;
+        //         var posnext = pos + 1;
+        //         var img1 = document.querySelector(".drinking .dringimg:nth-child(" + pos + ")");
+        //         console.log(img1);
+        //         $(img1).removeClass("active");
+        //         $(img1).addClass("none");
+
+        //         var imgnext = document.querySelector(".drinking .dringimg:nth-child(" + posnext + ")");
+        //         $(imgnext).removeClass("none");
+        //         $(imgnext).addClass("active");
+        //         TweenLite.to($('.year1997'), 1, { css: { 'left': -165, display: 'block' }, ease: Power2.easeOut });
+        //     }
+        //     else if (scrollY > 200) {
+
+        //         TweenLite.to($('.year1994'), 1, { css: { 'right': -255, display: 'block' }, ease: Power2.easeOut });
+        //     }
+
+        // }, false)
     </script>
 
 </body>
