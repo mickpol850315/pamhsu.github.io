@@ -302,7 +302,7 @@
             var delta = e.originalEvent.deltaY;
 
             if (delta > 0) {
-                // console.log("down");
+                console.log("down");
                 if (img_index < 4) {
                     img_index += 1;
                     $('.right_content').css('background-image', `url("/img/featured/背景圖${img_index}.jpg")`);
@@ -319,7 +319,7 @@
                 }
             } // going down
             else {// going up
-                // console.log("up");
+                console.log("up");
                 if (img_index > 1) {
                     img_index -= 1;
                     $('.right_content').css('background-image', `url("/img/featured/背景圖${img_index}.jpg")`);
