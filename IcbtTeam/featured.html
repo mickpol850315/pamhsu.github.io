@@ -26,7 +26,7 @@
             background-color: black;
             height: calc(100vh - 50px);
             position: relative;
-            background-image: url(/img/featured/背景圖1.jpg);
+            background-image: url(./img/featured/背景圖1.jpg);
             background-size: cover;
             background-position: center;
         }
@@ -103,7 +103,7 @@
             float: right;
             margin-top: 10px;
             margin-left: 10px;
-            background-image: url(/img/featured/珍奶ICON.png);
+            background-image: url(./img/featured/珍奶ICON.png);
             background-size: cover;
             background-position: center;
         }
@@ -262,7 +262,7 @@
             box1.classList.add("atv")
             icon.classList.remove("icon")
             btnicon1.classList.add("icon")
-            $('.right_content').css('background-image', 'url("/img/featured/背景圖1.jpg")');
+            $('.right_content').css('background-image', 'url("./img/featured/背景圖1.jpg")');
             img_index = 1;
         }
 
@@ -273,7 +273,7 @@
             box2.classList.add("atv")
             icon.classList.remove("icon")
             btnicon2.classList.add("icon")
-            $('.right_content').css('background-image', 'url("/img/featured/背景圖2.jpg")');
+            $('.right_content').css('background-image', 'url("./img/featured/背景圖2.jpg")');
             img_index = 2;
         }
         btn3.onclick = function () {
@@ -283,7 +283,7 @@
             box3.classList.add("atv")
             icon.classList.remove("icon")
             btnicon3.classList.add("icon")
-            $('.right_content').css('background-image', 'url("/img/featured/背景圖3.jpg")');
+            $('.right_content').css('background-image', 'url("./img/featured/背景圖3.jpg")');
             img_index = 3;
         }
 
@@ -294,7 +294,7 @@
             box4.classList.add("atv")
             icon.classList.remove("icon")
             btnicon4.classList.add("icon")
-            $('.right_content').css('background-image', 'url("/img/featured/背景圖4.jpg")');
+            $('.right_content').css('background-image', 'url("./img/featured/背景圖4.jpg")');
             img_index = 4;
         }
         //移除所有atv
@@ -309,7 +309,7 @@
                 console.log("down");
                 if (img_index < 4) {
                     img_index += 1;
-                    $('.right_content').css('background-image', `url("/img/featured/背景圖${img_index}.jpg")`);
+                    $('.right_content').css('background-image', `url("./img/featured/背景圖${img_index}.jpg")`);
                     var icon = document.querySelector(".icon");
                     icon.classList.remove("icon")
                     $('.btnicon' + img_index).addClass("icon");
@@ -326,7 +326,7 @@
                 console.log("up");
                 if (img_index > 1) {
                     img_index -= 1;
-                    $('.right_content').css('background-image', `url("/img/featured/背景圖${img_index}.jpg")`);
+                    $('.right_content').css('background-image', `url("./img/featured/背景圖${img_index}.jpg")`);
                     var icon = document.querySelector(".icon");
                     icon.classList.remove("icon")
                     $('.btnicon' + img_index).addClass("icon");
