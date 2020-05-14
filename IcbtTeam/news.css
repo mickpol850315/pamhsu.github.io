@@ -10,7 +10,7 @@
     font-size: 40px;
     padding:110px 0 34.5px 0;
     color: #132951;
-
+    font-family: "Noto Sans TC";
 }
 .new{
     /* position: relative; */
@@ -21,6 +21,7 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
+    font-family: "Noto Serif";
 }
 .border1{
     width: 150px;
@@ -47,7 +48,7 @@ h5{
 position: absolute;
 top: 50%;
 left: 50%;
-transform: translate(-50%,-50%);
+transform: translate(-48%,-50%);
 width: 82%;
 padding-top: 126px;
 padding-bottom: 50px;
@@ -80,6 +81,7 @@ position: absolute;
 right: 50px;
 top: 50% ;
 padding-top: 80px;
+outline: none;
 }
 .swiper-button-prev{
  color: #3C586E;
@@ -87,6 +89,10 @@ position: absolute;
 left: 50px;
 top: 50% ;
 padding-top: 80px;
+outline: none;
+}
+span:focus {
+    outline: none;
 }
 .img1:hover{
     background-image: url("./img/news/地球日\(圖\).jpg") !important;
