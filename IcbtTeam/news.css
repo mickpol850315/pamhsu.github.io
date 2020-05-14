@@ -19,7 +19,8 @@
     /* top: 179px; */
     display: flex;
     justify-content: space-between;
-    align-items: center;
+    align-items: center;  
+    
 }
 .border1{
     width: 150px;
