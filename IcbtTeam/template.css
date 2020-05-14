@@ -14,7 +14,7 @@ body{
 .left_navbar{
     width:175px;
     height:100vh;
-    background-color: black;
+    background-color: #3B465D;
     position:fixed;
     top:0;
     /* 未展開效果 */
@@ -46,7 +46,7 @@ body{
     opacity: 0;   
     /* 未展開效果 */
     /* opacity: 1;    */
-
+    font-family: "Noto Sans TC";
 }
 
 .left_navbar .item{
@@ -124,10 +124,12 @@ a{
 
 footer{
     height:50px;
-    background-color: gray;
+    background-color: #202F44;
+    color:white;
     text-align: center;
     font-size:16px;
     line-height: 50px;
     margin-left: 50px;
+    font-family: "微軟正黑體";
 }
 

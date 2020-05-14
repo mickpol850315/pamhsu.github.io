@@ -1,3 +1,7 @@
+  /* 字體改變 */
+  *{
+    font-family: "Noto Sans TC";
+  }
   /* 自訂樣式 */
   h1{
     text-align: center;
