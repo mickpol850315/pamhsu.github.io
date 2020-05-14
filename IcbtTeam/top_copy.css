@@ -79,9 +79,10 @@ transition: 0.5s;
         opacity: 1;
 }
 .bgm1,.bgm2,.bgm3{
-    height: 83%;
-    width: 100%;
-    margin-top: 20%;
+    height:70%;
+    width: 80%;
+    margin-top: 35%;
+    margin-left: 10%;
     background-position: center;
     background-size: contain;
     background-repeat: no-repeat;
