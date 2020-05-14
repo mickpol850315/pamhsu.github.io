@@ -88,13 +88,13 @@ transition: 0.5s;
 }
 
 .bgm1{
-    background-image: url(img/drinks/阿華田拿鐵.png);
+    background-image: url(./img/drinks/阿華田拿鐵.png);
 }
 .bgm2{
-    background-image: url(img/drinks/珍珠奶茶.png);
+    background-image: url(./img/drinks/珍珠奶茶.png);
 }
 .bgm3{
-    background-image: url(img/drinks/紅茶拿鐵.png);
+    background-image: url(./img/drinks/紅茶拿鐵.png);
 }
 
 
