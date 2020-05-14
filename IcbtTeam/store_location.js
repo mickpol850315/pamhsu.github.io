@@ -255,7 +255,6 @@ function getStoreData(store_array) {
             <h4>  ${item.shop_name}</h4>
             <p>  ${item.shop_number}</p>
             <p>${item.shop_address}</p>
-            <hr>
         </div>
     </div>`
 

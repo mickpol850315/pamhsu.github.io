@@ -1,7 +1,9 @@
+@charset "UTF-8";
 .right_content {
   height: 100vh;
-  background-color: #3c586e;
-  color: #ffffff;
+  background-color: #f7b9a4;
+  font-family: "Noto Sans TC";
+  color: #3b465d;
   letter-spacing: 1px;
 }
 
@@ -122,24 +124,26 @@
 }
 
 .right_content .store_out .align_right {
-  padding-top: 15vh;
+  padding-top: 20vh;
 }
 
 .right_content .store_out .shopBox .shop {
-  padding: 30px 10px;
+  padding: 30px 10px 50px;
+  margin-bottom: 30px;
+  border-bottom: 2px solid #3b465d;
 }
 
 .right_content .store_out .shopBox .shop h4 {
   font-size: 26px;
+  margin-bottom: 30px;
 }
 
 .right_content .store_out .shopBox .shop p {
+  font-family: "微軟正黑體";
   font-size: 20px;
 }
 
-.right_content .store_out .shopBox hr {
-  border: 1px solid #ffffff;
-  margin-top: 3rem;
-  margin-bottom: 0rem;
+.right_content .store_out .shopBox .col-6:nth-last-child(-n+3) .shop {
+  border-bottom: none;
 }
 /*# sourceMappingURL=store_location.css.map */

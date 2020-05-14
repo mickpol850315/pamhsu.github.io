@@ -1,4 +1,14 @@
+
+$font_family: "Noto Sans TC";
+$font-size:16px;
+$color:#3b465d;
+$placeholder_color:#534741;
+$letter-spacing:0.05em;
+
+
 .right_content {
+    font-family: $font_family;
+    font-size: $font-size;
     // background-color: rgb(209, 202, 202);
     background-position: center;
     background-size: cover;
@@ -7,21 +17,24 @@
 
 
     .contact_box_out {
+
         display: flex;
         justify-content: center;
         align-items: center;
         padding: 100px 0 0 0;
+
         @media all and (max-width: 375px) {
             padding: 20px 0;
         }
-
-
+       
+       
         .contact_size {
+            color: $color;
             font-size: 120px;
-            text-shadow: 4px 4px 3px #333333;
-            letter-spacing: 0.05em;
+            text-shadow: 1px -5px 3px #333333;
+            letter-spacing: $letter-spacing;
 
-          
+
 
             //平板
             @media all and (min-width: 760px) and (max-width: 959px) {
@@ -41,36 +54,52 @@
 
         .mar_top {
             margin-top: 50px;
+
             @media all and (max-width: 375px) {
                 margin-top: 20px;
             }
 
             .form-control {
                 border: none;
-                border-bottom: 2px solid rgb(0, 0, 0);
+                border-bottom: 2px solid $color;
                 padding: 20px 0;
                 background-color: unset;
                 border-radius: unset;
+                // &:focus{
+                //     color: #495057;
+                //     // background-color: #fff;
+                //     border-color:$color;
+                //     outline: 0;
+                //     box-shadow: 0 0 0 0.2rem $color;
+                   
+                // }
 
                 @media all and (max-width: 375px) {
                     padding: 0;
                 }
             }
-
+           
+            ::placeholder {
+                color:$placeholder_color;
+                opacity: 0.7; 
+              }
             .textarea_border {
-                border: 2px solid rgb(56, 56, 56);
+                border: 2px solid $color;
             }
         }
     }
 
     .btn_box {
+        margin-top: 40PX;
         display: flex;
         justify-content: flex-end;
 
-        .btn-primary {
-            background-color: white;
-            border: 1px solid black;
-            color: black;
+       
+
+        .btn-outline-secondary {
+            color:#534741;
+            border-color: #000;
+            background-color: #fbf3ef;
         }
     }
 }

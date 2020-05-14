@@ -1,4 +1,6 @@
 .right_content {
+  font-family: "Noto Sans TC";
+  font-size: 16px;
   background-position: center;
   background-size: cover;
   height: 100vh;
@@ -24,8 +26,9 @@
 }
 
 .right_content .contact_box_out .contact_size {
+  color: #3b465d;
   font-size: 120px;
-  text-shadow: 4px 4px 3px #333333;
+  text-shadow: 1px -5px 3px #333333;
   letter-spacing: 0.05em;
 }
 
@@ -59,7 +62,7 @@
 
 .right_content .contact_box_out .mar_top .form-control {
   border: none;
-  border-bottom: 2px solid black;
+  border-bottom: 2px solid #3b465d;
   padding: 20px 0;
   background-color: unset;
   border-radius: unset;
@@ -71,11 +74,32 @@
   }
 }
 
+.right_content .contact_box_out .mar_top ::-webkit-input-placeholder {
+  color: #534741;
+  opacity: 0.7;
+}
+
+.right_content .contact_box_out .mar_top :-ms-input-placeholder {
+  color: #534741;
+  opacity: 0.7;
+}
+
+.right_content .contact_box_out .mar_top ::-ms-input-placeholder {
+  color: #534741;
+  opacity: 0.7;
+}
+
+.right_content .contact_box_out .mar_top ::placeholder {
+  color: #534741;
+  opacity: 0.7;
+}
+
 .right_content .contact_box_out .mar_top .textarea_border {
-  border: 2px solid #383838;
+  border: 2px solid #3b465d;
 }
 
 .right_content .btn_box {
+  margin-top: 40PX;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -84,9 +108,9 @@
           justify-content: flex-end;
 }
 
-.right_content .btn_box .btn-primary {
-  background-color: white;
-  border: 1px solid black;
-  color: black;
+.right_content .btn_box .btn-outline-secondary {
+  color: #534741;
+  border-color: #000;
+  background-color: #fbf3ef;
 }
 /*# sourceMappingURL=contact.css.map */
