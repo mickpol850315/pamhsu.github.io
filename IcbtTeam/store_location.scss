@@ -8,7 +8,6 @@ $background-color:#f7b9a4;
 $letter-spacing:1px;
 
 
-
 .right_content {
     height: 100vh;
     background-color: $background-color;
@@ -35,10 +34,12 @@ $letter-spacing:1px;
         }
 
         .mapBox {
+
             position: relative;
 
             .map_border {
                 width: 395px;
+
             }
 
             .img_top {
@@ -54,8 +55,7 @@ $letter-spacing:1px;
                     opacity: 1;
                     pointer-events: default;
                 }
-
-                &.click_active {
+                &.click_active{
                     opacity: 1;
                     pointer-events: default;
                 }
@@ -74,8 +74,7 @@ $letter-spacing:1px;
                     opacity: 1;
                     pointer-events: default;
                 }
-
-                &.click_active {
+                &.click_active{
                     opacity: 1;
                     pointer-events: default;
                 }
@@ -94,8 +93,7 @@ $letter-spacing:1px;
                     opacity: 1;
                     pointer-events: default;
                 }
-
-                &.click_active {
+                &.click_active{
                     opacity: 1;
                     pointer-events: default;
                 }
@@ -115,8 +113,7 @@ $letter-spacing:1px;
                     opacity: 1;
                     pointer-events: default;
                 }
-
-                &.click_active {
+                &.click_active{
                     opacity: 1;
                     pointer-events: default;
                 }

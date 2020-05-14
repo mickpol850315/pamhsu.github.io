@@ -25,6 +25,7 @@ body{
     color:white;
     -webkit-box-shadow: 7px 1px 10px #595858;
     box-shadow: 7px 1px 10px #595858;
+    font-family: "Noto Sans TC";
 }
 
 /* hover位置 */
@@ -46,7 +47,7 @@ body{
     opacity: 0;   
     /* 未展開效果 */
     /* opacity: 1;    */
-    font-family: "Noto Sans TC";
+
 }
 
 .left_navbar .item{
@@ -124,12 +125,13 @@ a{
 
 footer{
     height:50px;
-    background-color: #202F44;
-    color:white;
+    background-color: gray;
     text-align: center;
     font-size:16px;
     line-height: 50px;
     margin-left: 50px;
+    background-color: #202F44;
+    color:white;
     font-family: "微軟正黑體";
 }
 
