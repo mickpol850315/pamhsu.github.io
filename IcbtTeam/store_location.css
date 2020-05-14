@@ -19,7 +19,21 @@
   height: 100%;
 }
 
-.right_content .store_out .align_left {
+@media all and (max-width: 768px) {
+  .right_content .store_out .row {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+}
+
+.right_content .store_out .left_box {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -29,6 +43,12 @@
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+}
+
+@media all and (max-width: 768px) {
+  .right_content .store_out .left_box {
+    display: none;
+  }
 }
 
 .right_content .store_out .mapBox {
@@ -123,8 +143,14 @@
   pointer-events: default;
 }
 
-.right_content .store_out .align_right {
-  padding-top: 20vh;
+.right_content .store_out .right_box {
+  padding-top: 12vh;
+}
+
+@media all and (max-width: 768px) {
+  .right_content .store_out .right_box {
+    padding-top: 2vh;
+  }
 }
 
 .right_content .store_out .shopBox .shop {

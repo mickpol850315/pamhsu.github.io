@@ -160,7 +160,7 @@ $('#poly_top').hover(function () {
     $('.img_top').addClass('active');
 
     console.log("test");
-    
+
 
 }, function () {
 
@@ -200,7 +200,7 @@ $("#poly_top").click(function () {
 
     $('.img_top, .img_center, .img_south, .img_east').removeClass('click_active');
 
-    $('.img_top').addClass('click_active');    
+    $('.img_top').addClass('click_active');
     var row = $('.shopBox .row').html();
     var store_array = stores.north;
     getStoreData(store_array);
@@ -208,11 +208,11 @@ $("#poly_top").click(function () {
 
 $("#poly_center").click(function () {
     $('.shopBox .row').html('');
-   $('.img_top, .img_center, .img_south, .img_east').removeClass('click_active');
+    $('.img_top, .img_center, .img_south, .img_east').removeClass('click_active');
 
     $('.img_center').addClass('click_active');
     var row = $('.shopBox .row').html();
- 
+
     var store_array = stores.central;
 
     getStoreData(store_array);
@@ -259,4 +259,11 @@ function getStoreData(store_array) {
     </div>`
 
     });
+
+    // if (store_array.length < 7) {
+    //     $('.right_content').css('height', '100vh');
+    // } 
+    // else {
+    //     $('.right_content').css('height', 'unset');
+    // }
 }

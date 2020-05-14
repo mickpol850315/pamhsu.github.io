@@ -25,12 +25,22 @@ $letter-spacing:1px;
 
         .row {
             height: 100%;
+
+            @media all and (max-width: 768px) {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+            }
         }
 
-        .align_left {
+        .left_box {
             display: flex;
             justify-content: center;
             align-items: center;
+
+            @media all and (max-width: 768px) {
+                display: none;
+            }
         }
 
         .mapBox {
@@ -55,7 +65,8 @@ $letter-spacing:1px;
                     opacity: 1;
                     pointer-events: default;
                 }
-                &.click_active{
+
+                &.click_active {
                     opacity: 1;
                     pointer-events: default;
                 }
@@ -74,7 +85,8 @@ $letter-spacing:1px;
                     opacity: 1;
                     pointer-events: default;
                 }
-                &.click_active{
+
+                &.click_active {
                     opacity: 1;
                     pointer-events: default;
                 }
@@ -93,7 +105,8 @@ $letter-spacing:1px;
                     opacity: 1;
                     pointer-events: default;
                 }
-                &.click_active{
+
+                &.click_active {
                     opacity: 1;
                     pointer-events: default;
                 }
@@ -113,7 +126,8 @@ $letter-spacing:1px;
                     opacity: 1;
                     pointer-events: default;
                 }
-                &.click_active{
+
+                &.click_active {
                     opacity: 1;
                     pointer-events: default;
                 }
@@ -121,8 +135,13 @@ $letter-spacing:1px;
 
         }
 
-        .align_right {
-            padding-top: 20vh;
+        .right_box {
+            padding-top: 12vh;
+
+            @media all and (max-width: 768px) {
+                padding-top: 2vh;
+
+            }
         }
 
         .shopBox {
@@ -141,10 +160,10 @@ $letter-spacing:1px;
                 p {
                     font-family: $font_family_2;
                     font-size: $font_size;
-                }           
+                }
             }
 
-           
+
             .col-6:nth-last-child(-n+3) {
                 .shop {
                     border-bottom: none;
