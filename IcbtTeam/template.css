@@ -116,6 +116,10 @@ a{
     letter-spacing: 0.35em;
 }
 
+.mobile_navbar{
+    display: none!important;
+}
+
 .right_content{
     width:calc(100% - 100px);
     /* height:100vh; */
@@ -124,6 +128,7 @@ a{
 }
 
 footer{
+
     height:50px;
     background-color: gray;
     text-align: center;
@@ -135,3 +140,36 @@ footer{
     font-family: "微軟正黑體";
 }
 
+
+@media  (max-width:768px) {
+    .left_navbar {
+        display: none;
+    }
+
+    .mobile_navbar{
+        display: flex!important;
+        z-index:99;
+        position: fixed;
+        width: 100%;
+        top: 0;
+        left: 0;
+        padding: 10px 20px;
+        background-color: #3B465D;
+    }
+
+    .mobile_navbar .hamburger{
+        width:50px;
+        height:50px;
+        background-color:lightblue;
+    }
+
+    .right_content {
+        width: 100%;
+        margin-left: 0;
+    }
+
+    footer {
+        margin: 0;
+        width: 100%;
+    }
+}
