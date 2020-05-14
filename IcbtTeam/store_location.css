@@ -1,7 +1,32 @@
 .right_content {
+  height: 100vh;
   background-color: #3c586e;
   color: #ffffff;
   letter-spacing: 1px;
+}
+
+.right_content .store_out {
+  height: 100%;
+}
+
+.right_content .store_out .container-fluid {
+  height: 100%;
+}
+
+.right_content .store_out .row {
+  height: 100%;
+}
+
+.right_content .store_out .align_left {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
 .right_content .store_out .mapBox {
@@ -9,15 +34,15 @@
 }
 
 .right_content .store_out .mapBox .map_border {
-  width: 525px;
+  width: 395px;
 }
 
 .right_content .store_out .mapBox .img_top {
   position: absolute;
-  width: 292px;
+  width: 220px;
   top: 0px;
-  left: 233px;
-  opacity: 1;
+  left: 175px;
+  opacity: 0;
   -webkit-transition: 0.6s;
   transition: 0.6s;
   pointer-events: none;
@@ -28,11 +53,16 @@
   pointer-events: default;
 }
 
+.right_content .store_out .mapBox .img_top.click_active {
+  opacity: 1;
+  pointer-events: default;
+}
+
 .right_content .store_out .mapBox .img_center {
   position: absolute;
-  width: 352px;
-  top: 155px;
-  left: 28px;
+  width: 266px;
+  top: 117px;
+  left: 20px;
   opacity: 0;
   -webkit-transition: 0.6s;
   transition: 0.6s;
@@ -44,11 +74,16 @@
   pointer-events: default;
 }
 
+.right_content .store_out .mapBox .img_center.click_active {
+  opacity: 1;
+  pointer-events: default;
+}
+
 .right_content .store_out .mapBox .img_south {
   position: absolute;
-  width: 272px;
-  top: 490px;
-  left: 0;
+  width: 205px;
+  top: 368px;
+  left: 0px;
   opacity: 0;
   -webkit-transition: 0.6s;
   transition: 0.6s;
@@ -60,11 +95,16 @@
   pointer-events: default;
 }
 
+.right_content .store_out .mapBox .img_south.click_active {
+  opacity: 1;
+  pointer-events: default;
+}
+
 .right_content .store_out .mapBox .img_east {
   position: absolute;
-  width: 272px;
-  top: 270px;
-  left: 196px;
+  width: 204px;
+  top: 205px;
+  left: 147px;
   opacity: 0;
   -webkit-transition: 0.6s;
   transition: 0.6s;
@@ -76,8 +116,13 @@
   pointer-events: default;
 }
 
-.right_content .store_out .align {
-  padding-top: 200px;
+.right_content .store_out .mapBox .img_east.click_active {
+  opacity: 1;
+  pointer-events: default;
+}
+
+.right_content .store_out .align_right {
+  padding-top: 20vh;
 }
 
 .right_content .store_out .shopBox .shop {
@@ -95,4 +140,4 @@
 .right_content .store_out .shopBox hr {
   border: 1px solid #ffffff;
 }
-/*# sourceMappingURL=store_location.css.map */
+/*# sourceMappingURL=store_location copy.css.map */
