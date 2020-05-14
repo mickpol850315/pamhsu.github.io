@@ -32,11 +32,11 @@ body{
 }
 .bg_red{
     height: 100vh;
-    background-color: #9DB6BB;
+    background-color: #F7B9A4;
     
 }
 .bg_red:hover{
-    background-color: #3F494B;
+    background-color: #634A42;
 }
 .bg_red:hover .bgm1{
 filter: brightness(40%);
@@ -48,11 +48,11 @@ transition: 0.5s;
 
 .bg_blue{
     height: 100vh;
-    background-color:#3C586E;
+    background-color:#F7B9A4;
     transition: 0.5s;
 }
 .bg_blue:hover{
-    background-color:#1E2C35;
+    background-color:#634A42;
     transition: 0.5s;
 }
 .bg_blue:hover .bgm2{
@@ -64,11 +64,11 @@ transition: 0.5s;
 }
 .bg_gray{
     height: 100vh;
-    background-color:#9DB6BB;
+    background-color:#F7B9A4;
     transition: 0.5s;
 }
 .bg_gray:hover{
-    background-color: #3F494B;
+    background-color: #634A42;
     transition: 0.5s;
 }
 .bg_gray:hover .bgm3{
@@ -79,9 +79,10 @@ transition: 0.5s;
         opacity: 1;
 }
 .bgm1,.bgm2,.bgm3{
-    height: 83%;
-    width: 100%;
-    margin-top: 20%;
+    height:70%;
+    width: 80%;
+    margin-top: 35%;
+    margin-left: 10%;
     background-position: center;
     background-size: contain;
     background-repeat: no-repeat;
