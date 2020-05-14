@@ -22,31 +22,32 @@
 
         }
 
-        .titleColor{
-            color: #3B465D;;
+        .titleColor {
+            color: #3B465D;
+            ;
         }
 
-        .subtitleColor{
-            color:#132951;
+        .subtitleColor {
+            color: #132951;
         }
 
-        .pColor{
-            color:#3B465D;
+        .pColor {
+            color: #3B465D;
         }
 
         .right_content {
             background-color: transparent;
             background-color: #F7B9A4;
-            color:white;
-            font-family:"Noto Sans TC" ;
+            color: white;
+            font-family: "Noto Sans TC";
         }
 
         .about {
             padding: 122px 0;
         }
 
-        .about .titleimg{
-            margin-top:-26px ;
+        .about .titleimg {
+            margin-top: -26px;
         }
 
         .about h1 {
@@ -108,7 +109,7 @@
 
         .year1994 {
             /* 1994 */
-            display:none;
+            display: none;
             position: absolute;
             /* 未展開 */
             right: 8px;
@@ -120,7 +121,7 @@
 
         .year1997 {
             /* 1997 */
-            display:none;
+            display: none;
             position: absolute;
             /*未展開*/
             left: 0px;
@@ -331,11 +332,11 @@
     <section class="right_content">
         <div class="about text-center">
             <div class="titlepart d-flex justify-content-center">
-               <img src="./img/about/cocoMilk.png" class="titleimg" alt="">
-               <h1 class="titleColor">關於50嵐</h1>
-               <img src="./img/about/greenMilk.png" class="titleimg" alt=""> 
+                <img src="./img/about/cocoMilk.png" class="titleimg" alt="">
+                <h1 class="titleColor">關於50嵐</h1>
+                <img src="./img/about/greenMilk.png" class="titleimg" alt="">
             </div>
-            
+
             <h6 class="subtitleColor">連鎖體系</h6>
             <p class="margin_bottom_p pColor">50嵐綠茶連鎖體系於1994年由創辦人馬先生自台南成立</p>
             <p class="pColor">進而自高雄區、中區(含雲、嘉)、台北區、桃竹苗區陸續拓點。</p>
@@ -347,8 +348,8 @@
         </div>
 
         <div class="timeline ">
-            <div class="drinking"  >
-                <div class="years "  >
+            <div class="drinking">
+                <div class="years ">
                     <img class="year year1994 t1" src="./img/about/t1.png" alt="">
                     <img class="year year1997 t2" src="./img/about/t2.png" alt="">
                     <img class="year year2000 t3" src="./img/about/t3.png" alt="">
@@ -406,24 +407,34 @@
         }
 
         //預設滑鼠滾輪次數
-        var imgIndex=0
-       
-        var arrPos=['right','left','right','left','right','left','right','left','right','left'];
-        var arrRightPos=[-242,-155,-161,-246,-221,-155,-127,-195,-165,-179];
+        var imgIndex = 0
+
+        var arrPos = ['right', 'left', 'right', 'left', 'right', 'left', 'right', 'left', 'right', 'left'];
+        var arrRightPos = [-242, -155, -161, -246, -221, -155, -127, -195, -165, -179];
 
 
         $(".drinking").click(function () {
 
         });
 
-        $(window).scroll(function () {
-            // console.log($(window).scrollTop());
-            if ($(window).scrollTop() + $(window).height() >= $("body").height()) {
-                $(window).on('wheel', function (e) {
+        // $(window).scroll(function () {
+        // console.log($(window).scrollTop());
 
-                    var delta = e.originalEvent.deltaY;
-                    if (delta > 0) {
-                        console.log("down");
+        $(window).on('wheel', function (e) {
+            if ($(window).scrollTop() + $(window).height() >= $("body").height()) {
+                //滾軸滾2次才會下一個動畫
+                //if (imgIndex % 2 == 0) {
+
+
+                console.log(index);
+
+                var delta = e.originalEvent.deltaY;
+                if (delta > 0) {
+                    console.log("down");
+                    if (imgIndex % 3 == 0) {
+                        console.log(imgIndex + "/3=", imgIndex / 3);
+
+                        var index = (imgIndex == 0) ? 0 : imgIndex / 3;
                         var bgPos = $('.drinking').css('background-position-y');
                         var posValue = parseInt(bgPos.substring(0, bgPos.length - 2)) + 882;
                         console.log("posvalue=", posValue);
@@ -439,27 +450,37 @@
                             }, 1000)
                             //1s後，footer出現，要讓footer在螢幕可視範圍的下方
                             $(window).scrollTop(oriTop)
-
                         } else {
                             // 飲料未喝完繼續喝飲料
                             $('.drinking').css('background-position-y', posValue + 'px');
-                            if(imgIndex<=9){
-                                imgNumber=imgIndex + 1;
-                                if(arrPos[imgIndex]=="right"){
-                                    TweenLite.to($('.t' + imgNumber  ), 2, { css: {  right:arrRightPos[imgIndex], display: 'block' ,opacity:1}, ease: Power2.easeOut });
-                                }else{
-                                    TweenLite.to($('.t' + imgNumber  ), 2, { css: {  left:arrRightPos[imgIndex], display: 'block' ,opacity:1}, ease: Power2.easeOut });
+                            if (index <= 9) {
+                                imgNumber = index + 1;
+                                if (arrPos[index] == "right") {
+                                    TweenLite.to($('.t' + imgNumber), 2, { css: { right: arrRightPos[index], display: 'block', opacity: 1 }, ease: Power2.easeOut });
+                                } else {
+                                    TweenLite.to($('.t' + imgNumber), 2, { css: { left: arrRightPos[index], display: 'block', opacity: 1 }, ease: Power2.easeOut });
                                 }
-                                imgIndex += 1;
+
 
                             }
 
+
                         }
+
                     }
-                    else {// going up
-                        console.log("up");
-                    }
-                });
+                    imgIndex += 1;
+                }
+                else {// going up  
+                    console.log("up");
+                }
+
+
+                //}
+
+
+
+            }
+        });
 
                 // document.querySelector("body").onwheel = function () {
                 //     var bgPos = $('.drinking').css('background-position-y');
@@ -483,9 +504,9 @@
 
 
                 // };
-            }
 
-        });
+
+        // });
 
 
         // document.addEventListener('scroll', function (x) {
