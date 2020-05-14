@@ -17,11 +17,14 @@
     <style>
         /* 自訂樣式 */
         /* 字體改變 */
-        *{
+        * {
             font-family: "Noto Sans TC";
         }
-        .myMOUSE{
-            cursor: pointer; }
+
+        .myMOUSE {
+            cursor: pointer;
+        }
+
         .right_content {
             background-color: black;
             height: calc(100vh - 50px);
@@ -33,8 +36,8 @@
 
         /* .title {
             /* position: fixed; */
-            /* top: 357px; */
-            /* right: 344px; 
+        /* top: 357px; */
+        /* right: 344px; 
         }*/
 
         .title h1 {
@@ -42,7 +45,7 @@
             font-size: 40px;
             top: 280px;
             right: 610px;
-            color: white;
+            color: #EED8CB;
             letter-spacing: 5px;
         }
 
@@ -65,7 +68,7 @@
             font-size: 28px;
             bottom: 400px;
             right: 792px;
-            color: rgb(233, 135, 6);
+            color: #E4B58F;
             letter-spacing: 5px;
         }
 
@@ -93,7 +96,7 @@
         }
 
         .a_box li {
-            color: white;
+            color: #969696;
             text-decoration: none;
         }
 
@@ -106,6 +109,10 @@
             background-image: url(./img/featured/珍奶ICON.png);
             background-size: cover;
             background-position: center;
+        }
+
+        .color_atv {
+            color: #FFFFFF !important;
         }
 
         .atv {
@@ -199,7 +206,7 @@
             <p>希望我們創造出友善及熱情的環境，將每位客人視為<br>家人般真誠對待，儘管在繁忙的日子裡，只要駐足於<br>店門口享受每一杯客製化的飲料，啜飲著我們真摯對<br>待的溫暖，即可深刻感受被茶香簇擁的幸福。</p>
         </div>
         <ul class="a_box">
-            <li class="btn1 myMOUSE">嚴選原料 <div class="btnicon1 icon"></div>
+            <li class="btn1 myMOUSE color_atv">嚴選原料 <div class="btnicon1 icon"></div>
             </li>
             <li class="btn2 myMOUSE">職人製茶 <div class="btnicon2"></div>
             </li>
@@ -258,6 +265,9 @@
         btn1.onclick = function () {
             var atv = document.querySelector(".atv")
             var icon = document.querySelector(".icon");
+            var color_atv = document.querySelector(".color_atv");
+            color_atv.classList.remove("color_atv")
+            btn1.classList.add("color_atv")
             atv.classList.remove("atv")
             box1.classList.add("atv")
             icon.classList.remove("icon")
@@ -269,6 +279,9 @@
         btn2.onclick = function () {
             var atv = document.querySelector(".atv")
             var icon = document.querySelector(".icon");
+            var color_atv = document.querySelector(".color_atv");
+            color_atv.classList.remove("color_atv")
+            btn2.classList.add("color_atv")
             atv.classList.remove("atv")
             box2.classList.add("atv")
             icon.classList.remove("icon")
@@ -279,6 +292,9 @@
         btn3.onclick = function () {
             var atv = document.querySelector(".atv")
             var icon = document.querySelector(".icon");
+            var color_atv = document.querySelector(".color_atv");
+            color_atv.classList.remove("color_atv")
+            btn3.classList.add("color_atv")
             atv.classList.remove("atv")
             box3.classList.add("atv")
             icon.classList.remove("icon")
@@ -290,6 +306,9 @@
         btn4.onclick = function () {
             var atv = document.querySelector(".atv")
             var icon = document.querySelector(".icon");
+            var color_atv = document.querySelector(".color_atv");
+            color_atv.classList.remove("color_atv")
+            btn4.classList.add("color_atv")
             atv.classList.remove("atv")
             box4.classList.add("atv")
             icon.classList.remove("icon")
@@ -316,6 +335,9 @@
                     var atv = document.querySelector(".atv")
                     atv.classList.remove("atv")
                     $('.box' + img_index).addClass("atv");
+                    var color_atv = document.querySelector(".color_atv");
+                    color_atv.classList.remove("color_atv")
+                    $('.btn' + img_index).addClass("color_atv");
                     //效果延遲
                     // $('.btnicon' + img_index).delay(2000);
                     // $('.box' + img_index).delay(2000);
@@ -333,6 +355,9 @@
                     var atv = document.querySelector(".atv")
                     atv.classList.remove("atv")
                     $('.box' + img_index).addClass("atv");
+                    var color_atv = document.querySelector(".color_atv");
+                    color_atv.classList.remove("color_atv")
+                    $('.btn' + img_index).addClass("color_atv");
                     //效果延遲
                     // $('.btnicon' + img_index).delay(2000);
                     // $('.box' + img_index).delay(2000);
