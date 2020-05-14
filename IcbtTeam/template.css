@@ -14,7 +14,7 @@ body{
 .left_navbar{
     width:175px;
     height:100vh;
-    background-color: black;
+    background-color: #3B465D;
     position:fixed;
     top:0;
     /* 未展開效果 */
@@ -25,6 +25,7 @@ body{
     color:white;
     -webkit-box-shadow: 7px 1px 10px #595858;
     box-shadow: 7px 1px 10px #595858;
+    font-family: "Noto Sans TC";
 }
 
 /* hover位置 */
@@ -129,5 +130,8 @@ footer{
     font-size:16px;
     line-height: 50px;
     margin-left: 50px;
+    background-color: #202F44;
+    color:white;
+    font-family: "微軟正黑體";
 }
 
