@@ -122,7 +122,7 @@
 }
 
 .right_content .store_out .align_right {
-  padding-top: 15vh;
+  padding-top: 20vh;
 }
 
 .right_content .store_out .shopBox .shop {
@@ -139,7 +139,5 @@
 
 .right_content .store_out .shopBox hr {
   border: 1px solid #ffffff;
-  margin-top: 3rem;
-  margin-bottom: 0rem;
 }
-/*# sourceMappingURL=store_location.css.map */
+/*# sourceMappingURL=store_location copy.css.map */
