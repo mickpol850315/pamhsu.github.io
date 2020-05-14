@@ -1,16 +1,13 @@
 $font_size_shopName:26px;
 $font_size_number:22px;
 $font_size_addres:20px;
-$font_family: "Noto Sans TC";
 $color:#ffffff;
 $letter-spacing:1px;
-
 
 
 .right_content {
     height: 100vh;
     background-color: #3c586e;
-    // font-family: $font_family;
     color: $color;
     letter-spacing: $letter-spacing;
 
@@ -33,10 +30,12 @@ $letter-spacing:1px;
         }
 
         .mapBox {
+
             position: relative;
 
             .map_border {
                 width: 395px;
+
             }
 
             .img_top {
@@ -52,8 +51,7 @@ $letter-spacing:1px;
                     opacity: 1;
                     pointer-events: default;
                 }
-
-                &.click_active {
+                &.click_active{
                     opacity: 1;
                     pointer-events: default;
                 }
@@ -72,8 +70,7 @@ $letter-spacing:1px;
                     opacity: 1;
                     pointer-events: default;
                 }
-
-                &.click_active {
+                &.click_active{
                     opacity: 1;
                     pointer-events: default;
                 }
@@ -92,8 +89,7 @@ $letter-spacing:1px;
                     opacity: 1;
                     pointer-events: default;
                 }
-
-                &.click_active {
+                &.click_active{
                     opacity: 1;
                     pointer-events: default;
                 }
@@ -112,8 +108,7 @@ $letter-spacing:1px;
                     opacity: 1;
                     pointer-events: default;
                 }
-
-                &.click_active {
+                &.click_active{
                     opacity: 1;
                     pointer-events: default;
                 }
@@ -122,8 +117,9 @@ $letter-spacing:1px;
         }
 
 
+
         .align_right {
-            padding-top:15vh;
+            padding-top: 20vh;
         }
 
         .shopBox {
@@ -141,8 +137,6 @@ $letter-spacing:1px;
 
             hr {
                 border: 1px solid $color;
-                margin-top: 3rem;
-                margin-bottom: 0rem;
             }
         }
     }
