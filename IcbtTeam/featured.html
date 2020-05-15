@@ -340,50 +340,73 @@
         //且在對應內容上加上atv
         //在style的background上改變字串
 
+        //預設滑鼠滾動次數
+        var iDownWheel = 0;
+        var iTopWheel = 0;
+
         $(window).on('wheel', function (e) {
 
             var delta = e.originalEvent.deltaY;
 
             if (delta > 0) {
                 console.log("down");
-                if (img_index < 4) {
-                    img_index += 1;
-                    $('.right_content').css('background-image', `url("./img/featured/背景圖${img_index}.jpg")`);
-                    var icon = document.querySelector(".icon");
-                    icon.classList.remove("icon")
-                    $('.btnicon' + img_index).addClass("icon");
-                    var atv = document.querySelector(".atv")
-                    atv.classList.remove("atv")
-                    $('.box' + img_index).addClass("atv");
-                    var color_atv = document.querySelector(".color_atv");
-                    color_atv.classList.remove("color_atv")
-                    $('.btn' + img_index).addClass("color_atv");
-                    //效果延遲
-                    // $('.btnicon' + img_index).delay(2000);
-                    // $('.box' + img_index).delay(2000);
-                    // $('.right_content').delay(5000);
+                if (iTopWheel != 0) {
+                    iTopWheel = 0;
+
                 }
+                if (iDownWheel % 5 == 0) {
+                    if (img_index < 4) {
+                        img_index += 1;
+                        $('.right_content').css('background-image', `url("./img/featured/背景圖${img_index}.jpg")`);
+                        var icon = document.querySelector(".icon");
+                        icon.classList.remove("icon")
+                        $('.btnicon' + img_index).addClass("icon");
+                        var atv = document.querySelector(".atv")
+                        atv.classList.remove("atv")
+                        $('.box' + img_index).addClass("atv");
+                        var color_atv = document.querySelector(".color_atv");
+                        color_atv.classList.remove("color_atv")
+                        $('.btn' + img_index).addClass("color_atv");
+                        //效果延遲
+                        // $('.btnicon' + img_index).delay(2000);
+                        // $('.box' + img_index).delay(2000);
+                        // $('.right_content').delay(5000);
+                    }
+                }
+
+                iDownWheel += 1;
+
             } // going down
             else {// going up
                 console.log("up");
-                if (img_index > 1) {
-                    img_index -= 1;
-                    $('.right_content').css('background-image', `url("./img/featured/背景圖${img_index}.jpg")`);
-                    var icon = document.querySelector(".icon");
-                    icon.classList.remove("icon")
-                    $('.btnicon' + img_index).addClass("icon");
-                    var atv = document.querySelector(".atv")
-                    atv.classList.remove("atv")
-                    $('.box' + img_index).addClass("atv");
-                    var color_atv = document.querySelector(".color_atv");
-                    color_atv.classList.remove("color_atv")
-                    $('.btn' + img_index).addClass("color_atv");
-                    //效果延遲
-                    // $('.btnicon' + img_index).delay(2000);
-                    // $('.box' + img_index).delay(2000);
-                    // $('.right_content').delay(5000);
-                    // setTimeout("alert('background-image');", 2000);
+                if (iDownWheel != 0) {
+                    iDownWheel = 0;
+
                 }
+                if (iTopWheel % 5 == 0) {
+                    if (img_index > 1) {
+                        img_index -= 1;
+                        $('.right_content').css('background-image', `url("./img/featured/背景圖${img_index}.jpg")`);
+                        var icon = document.querySelector(".icon");
+                        icon.classList.remove("icon")
+                        $('.btnicon' + img_index).addClass("icon");
+                        var atv = document.querySelector(".atv")
+                        atv.classList.remove("atv")
+                        $('.box' + img_index).addClass("atv");
+                        var color_atv = document.querySelector(".color_atv");
+                        color_atv.classList.remove("color_atv")
+                        $('.btn' + img_index).addClass("color_atv");
+                        //效果延遲
+                        // $('.btnicon' + img_index).delay(2000);
+                        // $('.box' + img_index).delay(2000);
+                        // $('.right_content').delay(5000);
+                        // setTimeout("alert('background-image');", 2000);
+                    }
+                }
+
+
+
+                iTopWheel += 1;
             }
         });
     </script>
