@@ -65,12 +65,12 @@
         .about p {
             margin: 0;
             font-size: 22px;
-
+            line-height: 48px;
         }
 
         .about .margin_bottom_p {
 
-            margin-bottom: 23px;
+            /* margin-bottom: 23px; */
         }
 
         .timeline {
@@ -239,7 +239,7 @@
             margin-top: -12px;
         }
 
-        .lineT {
+        /* .lineT {
             width: 100%;
             font-size: 26px;
         }
@@ -247,7 +247,7 @@
         .lineB {
             width: 100%;
             font-size: 18px;
-        }
+        } */
 
         /* nav {
             position: sticky;
@@ -266,6 +266,65 @@
             background-position-y: -8819px;
 
 
+        }
+
+        @media (max-width: 768px) {
+            .about {
+                padding: 122px 0 100px 0;
+            }
+
+            .about .titlepart img {
+                width: 50px;
+
+            }
+
+            .about .titleimg {
+                margin-top: -12px;
+            }
+
+            .about h1 {
+
+                font-size: 30px;
+                padding: 0 32px 0 32px;
+            }
+
+            .about h6 {
+                font-size: 22px;
+                padding: 30px 0 30px 0;
+            }
+
+            .about p {
+                margin: 0;
+                font-size: 16px;
+                text-align: justify;
+                padding: 0px 20px;
+                line-height: 30px;
+            }
+
+            .comma::before {
+                content: "，";
+
+            }
+
+            .hidden {
+                display: none;
+            }
+
+            .drinking {
+
+        
+                background: url(./img/about/mobile_cup.png) 0 0 no-repeat;
+                width: 147px;
+                height: 228px;
+       
+                background-position-y: -8819px;
+
+
+            }
+
+            .years{
+                display:none;
+            }
         }
     </style>
 
@@ -332,13 +391,13 @@
     <div class="mobile_navbar   ">
 
         <div class="logo"><a href="index.html"><img src="./img/cornerLogo.png" width="110px"></a></div>
-    
+
         <a href="mobile_menu.html">
             <div class="hamburger">
                 <img src="./img/hamburger.svg" width="36px">
             </div>
         </a>
-    
+
     </div>
 
     <div class="menu_icon"><a href="Menu.html"><img src="./img/menu/menu-icon.png" alt=""></a></div>
@@ -352,13 +411,15 @@
             </div>
 
             <h6 class="subtitleColor">連鎖體系</h6>
-            <p class="margin_bottom_p pColor">50嵐綠茶連鎖體系於1994年由創辦人馬先生自台南成立</p>
-            <p class="pColor">進而自高雄區、中區(含雲、嘉)、台北區、桃竹苗區陸續拓點。</p>
+            <p class=" pColor ">50嵐綠茶連鎖體系於1994年由創辦人馬先生自台南成立<span class=""><span class="comma"><br
+                            class="hidden">進而自高雄區、中區(含雲、嘉)、台北區、桃竹苗區陸續拓點。</p>
+            <!-- <p class="margin_bottom_p pColor">50嵐綠茶連鎖體系於1994年由創辦人馬先生自台南成立</p>
+            <p class="pColor">進而自高雄區、中區(含雲、嘉)、台北區、桃竹苗區陸續拓點。</p> -->
             <h6 class="subtitleColor">採取全國分區經營模式</h6>
-            <p class="margin_bottom_p pColor">因各地區之營運成本(例租金、人事等)與風俗民情不同，</p>
-            <p class="margin_bottom_p pColor">故有不同之商品定價與經營方式，此乃與其他品牌不同之處。</p>
-            <p class="margin_bottom_p pColor">50嵐綠茶連鎖體系截至2012年12月底全國總店數超越五百間門市，</p>
-            <p class="pColor">目前仍在陸續佈局中。</p>
+            <p class="margin_bottom_p pColor">因各地區之營運成本(例租金、人事等)與風俗民情不同，<br
+                    class="hidden">故有不同之商品定價與經營方式，此乃與其他品牌不同之處。<br class="hidden">50嵐綠茶連鎖體系截至2012年12月底全國總店數超越五百間門市，<br
+                    class="hidden">
+                目前仍在陸續佈局中。</p>
         </div>
 
         <div class="timeline ">
