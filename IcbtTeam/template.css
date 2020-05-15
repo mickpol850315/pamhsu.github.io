@@ -71,14 +71,6 @@ body{
     left: -20px;   
 }
 
- /* .item:hover{
-    opacity: 1; 
-} */
-
-/* .left_navbar .navitems.active{
- display: block;   
-} */
-
 .left_navbar ul{
     list-style:none;
     
@@ -139,6 +131,8 @@ footer{
     color:#3b465d;
     font-family: "微軟正黑體";
 }
+
+
 
 
 @media  (max-width:768px) {
