@@ -1,4 +1,43 @@
 @charset "UTF-8";
+@-webkit-keyframes slide {
+  0% {
+    -webkit-transform: scale(0, 0) translateY(0);
+            transform: scale(0, 0) translateY(0);
+  }
+  15%,
+  70% {
+    -webkit-transform: scale(1, 1) translateY(0);
+            transform: scale(1, 1) translateY(0);
+  }
+  90% {
+    -webkit-transform: scale(1, 1) translateY(600%);
+            transform: scale(1, 1) translateY(600%);
+  }
+  100% {
+    -webkit-transform: scale(1, 1) translateY(600%);
+            transform: scale(1, 1) translateY(600%);
+  }
+}
+@keyframes slide {
+  0% {
+    -webkit-transform: scale(0, 0) translateY(0);
+            transform: scale(0, 0) translateY(0);
+  }
+  15%,
+  70% {
+    -webkit-transform: scale(1, 1) translateY(0);
+            transform: scale(1, 1) translateY(0);
+  }
+  90% {
+    -webkit-transform: scale(1, 1) translateY(600%);
+            transform: scale(1, 1) translateY(600%);
+  }
+  100% {
+    -webkit-transform: scale(1, 1) translateY(600%);
+            transform: scale(1, 1) translateY(600%);
+  }
+}
+
 .right_content {
   height: 100vh;
   background-color: #f7b9a4;
@@ -158,6 +197,57 @@
     padding-top: 2vh;
     padding-right: 15px;
   }
+}
+
+.right_content .store_out .shopBox .slide.active {
+  -webkit-animation-name: slide;
+          animation-name: slide;
+  -webkit-animation-timing-function: ease;
+          animation-timing-function: ease;
+  -webkit-animation-duration: 4s;
+          animation-duration: 4s;
+  -webkit-animation-iteration-count: 1;
+          animation-iteration-count: 1;
+}
+
+.right_content .store_out .shopBox .slide:nth-child(2) {
+  -webkit-animation-delay: 0.2s;
+          animation-delay: 0.2s;
+}
+
+.right_content .store_out .shopBox .slide:nth-child(3) {
+  -webkit-animation-delay: 0.4s;
+          animation-delay: 0.4s;
+}
+
+.right_content .store_out .shopBox .slide:nth-child(4) {
+  -webkit-animation-delay: 0.6s;
+          animation-delay: 0.6s;
+}
+
+.right_content .store_out .shopBox .slide:nth-child(5) {
+  -webkit-animation-delay: 0.8s;
+          animation-delay: 0.8s;
+}
+
+.right_content .store_out .shopBox .slide:nth-child(6) {
+  -webkit-animation-delay: 1s;
+          animation-delay: 1s;
+}
+
+.right_content .store_out .shopBox .slide:nth-child(7) {
+  -webkit-animation-delay: 1.2s;
+          animation-delay: 1.2s;
+}
+
+.right_content .store_out .shopBox .slide:nth-child(8) {
+  -webkit-animation-delay: 1.4s;
+          animation-delay: 1.4s;
+}
+
+.right_content .store_out .shopBox .slide:nth-child(9) {
+  -webkit-animation-delay: 1.6s;
+          animation-delay: 1.6s;
 }
 
 .right_content .store_out .shopBox .shop {
