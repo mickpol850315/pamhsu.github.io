@@ -14,4 +14,15 @@
       nextEl: '.swiper-button-next',
       prevEl: '.swiper-button-prev',
     },
+    breakpoints: {
+      // when window width is >= 320px
+      320: {
+        slidesPerView: 1,
+        spaceBetween: 20
+      },
+      769: {
+        slidesPerView: 3,
+        spaceBetween: 40
+      }
+    }
   });
