@@ -257,12 +257,12 @@ function getStoreData(store_array) {
 
         row.innerHTML +=
             ` <div class="col-6  col-md-4">
-        <div class="shop">
-            <h4>  ${item.shop_name}</h4>
-            <p>  ${item.shop_number}</p>
-            <p>${item.shop_address}</p>
-        </div>
-    </div>`
+                    <div class="shop">
+                        <h4>  ${item.shop_name}</h4>
+                        <p>  ${item.shop_number}</p>
+                        <p>${item.shop_address}</p>
+                    </div>
+                </div>`
 
     });
 
