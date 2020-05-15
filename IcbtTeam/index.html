@@ -36,7 +36,7 @@
             -webkit-box-shadow: 7px 1px 10px #555555;
             box-shadow: 7px 1px 10px #555;
             transition: 1s;
-           
+
         }
 
         .index_left_navbar.active {
@@ -103,8 +103,8 @@
 
             /* 未展開效果 */
             /* opacity: 0; */
-            color:white;
-            font-family:"Noto Sans TC" ;
+            color: white;
+            font-family: "Noto Sans TC";
         }
 
         .index_left_navbar .item {
@@ -442,12 +442,24 @@
 
         }
 
+        /* menuicon */
         .menu_icon {
             position: fixed;
-            right: 10px;
-            bottom: 10px;
+            right: 20px;
+            bottom: 20px;
             z-index: 99;
             opacity: 0.7;
+        }
+
+        .icon_img {
+            animation: zoom 2s 1 ease-in-out;
+            animation-iteration-count: infinite;
+        }
+
+        @keyframes zoom {
+            50% {
+                transform: scale(1.2, 1.2);
+            }
         }
     </style>
 </head>
@@ -533,9 +545,8 @@
     <div class="enter">
         <img src="./img/banner/enter.png" alt="">
     </div>
-
     <!-- menu icon -->
-    <div class="menu_icon"><a href="Menu.html"><img src="./img/menu/menu-icon.png" alt=""></a></div>
+<div class="menu_icon"><a  href="Menu.html"><img class="icon_img" src="./img/menu/menu-icon.png" alt=""></a></div>
 
     <!-- jquery -->
     <script src="https://code.jquery.com/jquery-3.5.0.min.js"
