@@ -223,17 +223,16 @@ $("#poly_center").click(function () {
     $('.slide:nth-child(8)').addClass('active');
     $('.slide:nth-child(9)').addClass('active');
 
-    $('.shopBox .row').html('');
-
-    setTimeout(myStopFunction(), 20000);
-
-
+    var slide = document.querySelector(".slide:nth-child(9)");
+    slide.addEventListener('animationend', function () {
+        myStopFunction();
+    });
 });
 
 
 
 function myStopFunction() {
-
+    $('.shopBox .row').html('');
     $('.img_top, .img_center, .img_south, .img_east').removeClass('click_active');
 
     $('.img_center').addClass('click_active');
