@@ -15,23 +15,96 @@
     <link rel="stylesheet" href="template.css">
 
     <style>
-        /* 自訂樣式 */
+        .mobile_container {
+            width: 100%;
+            height: 100vh;
+            background-color: #3B465D;
+            font-family: "Noto Sans TC";
+            color: white;
+        }
+
+        /* hover位置 */
+        .mobile_container .logo {
+            margin-top: 50px;
+            position: relative;
+            /* 未展開效果 */
+            left: 97px;
+            /* 展開效果 */
+            /* left:59.5px; */
+        }
+
+
+
+        .mobile_container .item {
+            position: relative;
+        }
+
+        .mobile_container .navitems a:hover {
+
+            text-decoration: none;
+        }
+
+        .mobile_container .navitems .nav_icon.active {
+            width: 14px;
+            height: 14px;
+
+            background-image: url("./img/leaves.svg");
+            background-repeat: no-repeat;
+            display: block;
+            position: absolute;
+            top: 10px;
+            left: -20px;
+        }
+
+        .mobile_container ul {
+            list-style: none;
+
+            font-size: 48px;
+
+            padding: 0;
+            margin: 0 auto;
+            display: table;
+            margin-top: 50px;
+        }
+
+
+
+        .mobile_container a {
+            color: white;
+        }
+
+        a {
+            text-decoration: none;
+
+        }
+
+        /* .mobile_container .navitems img {
+            width: 100px;
+            z-index: 99;
+        } */
+
+        .mobile_container li {
+            margin-bottom: 50px;
+
+            /* background-color: blue; */
+        }
+
+        .letterSpace {
+            letter-spacing: 0.35em;
+        }
     </style>
-
-
 </head>
 
 <body>
-    <!-- <div class="box" style="background-color: red;">
-        <img src="./img/leaves.svg" alt="">
-    </div> -->
-
-    <div class="left_navbar  ">
-        <a href="index.html">
-            <div class="logo">
-                <img src="./img/logo.png">
-            </div>
-        </a>
+    <section class="mobile_container  ">
+        <div class="mobile_navbar  ">
+            <div class="logo"><a href="index.html"><img src="./img/cornerLogo.png" width="110px"></a></div>
+            <a href="mobile_menu.html">
+                <div class="hamburger">
+                    <img src="./img/close.svg" width="36px">
+                </div>
+            </a>
+        </div>
 
         <div class="navitems">
             <ul>
@@ -76,30 +149,7 @@
 
             </ul>
         </div>
-    </div>
-
-    <div class="mobile_navbar   ">
-
-        <div class="logo"><a href="index.html"><img src="./img/cornerLogo.png" width="110px"></a></div>
-    
-        <a href="mobile_menu.html">
-            <div class="hamburger">
-                <img src="./img/hamburger.svg" width="36px">
-            </div>
-        </a>
-    
-    </div>
-
-<!-- menu icon -->
-<div class="menu_icon"><a  href="Menu.html"><img class="icon_img" src="./img/menu/menu-icon.png" alt=""></a></div>
-
-    <section class="right_content">
-        <!-- 輸入該區域的HTML內容 -->
     </section>
-
-    <footer >
-       © 2020 五十嵐 DESIGN BY ICBT
-    </footer>
 
 
     <!-- jquery -->
@@ -117,16 +167,8 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.0.1/TweenMax.min.js"></script>
     <!-- swiper -->
     <script src="https://unpkg.com/swiper/js/swiper.min.js"></script>
-    <!-- parallax js -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/parallax/3.1.0/parallax.min.js"></script>
     <!-- 樣版js -->
     <script src="template.js"></script>
-
-    <script>
-        // 程式碼
-
-    </script>
-
 </body>
 
 </html>
