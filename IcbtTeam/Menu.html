@@ -24,25 +24,95 @@
             background-repeat: no-repeat; 
 
         }*/
+        .right_content {
+            background-color: #9DB6BB;
+        }
+
         .menu img {
             width: 100%;
         }
-        .menu .img2{
+
+        .menu .img2 {
             display: none;
         }
 
+        .menu .img3 {
+            display: none;
+        }
 
         .menu {
             height: 100%;
             margin: auto;
         }
 
-        @media(max-width: 768px) {
-            .menu .img1{display: none;}
-            .menu .img2{
-                display: block;
-                margin-top: 60px;    
+        @media (max-width:1024px) {
+            .left_navbar {
+                display: none;
             }
+
+            .mobile_navbar {
+                display: flex !important;
+                justify-content: space-between;
+                align-items: center;
+                z-index: 99;
+                position: fixed;
+                width: 100%;
+                top: 0;
+                left: 0;
+                padding: 10px 20px;
+                background-color: #3B465D;
+            }
+
+            .right_content {
+                width: 100%;
+                margin-left: 0;
+            }
+
+            footer {
+                margin: 0;
+                width: 100%;
+            }
+        }
+
+        @media(max-width: 1024px) {
+            .menu .img1 {
+                display: none;
+            }
+
+            .menu .img2 {
+                display: none;
+            }
+
+            .menu .img3 {
+                display: block;
+                margin-top: 60px;
+            }
+
+            .left_navbar {
+                display: none;
+            }
+
+            .right_content {
+                width: 100%;
+                margin-left: 0;
+            }
+
+        }
+
+        @media(max-width: 768px) {
+            .menu .img1 {
+                display: none;
+            }
+
+            .menu .img2 {
+                display: block;
+                margin-top: 60px;
+            }
+
+            .menu .img3 {
+                display: none;
+            }
+
             .left_navbar {
                 display: none;
             }
@@ -122,11 +192,13 @@
             </div>
         </a>
     </div>
-
+    <!-- menu icon -->
+    <div class="menu_icon"><a href="Menu.html"><img class="icon_img" src="./img/menu/menu-icon.png" alt=""></a></div>
     <section class="right_content">
         <div class="menu">
-            <img class="img1"src="./img/menu/菜單.jpg">
-            <img class="img2" src="./img/menu/手機板菜單.png" alt="">
+            <img class="img1" src="./img/menu/菜單.jpg">
+            <img class="img2" src="./img/menu/手機板菜單.png">
+            <img class="img3" src="./img/menu/平板版菜單.jpg">
         </div>
     </section>
 
