@@ -95,7 +95,7 @@ span:focus {
     outline: none;
 }
 .img1:hover{
-    background-image: url("./img/news/地球日\(圖\).jpg") !important;
+    background-image: url("./img/news/新品上市\(圖\).jpg") !important;
     background-position: center;
     background-size: cover;
 }
@@ -105,22 +105,22 @@ span:focus {
     background-size: cover;
 }
 .img3:hover{
-    background-image: url("./img/news/新品上市\(圖\).jpg") !important;
+    background-image: url("./img/news/疾病退散\(圖\).jpg") !important;
     background-position: initial;
     background-size: cover;
 }
 .img4:hover{
-    background-image: url("./img/news/地球日\(圖\).jpg") !important;
+    background-image: url("./img/news/新品上市\(圖\).jpg") !important;
     background-position: center;
     background-size: cover;
 }
 .img5:hover{
-    background-image: url("./img/news/疾病退散\(圖\).jpg") !important;
+    background-image: url("./img/news/地球日\(圖\).jpg") !important;
     background-position: center;
     background-size: cover;
 }
 .img6:hover{
-    background-image: url("./img/news/新品上市\(圖\).jpg") !important;
+    background-image: url("./img/news/疾病退散\(圖\).jpg") !important;
     background-position: initial;
     background-size: cover;
 }
