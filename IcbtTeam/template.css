@@ -148,6 +148,8 @@ footer{
 
     .mobile_navbar{
         display: flex!important;
+        justify-content: space-between;
+        align-items: center;
         z-index:99;
         position: fixed;
         width: 100%;
@@ -158,9 +160,7 @@ footer{
     }
 
     .mobile_navbar .hamburger{
-        width:50px;
-        height:50px;
-        background-color:lightblue;
+         
     }
 
     .right_content {
