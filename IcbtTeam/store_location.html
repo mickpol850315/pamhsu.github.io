@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>store_location</title>
     <!-- bootstrap -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
         integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
@@ -14,6 +14,7 @@
     <!-- 樣版css -->
     <link rel="stylesheet" href="template.css">
     <link rel="stylesheet" href="store_location.css">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
 
     <style>
         /* 自訂樣式 */
@@ -24,7 +25,7 @@
 
 <body>
 
-    <div class="left_navbar ">
+    <div class="left_navbar">
         <a href="index.html">
             <div class="logo">
                 <img src="./img/logo.png">
@@ -74,14 +75,25 @@
             </ul>
         </div>
     </div>
+    <div class="mobile_navbar">
 
+        <div class="logo"><a href="index.html"><img src="./img/cornerLogo.png" width="110px"></a></div>
+
+        <a href="mobile_menu.html">
+            <div class="hamburger">
+                <img src="./img/hamburger.svg" width="36px">
+            </div>
+        </a>
+
+    </div>
     <div class="menu_icon"><a href="Menu.html"><img src="./img/menu/menu-icon.png" alt=""></a></div>
 
     <section class="right_content">
         <div class="store_out">
             <div class="container-fluid">
                 <div class="row">
-                    <div class="col-12   col-md-4  left_box">
+                    <!-- <div data-aos="fade-up-right"></div> -->
+                    <div class="col-12  col-md-4  left_box" data-aos="fade-up-right">
                         <div class="mapBox">
                             <img class="map_border" src="./img/taiwan_map/taiwan_all.png" alt=""
                                 usemap="#taiwan_workmap">
@@ -111,8 +123,8 @@
                         </div>
 
                     </div>
-
-                    <div class="col-12  col-md-8  right_box">
+                    <!-- <div data-aos="fade-up-left"></div> -->
+                    <div class="col-12  col-md-8  right_box" data-aos="fade-up-left">
                         <div class="shopBox">
                             <div class="row">
                                 <div class="col-6 col-sm-4 col-md-4">
@@ -207,9 +219,9 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.0.1/TweenMax.min.js"></script>
     <!-- swiper -->
     <script src="https://unpkg.com/swiper/js/swiper.min.js"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <!-- 樣版js -->
     <script src="template.js"></script>
-
     <script src="store_location.js">
 
     </script>

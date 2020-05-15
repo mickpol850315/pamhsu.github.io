@@ -147,6 +147,12 @@
   padding-top: 12vh;
 }
 
+@media all and (max-width: 1024px) {
+  .right_content .store_out .right_box {
+    padding-top: 20vh;
+  }
+}
+
 @media all and (max-width: 768px) {
   .right_content .store_out .right_box {
     padding-top: 2vh;
@@ -157,6 +163,22 @@
   padding: 30px 10px 50px;
   margin-bottom: 30px;
   border-bottom: 2px solid #3b465d;
+}
+
+@media all and (max-width: 1024px) {
+  .right_content .store_out .shopBox .shop {
+    padding: 30px 10px 50px;
+    margin-bottom: 30px;
+    border-bottom: 2px solid #3b465d;
+  }
+}
+
+@media all and (max-width: 768px) {
+  .right_content .store_out .shopBox .shop {
+    padding: 10px 5px 0 5px;
+    margin-bottom: 10px;
+    border-bottom: 2px solid #3b465d;
+  }
 }
 
 .right_content .store_out .shopBox .shop h4 {
