@@ -156,6 +156,7 @@
 @media all and (max-width: 768px) {
   .right_content .store_out .right_box {
     padding-top: 2vh;
+    padding-right: 15px;
   }
 }
 
