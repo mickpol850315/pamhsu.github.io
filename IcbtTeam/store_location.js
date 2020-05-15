@@ -1,3 +1,9 @@
+AOS.init({
+
+    delay: 2,
+    duration: 1000,
+});
+
 var stores = {
 
     north: [{
