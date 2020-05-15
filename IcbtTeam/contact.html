@@ -4,13 +4,14 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>contact_us</title>
     <link href='https://fonts.googleapis.com/css?family=Asap:400,700' rel='stylesheet' type='text/css'>
     <link rel="stylesheet" href="https://unpkg.com/swiper/css/swiper.min.css">
     <link rel="stylesheet" href="template.css">
     <link rel="stylesheet" href="contact.css">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css"
         integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
 
     <style>
         /* 自訂樣式 */
@@ -20,7 +21,6 @@
 </head>
 
 <body>
-    <div class="menu_icon"><a href="Menu.html"><img src="./img/menu/menu-icon.png" alt=""></a></div>
     <div class="left_navbar ">
         <a href="index.html">
             <div class="logo">
@@ -75,13 +75,11 @@
     <div class="menu_icon"><a href="Menu.html"><img src="./img/menu/menu-icon.png" alt=""></a></div>
 
     <section class="right_content" style="background-image: url('./img/contact_img/Contact2.jpg');">
-
-
-        <div class="container-fluid">
+        <div class="container-fluid" data-aos="fade-left">
             <div class="row">
-                <div class="col-12 col-md-6">
+                <div class="col-12 col-md-6 left">
                 </div>
-                <div class="col-12 col-md-6">
+                <div class="col-12 col-md-6 display">
                     <div class="contact_box_out">
                         <div class="contact_box_in">
                             <h1 class="contact_size">contact</h1>
@@ -137,9 +135,10 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.0.1/TweenMax.min.js"></script>
     <script src="https://unpkg.com/swiper/js/swiper.min.js"></script>
     <script src="template.js"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
 
-    <script>
-        // 程式碼
+    <script src="contact.js">
+
     </script>
 
 </body>

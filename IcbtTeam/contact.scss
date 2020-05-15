@@ -1,10 +1,8 @@
-
 $font_family: "Noto Sans TC";
 $font-size:16px;
 $color:#3b465d;
 $placeholder_color:#534741;
 $letter-spacing:0.05em;
-
 
 .right_content {
     font-family: $font_family;
@@ -14,27 +12,57 @@ $letter-spacing:0.05em;
     background-size: cover;
     height: 100vh;
 
+    @media all and (max-width: 768px) {
+        background-image: unset !important;
+        background-color: #f7b9a4;
+    }
 
+    .left {
+        @media all and (max-width: 768px) {
+            display: none;
+        }
+    }
+
+    .display {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        @media (max-width: 768px) {
+            width: 100%;
+            flex: 0 0 100%;
+            max-width: 100%;
+            height: 100%;
+        }
+    }
 
     .contact_box_out {
 
         display: flex;
         justify-content: center;
         align-items: center;
-        padding: 100px 0 0 0;
+        padding-top: 100px;
 
-        @media all and (max-width: 375px) {
-            padding: 20px 0;
+        @media all and (min-width: 1024px) {
+            padding: 120px 60px 0 0;
+            width: 100%;
         }
-       
-       
+
+        @media all and (max-width: 414px) {
+            padding-top: 30px;
+            height: 100%;
+        }
+
+        @media all and (max-width: 320px) {
+            padding-top: 10px;
+            
+        }
+
         .contact_size {
             color: $color;
             font-size: 120px;
             text-shadow: 7px -6px 10px #686868;
             letter-spacing: $letter-spacing;
-
-
 
             //平板
             @media all and (min-width: 760px) and (max-width: 959px) {
@@ -55,7 +83,7 @@ $letter-spacing:0.05em;
         .mar_top {
             margin-top: 50px;
 
-            @media all and (max-width: 375px) {
+            @media all and (max-width: 414px) {
                 margin-top: 20px;
             }
 
@@ -65,24 +93,17 @@ $letter-spacing:0.05em;
                 padding: 20px 0;
                 background-color: unset;
                 border-radius: unset;
-                // &:focus{
-                //     color: #495057;
-                //     // background-color: #fff;
-                //     border-color:$color;
-                //     outline: 0;
-                //     box-shadow: 0 0 0 0.2rem $color;
-                   
-                // }
 
                 @media all and (max-width: 375px) {
                     padding: 0;
                 }
             }
-           
+
             ::placeholder {
-                color:$placeholder_color;
-                opacity: 0.7; 
-              }
+                color: $placeholder_color;
+                opacity: 0.7;
+            }
+
             .textarea_border {
                 border: 2px solid $color;
             }
@@ -94,12 +115,12 @@ $letter-spacing:0.05em;
         display: flex;
         justify-content: flex-end;
 
-       
-
         .btn-outline-secondary {
-            color:#534741;
+            font-family: $font_family;
+            letter-spacing: $letter-spacing;
+            color: #eee;
             border-color: #000;
-            background-color: #fbf3ef;
+            background-color: $color;
         }
     }
 }
