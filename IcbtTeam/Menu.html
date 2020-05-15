@@ -24,48 +24,32 @@
             background-repeat: no-repeat; 
 
         }*/
-        div img {
+        .menu img {
+            width: 100%;
+        }
+        .menu .img2{
             display: none;
-            max-width: 100%;
-            height: auto;
         }
 
-        div img:nth-child(1) {
-            display: block;
-        }
 
         .menu {
-            max-width: 100%;
-            min-height: 100%;
-        }
-
-        @media (min-width: 992px) {
-            div img:nth-child(1) {
-                display: block;
-            }
+            height: 100%;
+            margin: auto;
         }
 
         @media(max-width: 768px) {
+            .menu .img1{display: none;}
+            .menu .img2{
+                display: block;
+                margin-top: 60px;    
+            }
             .left_navbar {
                 display: none;
-            }
-
-            div img:nth-child(1) {
-                display: none;
-            }
-
-            div img:nth-child(2) {
-                display: block;
             }
 
             .right_content {
                 width: 100%;
                 margin-left: 0;
-            }
-
-            footer {
-                margin: 0;
-                width: 100%;
             }
 
         }
@@ -140,10 +124,9 @@
     </div>
 
     <section class="right_content">
-        <!-- 輸入該區域的HTML內容 -->
         <div class="menu">
-            <img src="./img/menu/菜單.jpg">
-            <img src="./img/menu/手機板菜單.png">
+            <img class="img1"src="./img/menu/菜單.jpg">
+            <img class="img2" src="./img/menu/手機板菜單.png" alt="">
         </div>
     </section>
 
