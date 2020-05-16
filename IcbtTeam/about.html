@@ -112,7 +112,7 @@
 
         .year1994 {
             /* 1994 */
-            display: none;
+            opacity: 0;
             position: absolute;
             /* 未展開 */
             right: 8px;
@@ -124,7 +124,7 @@
 
         .year1997 {
             /* 1997 */
-            display: none;
+            opacity: 0;
             position: absolute;
             /*未展開*/
             left: 0px;
@@ -226,6 +226,10 @@
             top: 786px;
         }
 
+        .mobile_years{
+                display: none;
+            }
+
 
         .line_content .line {
             width: 100%;
@@ -241,22 +245,7 @@
             margin-top: -12px;
         }
 
-        /* .lineT {
-            width: 100%;
-            font-size: 26px;
-        }
 
-        .lineB {
-            width: 100%;
-            font-size: 18px;
-        } */
-
-        /* nav {
-            position: sticky;
-            top: 0;
-        } */
-
-        /* 0.511 */
         .drinking {
 
             position: relative;
@@ -270,9 +259,13 @@
 
         }
 
+        .mobile_hidden {
+            display: none;
+        }
+
         @media (max-width: 768px) {
             .about {
-                padding: 122px 0 100px 0;
+                padding: 122px 0 60px 0;
             }
 
             .about .titlepart img {
@@ -313,20 +306,139 @@
             }
 
             .drinking {
-
-        
-                background: url(./img/about/mobile_cup.png) 0 0 no-repeat;
+                position: relative;
+                z-index: 1;
+                background: url(./img/about/mobile_cup.png) 0 0 no-repeat ;
                 width: 147px;
-                height: 228px;
-       
-                background-position-y: -8819px;
-
-
+                height: 299px;
+                margin: unset;
+                left: 50%;
+                transform: translateX(-50%);
+                background-position-y: -2989px;
             }
 
-            .years{
-                display:none;
+            .margin_top_12 {
+                margin-top: -12px;
             }
+
+
+            .mobile_years{
+                display: block;
+            }
+
+            .year1994 {
+                /* 1994 */
+                opacity: 1;
+                position: absolute;
+                /* 未展開 */
+                right: 2px;
+                /* 展開 */
+                /* right: -84px; */
+
+                top: 95px;
+            }
+
+            .year1997 {
+                /* 1997 */
+                opacity: 1;
+                position: absolute;
+                /*未展開*/
+                left: 0px;
+                /*展開*/
+                /* left: -54px; */
+                top: 100px;
+            }
+
+            .year2000 {
+                /* 2000 */
+                opacity: 1;
+                position: absolute;
+                /* 未展開 */
+                right: 10px;
+                /* 展開 */
+                /* right: -58px; */
+                top: 126px;
+              
+            }
+
+            .year2002 {
+                /* 2002 */
+                opacity: 1;
+                position: absolute;
+                /*未展開*/
+                left: 4px;
+                /*展開*/
+                /* left: -84px; */
+                top: 135px;
+            }
+
+            .year2003 {
+                /* 2003 */
+                opacity: 1;
+                position: absolute;
+                /* 未展開 */
+                right: 10px;
+                /* 展開 */
+                /* right: -88px; */
+                top: 157px;
+            }
+
+            .year2005 {
+                /* 2005 */
+                opacity: 1;
+                position: absolute;
+                /* 未展開 */
+                left: 8px;
+                /* 展開 */
+                /* left: -55px; */
+                top: 172px;
+            }
+
+            .year2006 {
+                /* 2006 */
+                opacity: 1;
+                position: absolute;
+                /* 未展開 */
+                right: 15px;
+                /* 展開 */
+                /* right: -46px; */
+                top: 199px;
+            }
+
+            .year2012 {
+                /* 2012 */
+                opacity: 1;
+                position: absolute;
+                /* 未展開 */
+                left: 8px;
+                /* 展開 */
+                /* left: -67px; */
+                top: 222px;
+            }
+
+            .year2016 {
+                /* 2016 */
+                opacity: 1;
+                position: absolute;
+                /* 未展開 */
+                right: 18px;
+                /* 展開 */
+                /* right: -58px; */
+                top: 243px;
+            }
+
+            .year2017 {
+                /* 2017 */
+                opacity: 1;
+                position: absolute;
+                /* 未展開 */
+                left:20px;
+                /* 展開 */
+                /* left: -62px; */
+                top: 262px;
+            }
+
+
         }
     </style>
 
@@ -402,7 +514,7 @@
 
     </div>
 
-    <div class="menu_icon"><a  href="Menu.html"><img class="icon_img" src="./img/menu/menu-icon.png" alt=""></a></div>
+    <div class="menu_icon"><a href="Menu.html"><img class="icon_img" src="./img/menu/menu-icon.png" alt=""></a></div>
 
     <section class="right_content">
         <div class="about text-center">
@@ -426,7 +538,7 @@
 
         <div class="timeline ">
             <div class="drinking">
-                <div class="years ">
+                <div class="years hidden">
                     <img class="year year1994 t1" src="./img/about/t1.png" alt="">
                     <img class="year year1997 t2" src="./img/about/t2.png" alt="">
                     <img class="year year2000 t3" src="./img/about/t3.png" alt="">
@@ -437,6 +549,18 @@
                     <img class="year year2012 t8" src="./img/about/t8.png" alt="">
                     <img class="year year2016 t9" src="./img/about/t9.png" alt="">
                     <img class="year year2017 t10" src="./img/about/t10.png" alt="">
+                </div>
+                <div class="mobile_years ">
+                    <img class="year year1994 t1" src="./img/about/mobile_t1.png" alt="">
+                    <img class="year year1997 t2" src="./img/about/mobile_t2.png" alt="">
+                    <img class="year year2000 t3" src="./img/about/mobile_t3.png" alt="">
+                    <img class="year year2002 t4" src="./img/about/mobile_t4.png" alt="">
+                    <img class="year year2003 t5" src="./img/about/mobile_t5.png" alt="">
+                    <img class="year year2005 t6" src="./img/about/mobile_t6.png" alt="">
+                    <img class="year year2006 t7" src="./img/about/mobile_t7.png" alt="">
+                    <img class="year year2012 t8" src="./img/about/mobile_t8.png" alt="">
+                    <img class="year year2016 t9" src="./img/about/mobile_t9.png" alt="">
+                    <img class="year year2017 t10" src="./img/about/mobile_t10.png" alt="">
                 </div>
             </div>
 
@@ -488,163 +612,82 @@
 
         var arrPos = ['right', 'left', 'right', 'left', 'right', 'left', 'right', 'left', 'right', 'left'];
         var arrRightPos = [-242, -155, -161, -246, -221, -155, -127, -195, -165, -179];
+        var iheight = 882
+        // var selectorName = 't';
 
+        console.log("screen.width", screen.width);
 
-        $(".drinking").click(function () {
-
-        });
-
-        // $(window).scroll(function () {
-        // console.log($(window).scrollTop());
+        if (screen.width <= 768) {
+            arrRightPos = [-84, -54, -58, -84, -88, -55, -46, -67, -58, -62];
+            iheight = 299;
+            // selectorName = 'mobile_t';
+        }
 
         $(window).on('wheel', function (e) {
             if ($(window).scrollTop() + $(window).height() >= $("body").height()) {
-                //滾軸滾2次才會下一個動畫
-                //if (imgIndex % 2 == 0) {
-
-
-                console.log(index);
 
                 var delta = e.originalEvent.deltaY;
                 if (delta > 0) {
                     console.log("down");
-                    if (imgIndex % 3 == 0) {
-                        console.log(imgIndex + "/3=", imgIndex / 3);
-
-                        var index = (imgIndex == 0) ? 0 : imgIndex / 3;
-                        var bgPos = $('.drinking').css('background-position-y');
-                        var posValue = parseInt(bgPos.substring(0, bgPos.length - 2)) + 882;
-                        console.log("posvalue=", posValue);
-
-                        if (posValue > 882) {
-                            // 直到飲料喝完才顯示footer
-                            isStop = true;
-                            //取得目前未有footer的高度
-                            var oriTop = $(window).scrollTop();
-                            //延遲1s，顯示footer，主要是讓user 滾動滑鼠時，不要一次到底，停留在喝完飲料的畫面
-                            setTimeout(function () {
-                                $("footer").show();
-                            }, 1000)
-                            //1s後，footer出現，要讓footer在螢幕可視範圍的下方
-                            $(window).scrollTop(oriTop)
-                        } else {
-                            // 飲料未喝完繼續喝飲料
-                            $('.drinking').css('background-position-y', posValue + 'px');
-                            if (index <= 9) {
-                                imgNumber = index + 1;
-                                if (arrPos[index] == "right") {
-                                    TweenLite.to($('.t' + imgNumber), 2, { css: { right: arrRightPos[index], display: 'block', opacity: 1 }, ease: Power2.easeOut });
-                                } else {
-                                    TweenLite.to($('.t' + imgNumber), 2, { css: { left: arrRightPos[index], display: 'block', opacity: 1 }, ease: Power2.easeOut });
-                                }
-
-
-                            }
-
-
-                        }
-
-                    }
+                    changeImg(imgIndex, iheight)
                     imgIndex += 1;
                 }
                 else {// going up  
                     console.log("up");
                 }
-
-
-                //}
-
-
-
             }
         });
 
-                // document.querySelector("body").onwheel = function () {
-                //     var bgPos = $('.drinking').css('background-position-y');
-                //     var posValue = parseInt(bgPos.substring(0, bgPos.length - 2)) + 539;
-                //     if (posValue > 0) {
-                //         // 直到飲料喝完才顯示footer
-                //         isStop = true;
-                //         //取得目前未有footer的高度
-                //         var oriTop = $(window).scrollTop();
-                //         //延遲1s，顯示footer，主要是讓user 滾動滑鼠時，不要一次到底，停留在喝完飲料的畫面
-                //         setTimeout(function () {
-                //             $("footer").show();
-                //         }, 1000)
-                //         //1s後，footer出現，要讓footer在螢幕可視範圍的下方
-                //         $(window).scrollTop(oriTop)
 
-                //     } else {
-                //         // 飲料未喝完繼續喝飲料
-                //         $('.drinking').css('background-position-y', posValue + 'px');
-                //     }
+        //changeImg(imgIndex,882,'t')
+
+        function changeImg(imgIndex, iheight) {
+
+            //滾軸滾3次才會下一個動畫
+            if (imgIndex % 3 == 0) {
+                console.log(imgIndex + "/3=", imgIndex / 3);
+
+                var index = (imgIndex == 0) ? 0 : imgIndex / 3;
+                var bgPos = $('.drinking').css('background-position-y');
+                var posValue = parseInt(bgPos.substring(0, bgPos.length - 2)) + iheight;
+                console.log("posvalue=", posValue);
+
+                if (posValue > iheight) {
+                    // 直到飲料喝完才顯示footer
+                    isStop = true;
+                    //取得目前未有footer的高度
+                    var oriTop = $(window).scrollTop();
+                    //延遲1s，顯示footer，主要是讓user 滾動滑鼠時，不要一次到底，停留在喝完飲料的畫面
+                    setTimeout(function () {
+                        $("footer").show();
+                    }, 1000)
+                    //1s後，footer出現，要讓footer在螢幕可視範圍的下方
+                    $(window).scrollTop(oriTop)
+                } else {
+                    // 飲料未喝完繼續喝飲料
+                    $('.drinking').css('background-position-y', posValue + 'px');
+                    if (index <= 9) {
+                        var imgNumber = index + 1;
+                        if (arrPos[index] == "right") {
+                            TweenLite.to($('.t' + imgNumber), 2, { css: { right: arrRightPos[index], display: 'block', opacity: 1 }, ease: Power2.easeOut });
+                        } else {
+                            TweenLite.to($('.t' + imgNumber), 2, { css: { left: arrRightPos[index], display: 'block', opacity: 1 }, ease: Power2.easeOut });
+                        }
+
+                    }
+
+                }
+
+            }
+        }
 
 
-                // };
 
 
-        // });
 
 
-        // document.addEventListener('scroll', function (x) {
-        //     console.log(window.scrollY)
 
 
-        //     if (scrollY > 400) {
-        //         var pos = 4;
-        //         var posnext = pos + 1;
-        //         var img1 = document.querySelector(".drinking .dringimg:nth-child(" + pos + ")");
-        //         $(img1).removeClass("active");
-        //         $(img1).addClass("none");
-
-        //         var imgnext = document.querySelector(".drinking .dringimg:nth-child(" + posnext + ")");
-        //         $(imgnext).removeClass("none");
-        //         $(imgnext).addClass("active");
-        //         TweenLite.to($('.year2003'), 1, { css: { 'right': -280, display: 'block' }, ease: Power2.easeOut });
-        //     }
-        //     else if (scrollY > 350) {
-        //         var pos = 3;
-        //         var posnext = pos + 1;
-        //         var img1 = document.querySelector(".drinking .dringimg:nth-child(" + pos + ")");
-        //         $(img1).removeClass("active");
-        //         $(img1).addClass("none");
-
-        //         var imgnext = document.querySelector(".drinking .dringimg:nth-child(" + posnext + ")");
-        //         $(imgnext).removeClass("none");
-        //         $(imgnext).addClass("active");
-        //         TweenLite.to($('.year2002'), 1, { css: { 'left': -255, display: 'block' }, ease: Power2.easeOut });
-        //     }
-        //     else if (scrollY > 300) {
-        //         var pos = 2;
-        //         var posnext = pos + 1;
-        //         var img1 = document.querySelector(".drinking .dringimg:nth-child(" + pos + ")");
-        //         $(img1).removeClass("active");
-        //         $(img1).addClass("none");
-
-        //         var imgnext = document.querySelector(".drinking .dringimg:nth-child(" + posnext + ")");
-        //         $(imgnext).removeClass("none");
-        //         $(imgnext).addClass("active");
-        //         TweenLite.to($('.year2000'), 1, { css: { 'right': -200, display: 'block' }, ease: Power2.easeOut });
-        //     }
-        //     else if (scrollY > 250) {
-        //         var pos = 1;
-        //         var posnext = pos + 1;
-        //         var img1 = document.querySelector(".drinking .dringimg:nth-child(" + pos + ")");
-        //         console.log(img1);
-        //         $(img1).removeClass("active");
-        //         $(img1).addClass("none");
-
-        //         var imgnext = document.querySelector(".drinking .dringimg:nth-child(" + posnext + ")");
-        //         $(imgnext).removeClass("none");
-        //         $(imgnext).addClass("active");
-        //         TweenLite.to($('.year1997'), 1, { css: { 'left': -165, display: 'block' }, ease: Power2.easeOut });
-        //     }
-        //     else if (scrollY > 200) {
-
-        //         TweenLite.to($('.year1994'), 1, { css: { 'right': -255, display: 'block' }, ease: Power2.easeOut });
-        //     }
-
-        // }, false)
     </script>
 
 </body>
