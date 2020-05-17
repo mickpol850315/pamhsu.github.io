@@ -54,7 +54,7 @@ $(document).on("pageinit", ".mobile_navbar_fully .mobile_items", function () {
 	var nav_items = document.querySelectorAll(".mobile_navbar_fully .mobile_items");
 	nav_items.forEach(function (item, index) {
 
-		$(item).on('tap', function () {
+		$(item).on('click touchstart', function () {
 			var nav_icon = item.querySelector('.nav_icon');
 			console.log(nav_icon);
 			$(nav_icon).addClass("active");
