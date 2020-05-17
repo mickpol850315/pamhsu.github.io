@@ -48,10 +48,13 @@ nav_items.forEach(function (item, index) {
 
 
 // 手機版navbar的每個項目hover會有一個icon
+$(document).on("pageinit","#pageone",function(){
+
+	// 此处是 jQuery 事件...
 var nav_items = document.querySelectorAll(".mobile_navbar_fully .mobile_items");
 nav_items.forEach(function (item, index) {
 
-	$(item).on('touchstart click', function(){ 
+	$(item).on('tap', function(){ 
 		var nav_icon = item.querySelector('.nav_icon');
 		console.log(nav_icon);
 		$(nav_icon).addClass("active");		
@@ -67,7 +70,9 @@ nav_items.forEach(function (item, index) {
 	// 	$(nav_icon).removeClass("active");
 	// });
 
-});
+}); 
+ });
+
 
 
 
