@@ -7,6 +7,7 @@ AOS.init({
 var stores = {
 
     north: [{
+            local: '北部門店',
             shop_name: '基隆廟口店',
             shop_number: '02-24211682',
             shop_address: '基隆市仁愛區愛四路1號'
@@ -52,7 +53,9 @@ var stores = {
             shop_address: '新竹縣竹北市中正西路124號'
         }
     ],
+
     central: [{
+            local: '中部門店',
             shop_name: '竹南中正店',
             shop_number: '037-552577',
             shop_address: '苗栗縣竹南鎮中正路263-1號'
@@ -100,6 +103,7 @@ var stores = {
     ],
 
     South: [{
+            local: '南部門店',
             shop_name: '嘉義民雄店',
             shop_number: ' 05-2263022 ',
             shop_address: '嘉義縣民雄鄉東榮路15號'
@@ -147,6 +151,7 @@ var stores = {
     ],
 
     east: [{
+            local: '東部門店',
             shop_name: '台東新生店',
             shop_number: ' 089-345875',
             shop_address: '台東縣台東市新生路532號'
@@ -161,127 +166,112 @@ var stores = {
 
 
 $('#poly_top').hover(function () {
-    $('.img_top, .img_center, .img_south, .img_east').removeClass('active');
-
+    $('.img_top,.img_center, .img_south, .img_east').removeClass('active');
     $('.img_top').addClass('active');
-
-
-
-
 }, function () {
-
-    $('.img_top').removeClass('active');
-
+    // $('.img_top').removeClass('active');
 });
 
+
 $('#poly_center').hover(function () {
-    $('.img_top, .img_center, .img_south, .img_east').removeClass('active');
-
+    $('.img_center, .img_south, .img_east').removeClass('active');
     $('.img_center').addClass('active');
-
 }, function () {
     $('.img_center').removeClass('active');
 });
 
+
 $('#poly_south').hover(function () {
-    $('.img_top, .img_center, .img_south, .img_east').removeClass('active');
-
+    $('.img_center, .img_south, .img_east').removeClass('active');
     $('.img_south').addClass('active');
-
 }, function () {
     $('.img_south').removeClass('active');
 });
 
+
 $('#poly_east').hover(function () {
-    $('.img_top, .img_center, .img_south, .img_east').removeClass('active');
-
+    $('.img_center, .img_south, .img_east').removeClass('active');
     $('.img_east').addClass('active');
-
 }, function () {
     $('.img_east').removeClass('active');
 });
 
+
 $("#poly_top").click(function () {
     $('.shopBox .row').html('');
-
+    $('.img_top').removeClass('active');
     $('.img_top, .img_center, .img_south, .img_east').removeClass('click_active');
-
     $('.img_top').addClass('click_active');
     var row = $('.shopBox .row').html();
     var store_array = stores.north;
     getStoreData(store_array);
 });
 
+
 $("#poly_center").click(function () {
-    $('.slide:nth-child(1)').addClass('active');
-    $('.slide:nth-child(2)').addClass('active');
-    $('.slide:nth-child(3)').addClass('active');
-    $('.slide:nth-child(4)').addClass('active');
-    $('.slide:nth-child(5)').addClass('active');
-    $('.slide:nth-child(6)').addClass('active');
-    $('.slide:nth-child(7)').addClass('active');
-    $('.slide:nth-child(8)').addClass('active');
-    $('.slide:nth-child(9)').addClass('active');
-
-    var slide = document.querySelector(".slide:nth-child(9)");
-    slide.addEventListener('animationend', function () {
-        myStopFunction();
-    });
-});
-
-
-
-function myStopFunction() {
     $('.shopBox .row').html('');
+    $('.img_top').removeClass('active');
     $('.img_top, .img_center, .img_south, .img_east').removeClass('click_active');
-
     $('.img_center').addClass('click_active');
     var row = $('.shopBox .row').html();
-
     var store_array = stores.central;
-
     getStoreData(store_array);
-}
+
+    // $('.slide:nth-child(1)').addClass('active');
+    // $('.slide:nth-child(2)').addClass('active');
+    // $('.slide:nth-child(3)').addClass('active');
+    // $('.slide:nth-child(4)').addClass('active');
+    // $('.slide:nth-child(5)').addClass('active');
+    // $('.slide:nth-child(6)').addClass('active');
+    // $('.slide:nth-child(7)').addClass('active');
+    // $('.slide:nth-child(8)').addClass('active');
+    // $('.slide:nth-child(9)').addClass('active');
+    // var slide = document.querySelector(".slide:nth-child(9)");
+    // slide.addEventListener('animationend', function () {
+    //     myStopFunction();
+    // });
+});
+
+// function myStopFunction() {
+//     $('.shopBox .row').html('');
+//     $('.img_top, .img_center, .img_south, .img_east').removeClass('click_active');
+//     $('.img_center').addClass('click_active');
+//     var row = $('.shopBox .row').html();
+//     var store_array = stores.central;
+//     getStoreData(store_array);
+// }
 
 $("#poly_south").click(function () {
     $('.shopBox .row').html('');
     $('.img_top, .img_center, .img_south, .img_east').removeClass('click_active');
-
     $('.img_south').addClass('click_active');
     var row = $('.shopBox .row').html();
-
     var store_array = stores.South;
-
     getStoreData(store_array);
-
 });
+
+
 $("#poly_east").click(function () {
     $('.shopBox .row').html('');
     $('.img_top, .img_center, .img_south, .img_east').removeClass('click_active');
-
     $('.img_east').addClass('click_active');
     var row = $('.shopBox .row').html();
-
     var store_array = stores.east;
-
     getStoreData(store_array);
-
 });
+
 
 function getStoreData(store_array) {
     $(store_array).each(function (index, item) {
-
         var row = document.querySelector('.shopBox .row');
-
         row.innerHTML +=
-            ` <div class="col-6  col-md-4">
-                    <div class="shop">
-                        <h4>  ${item.shop_name}</h4>
-                        <p>  ${item.shop_number}</p>
-                        <p>${item.shop_address}</p>
-                    </div>
-                </div>`
-
+            ` <div class="col-6 col-sm-4 col-md-4">
+                        <div class="shop">
+                            <h4>  ${item.shop_name}</h4>
+                            <p>  ${item.shop_number}</p>
+                            <p>${item.shop_address}</p>
+                        </div>
+                    </div>`
     });
 
     // if (store_array.length < 7) {
