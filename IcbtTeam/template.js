@@ -50,15 +50,22 @@ nav_items.forEach(function (item, index) {
 // 手機版navbar的每個項目hover會有一個icon
 var nav_items = document.querySelectorAll(".mobile_navbar_fully .mobile_items");
 nav_items.forEach(function (item, index) {
-	$(item).hover(function () {
+
+	$(item).on('touchstart click', function(){ 
 		var nav_icon = item.querySelector('.nav_icon');
 		console.log(nav_icon);
-		$(nav_icon).addClass("active");
-	}, function () {
-		var nav_icon = item.querySelector('.nav_icon');
-		console.log(nav_icon);
-		$(nav_icon).removeClass("active");
+		$(nav_icon).addClass("active");		
 	});
+
+	// $(item).hover(function () {
+	// 	var nav_icon = item.querySelector('.nav_icon');
+	// 	console.log(nav_icon);
+	// 	$(nav_icon).addClass("active");
+	// }, function () {
+	// 	var nav_icon = item.querySelector('.nav_icon');
+	// 	console.log(nav_icon);
+	// 	$(nav_icon).removeClass("active");
+	// });
 
 });
 

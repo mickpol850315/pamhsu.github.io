@@ -52,6 +52,14 @@
             animation-iteration-count: infinite;
         }
 
+        .about .imgbox1 {
+            position: absolute;
+            right: -116px;
+            top: 26px;
+            transform: rotate(15deg);
+            display: none;
+        }
+
         .about h1 {
             margin: 0;
             font-size: 60px;
@@ -70,13 +78,19 @@
             line-height: 48px;
         }
 
+        .about .imgbox2 {
+            position: absolute;
+            left: 100px;
+            display: none;
+        }
+
         .about .margin_bottom_p {
 
             /* margin-bottom: 23px; */
         }
 
         .timeline {
-            /* padding-bottom:20px; */
+            position: relative;
         }
 
 
@@ -226,9 +240,16 @@
             top: 786px;
         }
 
-        .mobile_years{
-                display: none;
-            }
+        .mobile_years {
+            display: none;
+        }
+
+        .timeline  .imgbox3 {
+            position: absolute;
+            right: -55px;
+            bottom:0px;
+            display: none;
+        }
 
 
         .line_content .line {
@@ -261,6 +282,19 @@
 
         .mobile_hidden {
             display: none;
+        }
+
+        @media(min-width: 1920px){
+            .about .imgbox1{
+                
+                display:block;
+            }
+            .about .imgbox2{
+                display:block;
+            }
+            .timeline .imgbox3{
+                display:block;
+            }
         }
 
         @media (max-width: 768px) {
@@ -301,14 +335,12 @@
 
             }
 
-            .hidden {
-                display: none;
-            }
+
 
             .drinking {
                 position: relative;
                 z-index: 1;
-                background: url(./img/about/mobile_cup.png) 0 0 no-repeat ;
+                background: url(./img/about/mobile_cup.png) 0 0 no-repeat;
                 width: 147px;
                 height: 299px;
                 margin: unset;
@@ -322,7 +354,7 @@
             }
 
 
-            .mobile_years{
+            .mobile_years {
                 display: block;
             }
 
@@ -358,7 +390,7 @@
                 /* 展開 */
                 /* right: -58px; */
                 top: 126px;
-              
+
             }
 
             .year2002 {
@@ -432,7 +464,7 @@
                 opacity: 0;
                 position: absolute;
                 /* 未展開 */
-                left:20px;
+                left: 20px;
                 /* 展開 */
                 /* left: -62px; */
                 top: 262px;
@@ -515,7 +547,7 @@
 
 
     </div>
-      
+
     <!-- 手機版上方navbar滿版 -->
     <div class="mobile_navbar_fully  ">
         <a href="index.html">
@@ -523,7 +555,7 @@
                 <img src="./img/cornerLogo.png" style="width:127px">
 
             </div>
-        
+
         </a>
         <div class="mobile_items">
             <ul class="fontSize16">
@@ -560,7 +592,7 @@
 
                 <div class="item">
                     <a href="contact.html">
-                        <div class="nav_icon" ></div>
+                        <div class="nav_icon"></div>
                         <li class="letterSpace" style="padding-bottom: 0;">聯絡我們</li>
                     </a>
                 </div>
@@ -581,17 +613,24 @@
                 <img src="./img/about/greenMilk.png" class="titleimg" alt="">
             </div>
 
+            <div class="imgbox1">
+                <img src="./img/about/teaPowder.png" style="width:750px" alt="">
+            </div>
+
             <h6 class="subtitleColor">連鎖體系</h6>
             <p class=" pColor ">50嵐綠茶連鎖體系於1994年由創辦人馬先生自台南成立<span class=""><span class="comma"><br
                             class="hidden">進而自高雄區、中區(含雲、嘉)、台北區、桃竹苗區陸續拓點。</p>
-            <!-- <p class="margin_bottom_p pColor">50嵐綠茶連鎖體系於1994年由創辦人馬先生自台南成立</p>
-            <p class="pColor">進而自高雄區、中區(含雲、嘉)、台北區、桃竹苗區陸續拓點。</p> -->
             <h6 class="subtitleColor">採取全國分區經營模式</h6>
             <p class="margin_bottom_p pColor">因各地區之營運成本(例租金、人事等)與風俗民情不同，<br
                     class="hidden">故有不同之商品定價與經營方式，此乃與其他品牌不同之處。<br class="hidden">50嵐綠茶連鎖體系截至2012年12月底全國總店數超越五百間門市，<br
                     class="hidden">
                 目前仍在陸續佈局中。</p>
+            <div class="imgbox2">
+                <img src="./img/about/boba.png" style="width:521px" alt="">
+            </div>
+
         </div>
+
 
         <div class="timeline ">
             <div class="drinking">
@@ -619,6 +658,10 @@
                     <img class="year year2016 t9" src="./img/about/mobile_t9.png" alt="">
                     <img class="year year2017 t10" src="./img/about/mobile_t10.png" alt="">
                 </div>
+            </div>
+
+            <div class="imgbox3">
+                <img src="./img/about/tea.png" style="width:657px" alt="">
             </div>
 
         </div>
