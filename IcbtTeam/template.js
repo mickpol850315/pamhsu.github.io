@@ -48,30 +48,30 @@ nav_items.forEach(function (item, index) {
 
 
 // 手機版navbar的每個項目hover會有一個icon
-$(document).on("pageinit","#pageone",function(){
+$(document).on("pageinit", ".mobile_navbar_fully .mobile_items", function () {
 
 	// 此处是 jQuery 事件...
-var nav_items = document.querySelectorAll(".mobile_navbar_fully .mobile_items");
-nav_items.forEach(function (item, index) {
+	var nav_items = document.querySelectorAll(".mobile_navbar_fully .mobile_items");
+	nav_items.forEach(function (item, index) {
 
-	$(item).on('tap', function(){ 
-		var nav_icon = item.querySelector('.nav_icon');
-		console.log(nav_icon);
-		$(nav_icon).addClass("active");		
+		$(item).on('tap', function () {
+			var nav_icon = item.querySelector('.nav_icon');
+			console.log(nav_icon);
+			$(nav_icon).addClass("active");
+		});
+
+		// $(item).hover(function () {
+		// 	var nav_icon = item.querySelector('.nav_icon');
+		// 	console.log(nav_icon);
+		// 	$(nav_icon).addClass("active");
+		// }, function () {
+		// 	var nav_icon = item.querySelector('.nav_icon');
+		// 	console.log(nav_icon);
+		// 	$(nav_icon).removeClass("active");
+		// });
+
 	});
-
-	// $(item).hover(function () {
-	// 	var nav_icon = item.querySelector('.nav_icon');
-	// 	console.log(nav_icon);
-	// 	$(nav_icon).addClass("active");
-	// }, function () {
-	// 	var nav_icon = item.querySelector('.nav_icon');
-	// 	console.log(nav_icon);
-	// 	$(nav_icon).removeClass("active");
-	// });
-
-}); 
- });
+});
 
 
 
@@ -104,7 +104,7 @@ $(".main").click(function () {
 		$(".menu_icon").show();
 
 	}
-	
+
 
 });
 
