@@ -12,7 +12,7 @@
     <!-- swiper css -->
     <link rel="stylesheet" href="https://unpkg.com/swiper/css/swiper.min.css">
     <!-- 樣版css -->
-    <!-- <link rel="stylesheet" href="template.css"> -->
+    <link rel="stylesheet" href="template.css">
     <style>
         .index_left_navbar {
             width: 175px;
@@ -387,6 +387,7 @@
             z-index: 99;
             animation: logohidden 9s 0s 1;
             animation-fill-mode: forwards;
+            width: 400px;
         }
 
         /* 中間logo隱藏 */
@@ -409,9 +410,10 @@
             left: 50%;
             bottom: 25px;
             transform: translate(-50%, 0);
-            opacity: 0.65;
-            animation: shineEnter 5s 0s infinite;
+            opacity: 0;
+            animation: shineEnter 5s 7.3s infinite;
             cursor: pointer;
+
         }
 
         /* 中間logo隱藏 */
@@ -452,14 +454,40 @@
         }
 
         .icon_img {
-            animation: zoom 2s 1 ease-in-out;
+            animation: zoom 2s 9s ease-in-out;
             animation-iteration-count: infinite;
+            opacity: 0;
         }
 
         @keyframes zoom {
+            0% {
+                opacity: 1;
+            }
+
             50% {
                 transform: scale(1.2, 1.2);
             }
+        }
+
+        @media(max-width: 768px) {
+            .centerlogo {
+
+                width: 200px;
+            }
+
+            .enter{
+                display: none;
+            }
+
+            .index_left_navbar{
+                display:none;
+            }
+
+            .cornerlogo{
+                display:none;
+            }
+
+
         }
     </style>
 </head>
@@ -520,6 +548,75 @@
     </a>
 
 
+    <!-- 手機版上方固定的navbar -->
+    <div class="mobile_navbar ">
+
+        <div class="logo"><a href="index.html"><img src="./img/cornerLogo.png" width="47px"></a></div>
+
+        <a href="javascript:;" class="main">
+            <span class='hamburger'></span>
+            <span class='hamburger'></span>
+            <span class='hamburger'></span>
+        </a>
+
+
+    </div>
+
+    <!-- 手機版上方navbar滿版 -->
+    <div class="mobile_navbar_fully  ">
+        <a href="index.html">
+            <div class="logo d-flex justify-content-center">
+                <img src="./img/cornerLogo.png" style="width:127px">
+
+            </div>
+
+        </a>
+        <div class="mobile_items">
+            <ul class="fontSize16">
+                <div class="item">
+                    <a href="about.html">
+                        <div class="nav_icon"></div>
+                        <li>關於五十嵐</li>
+                    </a>
+                </div>
+                <div class="item">
+                    <a href="featured.html">
+                        <div class="nav_icon"></div>
+                        <li>五十嵐嚴選</li>
+                    </a>
+                </div>
+                <div class="item">
+                    <a href="news.html">
+                        <div class="nav_icon"></div>
+                        <li class="letterSpace">最新消息</li>
+                    </a>
+                </div>
+                <div class="item">
+                    <a href="top.html">
+                        <div class="nav_icon"></div>
+                        <li class="letterSpace">精選飲品</li>
+                    </a>
+                </div>
+                <div class="item">
+                    <a href="store_location.html">
+                        <div class="nav_icon"></div>
+                        <li class="letterSpace">門市據點</li>
+                    </a>
+                </div>
+
+                <div class="item">
+                    <a href="contact.html">
+                        <div class="nav_icon"></div>
+                        <li class="letterSpace" style="padding-bottom: 0;">聯絡我們</li>
+                    </a>
+                </div>
+
+
+            </ul>
+        </div>
+    </div>
+
+
     <!-- banner -->
     <section id="banner_section">
         <div class="bgfirst">
@@ -538,7 +635,7 @@
 
     <!-- 中間logo -->
     <div class="centerlogo">
-        <img src="./img/logo_white.svg" style="width:400px;" alt="">
+        <img src="./img/logo_white.svg" alt="">
     </div>
 
     <!-- enter icon -->
@@ -546,7 +643,7 @@
         <img src="./img/banner/enter.png" alt="">
     </div>
     <!-- menu icon -->
-<div class="menu_icon"><a  href="Menu.html"><img class="icon_img" src="./img/menu/menu-icon.png" alt=""></a></div>
+    <div class="menu_icon"><a href="Menu.html"><img class="icon_img" src="./img/menu/menu-icon.png" alt=""></a></div>
 
     <!-- jquery -->
     <script src="https://code.jquery.com/jquery-3.5.0.min.js"
@@ -586,11 +683,20 @@
 
         });
 
-        // //設定秒數關閉enter icon
-        // var timeoutID = setTimeout(closeEnter, 22000);
-        // function closeEnter() {
-        //     document.getElementsByClassName("enter").style.display = "none";
-        // }
+        // 手機版navbar的每個項目hover會有一個icon
+        var nav_items = document.querySelectorAll(".mobile_navbar_fully .mobile_items");
+        nav_items.forEach(function (item, index) {
+            $(item).mouseout(function () {
+                var nav_icon = item.querySelector('.nav_icon');
+                console.log(nav_icon);
+                $(nav_icon).addClass("active");
+            });
+
+        });
+
+
+        var t1 = new TimelineMax();
+        t1.fromTo($('.mobile_navbar'), 1, { css: { top: "-55.25px" } }, { css: { top: "0px" } }, 6.7)
 
         $(".enter").click(function () {
             $('.index_left_navbar').addClass("active");

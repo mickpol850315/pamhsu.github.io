@@ -72,6 +72,8 @@ nav_items.forEach(function(item,index){
 		TweenLite.to( $('.mobile_navbar_fully'), 3, {css:{'left':'-100%','display':'none'} ,ease:Power2.easeOut});	
 		TweenLite.to( $('.mobile_navbar .logo'), 0.5, {css:{'opacity':1},delay:1 ,ease:Power2.easeOut});	
 		$("footer").show();
+		$(".menu_icon").show();
+
 
 	}else{
 		TweenLite.to( $('.hamburger:nth-child(1)'), 1, {css:{transform:"translateY(0px) rotate(-45deg)"} ,ease:Power2.easeOut});
@@ -81,6 +83,8 @@ nav_items.forEach(function(item,index){
 		TweenLite.to( $('.mobile_navbar_fully'), 2, {css:{'left':0,'display':'block'} ,ease:Power2.easeOut});	
 		TweenLite.to( $('.mobile_navbar .logo'), 1, {css:{'opacity':0} ,ease:Power2.easeOut});	
 		$("footer").hide();
+		$(".menu_icon").show();
+
 	}
 
   });
