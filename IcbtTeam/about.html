@@ -280,8 +280,8 @@
 
         }
 
-        .mobile_hidden {
-            display: none;
+        .hidden {
+            display: block;
         }
 
         @media(min-width: 1920px){
@@ -329,6 +329,10 @@
                 padding: 0px 20px;
                 line-height: 30px;
             }
+
+            .hidden {
+            display: none;
+        }
 
             .comma::before {
                 content: "，";
