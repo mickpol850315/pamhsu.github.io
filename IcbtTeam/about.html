@@ -11,8 +11,8 @@
     <link href='https://fonts.googleapis.com/css?family=Asap:400,700' rel='stylesheet' type='text/css'>
     <!-- swiper css -->
     <link rel="stylesheet" href="https://unpkg.com/swiper/css/swiper.min.css">
-        <!-- aos css -->
-        <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <!-- aos css -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
     <!-- 樣版css -->
     <link rel="stylesheet" href="template.css">
 
@@ -624,7 +624,7 @@
             </div>
 
             <div class="imgbox1" data-aos="fade-down">
-                <img  src="./img/about/teaPowder2.png" style="width:700px" alt="">
+                <img src="./img/about/teaPowder2.png" style="width:700px" alt="">
             </div>
 
             <h6 class="subtitleColor">連鎖體系</h6>
@@ -706,8 +706,8 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.0.1/TweenMax.min.js"></script>
     <!-- swiper -->
     <script src="https://unpkg.com/swiper/js/swiper.min.js"></script>
-       <!-- aos js -->
-   <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <!-- aos js -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <!-- 樣版js -->
     <script src="template.js"></script>
 
@@ -742,6 +742,7 @@
             // selectorName = 'mobile_t';
         }
 
+        //滾軸
         $(window).on('wheel', function (e) {
             if ($(window).scrollTop() + $(window).height() >= $("body").height()) {
 
@@ -757,8 +758,21 @@
             }
         });
 
+        function sleep(sec) {
+    var time = new Date().getTime();
+    while(new Date().getTime() - time < sec * 1000);
+}
 
-        //changeImg(imgIndex,882,'t')
+        //click
+        $(".imgbox3").on('click', function (e) {
+            for (let index = 0; index < 10; index++) {
+                var i= index * 3;
+                 changeImg(i, iheight) ;
+                 sleep(10);
+            }
+        });
+
+        
 
         function changeImg(imgIndex, iheight) {
 
