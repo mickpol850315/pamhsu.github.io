@@ -8,9 +8,11 @@
     <!-- bootstrap -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
         integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
-    <link href='https://fonts.googleapis.com/css?family=Asap:400,700' rel='stylesheet' type='text/css'>
+        <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
     <!-- swiper css -->
     <link rel="stylesheet" href="https://unpkg.com/swiper/css/swiper.min.css">
+    <!-- aos css -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
     <!-- 樣版css -->
     <link rel="stylesheet" href="template.css">
 
@@ -159,6 +161,8 @@
     </footer>
 
 
+
+
     <!-- jquery -->
     <script src="https://code.jquery.com/jquery-3.5.0.min.js"
         integrity="sha256-xNzN2a4ltkB44Mc/Jz3pT4iU1cmeR0FkXs4pru/JxaQ=" crossorigin="anonymous"></script>
@@ -178,13 +182,16 @@
     <script src="https://unpkg.com/swiper/js/swiper.min.js"></script>
     <!-- parallax js -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/parallax/3.1.0/parallax.min.js"></script>
+   <!-- aos js -->
+   <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <!-- 樣版js -->
     <script src="template.js"></script>
 
     <script>
-        // 程式碼
-
-    </script>
+      AOS.init({
+        easing: 'ease-in-out-sine'
+      });
+      </script>
 
 </body>
 

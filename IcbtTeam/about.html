@@ -11,6 +11,8 @@
     <link href='https://fonts.googleapis.com/css?family=Asap:400,700' rel='stylesheet' type='text/css'>
     <!-- swiper css -->
     <link rel="stylesheet" href="https://unpkg.com/swiper/css/swiper.min.css">
+        <!-- aos css -->
+        <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
     <!-- 樣版css -->
     <link rel="stylesheet" href="template.css">
 
@@ -56,9 +58,9 @@
 
         .about .imgbox1 {
             position: absolute;
-            right: -116px;
+            right: 0px;
             top: 26px;
-            transform: rotate(15deg);
+            /* transform: rotate(15deg); */
             display: none;
         }
 
@@ -246,10 +248,10 @@
             display: none;
         }
 
-        .timeline  .imgbox3 {
+        .timeline .imgbox3 {
             position: absolute;
-            right: -55px;
-            bottom:0px;
+            right: 0px;
+            bottom: 0px;
             display: none;
         }
 
@@ -286,16 +288,18 @@
             display: block;
         }
 
-        @media(min-width: 1920px){
-            .about .imgbox1{
-                
-                display:block;
+        @media(min-width: 1920px) {
+            .about .imgbox1 {
+
+                display: block;
             }
-            .about .imgbox2{
-                display:block;
+
+            .about .imgbox2 {
+                display: block;
             }
-            .timeline .imgbox3{
-                display:block;
+
+            .timeline .imgbox3 {
+                display: block;
             }
         }
 
@@ -333,8 +337,8 @@
             }
 
             .hidden {
-            display: none;
-        }
+                display: none;
+            }
 
             .comma::before {
                 content: "，";
@@ -614,13 +618,13 @@
     <section class="right_content">
         <div class="about text-center">
             <div class="titlepart d-flex justify-content-center">
-                <img src="./img/about/cocoMilk.png" class="titleimg" alt="">
+                <img src="./img/about/cocoMilk.png" class="titleimg" data-aos="zoom-out-right" alt="">
                 <h1 class="titleColor">關於50嵐</h1>
-                <img src="./img/about/greenMilk.png" class="titleimg" alt="">
+                <img src="./img/about/greenMilk.png" class="titleimg" data-aos="zoom-out-left" alt="">
             </div>
 
-            <div class="imgbox1">
-                <img src="./img/about/teaPowder.png" style="width:750px" alt="">
+            <div class="imgbox1" data-aos="fade-down">
+                <img  src="./img/about/teaPowder2.png" style="width:700px" alt="">
             </div>
 
             <h6 class="subtitleColor">連鎖體系</h6>
@@ -631,7 +635,7 @@
                     class="hidden">故有不同之商品定價與經營方式，此乃與其他品牌不同之處。<br class="hidden">50嵐綠茶連鎖體系截至2012年12月底全國總店數超越五百間門市，<br
                     class="hidden">
                 目前仍在陸續佈局中。</p>
-            <div class="imgbox2">
+            <div class="imgbox2" data-aos="fade-right">
                 <img src="./img/about/boba.png" style="width:521px" alt="">
             </div>
 
@@ -666,11 +670,14 @@
                 </div>
             </div>
 
-            <div class="imgbox3">
+            <div class="imgbox3" data-aos="zoom-out-left">
                 <img src="./img/about/tea.png" style="width:657px" alt="">
             </div>
 
         </div>
+
+
+
     </section>
 
 
@@ -699,11 +706,17 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.0.1/TweenMax.min.js"></script>
     <!-- swiper -->
     <script src="https://unpkg.com/swiper/js/swiper.min.js"></script>
+       <!-- aos js -->
+   <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <!-- 樣版js -->
     <script src="template.js"></script>
 
     <script>
         // 程式碼
+        AOS.init({
+            easing: 'ease-in-out-sine'
+        });
+
         var isStop = false;
 
         // 預設不顯示footer
