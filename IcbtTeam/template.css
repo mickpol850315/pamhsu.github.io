@@ -14,6 +14,10 @@ body{
 .icon_img {
     animation: zoom 2s 1 ease-in-out;
     animation-iteration-count: infinite;
+    -webkit-animation: zoom 2s ease-in-out 1s infinite ; /* Safari 4+ */
+    -moz-animation:    zoom 2s ease-in-out 1s infinite ; /* Fx 5+ */
+    -o-animation:      zoom 2s ease-in-out 1s infinite ; /* Opera 12+ */
+    animation:         zoom 2s ease-in-out 1s infinite ; /* IE 10+, Fx 29+ */
 }
 @keyframes zoom{
    50%{ transform:scale(1.1,1.1);}
@@ -298,6 +302,8 @@ footer{
     width: 100%;
     height: 2px;
     background-color:white;
+
+
     -webkit-transform: translateY(0);
     transform: translateY(0);
     transition: all .6s;

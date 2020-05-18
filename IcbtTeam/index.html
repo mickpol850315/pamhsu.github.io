@@ -27,8 +27,13 @@
             opacity: 0;
             z-index: 98;
 
-            animation: navbar_slider 1s 23s 1;
-            animation-fill-mode: forwards;
+            /* animation: navbar_slider 1s 23s 1;
+            animation-fill-mode: forwards; */
+
+            -webkit-animation: navbar_slider 1s  23s 1 forwards; /* Safari 4+ */
+            -moz-animation:    navbar_slider 1s  23s 1 forwards; /* Fx 5+ */
+            -o-animation:      navbar_slider 1s  23s 1 forwards; /* Opera 12+ */
+            animation:         navbar_slider 1s  23s 1 forwards; /* IE 10+, Fx 29+ */
 
             display: flex;
             justify-content: center;
@@ -74,8 +79,15 @@
             /* left: 35px; */
             opacity: 0;
             z-index: 99;
-            animation: logoshow 1s 23s 1;
-            animation-fill-mode: forwards;
+            /* animation: logoshow 1s 23s 1;
+            animation-fill-mode: forwards; */
+
+            
+            -webkit-animation: logoshow 1s  23s 1 forwards; /* Safari 4+ */
+            -moz-animation:    logoshow 1s  23s 1 forwards; /* Fx 5+ */
+            -o-animation:      logoshow 1s  23s 1 forwards; /* Opera 12+ */
+            animation:         logoshow 1s  23s 1 forwards; /* IE 10+, Fx 29+ */
+
             transition: 1s;
         }
 
@@ -177,8 +189,13 @@
             position: absolute;
             top: 0;
             left: 0;
-            animation: animeBlack 3s 0s 1;
-            animation-fill-mode: forwards;
+            /* animation: animeBlack 3s 0s 1;
+            animation-fill-mode: forwards; */
+
+            -webkit-animation: animeBlack 3s  0s 1 forwards; /* Safari 4+ */
+            -moz-animation:    animeBlack 3s  0s 1 forwards; /* Fx 5+ */
+            -o-animation:      animeBlack 3s  0s 1 forwards; /* Opera 12+ */
+            animation:         animeBlack 3s  0s 1 forwards; /* IE 10+, Fx 29+ */
         }
 
         /*  */
@@ -266,8 +283,13 @@
             position: absolute;
             left: 0;
             top: 0;
-            animation: anime 27s 0s 1;
-            animation-fill-mode: forwards;
+            /* animation: anime 27s 0s 1;
+            animation-fill-mode: forwards; */
+
+            -webkit-animation: anime 27s  0s 1 forwards; /* Safari 4+ */
+            -moz-animation:    anime 27s  0s 1 forwards; /* Fx 5+ */
+            -o-animation:      anime 27s  0s 1 forwards; /* Opera 12+ */
+            animation:         anime 27s  0s 1 forwards; /* IE 10+, Fx 29+ */
         }
 
         @keyframes anime {
@@ -316,9 +338,14 @@
             position: absolute;
             left: 0;
             top: 0;
-            animation: animelast 34s 20s 1;
-            /*28*/
-            animation-fill-mode: forwards;
+
+            /* animation: animelast 34s 20s 1;
+            animation-fill-mode: forwards; */
+
+            -webkit-animation: animelast 34s  20s 1 forwards; /* Safari 4+ */
+            -moz-animation:    animelast 34s  20s 1 forwards; /* Fx 5+ */
+            -o-animation:      animelast 34s  20s 1 forwards; /* Opera 12+ */
+            animation:         animelast 34s  20s 1 forwards; /* IE 10+, Fx 29+ */
         }
 
 
@@ -385,8 +412,14 @@
             top: 50%;
             transform: translate(-50%, -50%);
             z-index: 99;
-            animation: logohidden 9s 0s 1;
-            animation-fill-mode: forwards;
+            /* animation: logohidden 9s 0s 1;
+            animation-fill-mode: forwards; */
+
+            -webkit-animation: logohidden 9s  0s 1 forwards; /* Safari 4+ */
+            -moz-animation:    logohidden 9s  0s 1 forwards; /* Fx 5+ */
+            -o-animation:      logohidden 9s  0s 1 forwards; /* Opera 12+ */
+            animation:         logohidden 9s  0s 1 forwards; /* IE 10+, Fx 29+ */
+
             width: 400px;
         }
 
@@ -412,6 +445,12 @@
             transform: translate(-50%, 0);
             opacity: 0;
             animation: shineEnter 5s 7.3s infinite;
+
+            -webkit-animation: shineEnter 5s  7.3s  infinite; /* Safari 4+ */
+            -moz-animation:    shineEnter 5s  7.3s  infinite; /* Fx 5+ */
+            -o-animation:      shineEnter 5s  7.3s  infinite; /* Opera 12+ */
+            animation:         shineEnter 5s  7.3s  infinite; /* IE 10+, Fx 29+ */
+
             cursor: pointer;
 
         }
@@ -456,6 +495,12 @@
         .icon_img {
             animation: zoom 2s 9s ease-in-out;
             animation-iteration-count: infinite;
+
+            -webkit-animation: zoom 2s  9s  infinite; /* Safari 4+ */
+            -moz-animation:    zoom 2s  9s  infinite; /* Fx 5+ */
+            -o-animation:      zoom 2s  9s  infinite; /* Opera 12+ */
+            animation:         zoom 2s  9s  infinite; /* IE 10+, Fx 29+ */
+
             opacity: 0;
         }
 
@@ -475,16 +520,16 @@
                 width: 200px;
             }
 
-            .enter{
+            .enter {
                 display: none;
             }
 
-            .index_left_navbar{
-                display:none;
+            .index_left_navbar {
+                display: none;
             }
 
-            .cornerlogo{
-                display:none;
+            .cornerlogo {
+                display: none;
             }
 
 
@@ -575,39 +620,39 @@
             <ul class="fontSize16">
                 <div class="item">
                     <!-- <a href="about.html"> -->
-                        <div class="nav_icon"></div>
-                        <li>關於五十嵐</li>
+                    <div class="nav_icon"></div>
+                    <li>關於五十嵐</li>
                     <!-- </a> -->
                 </div>
                 <div class="item">
                     <!-- <a href="featured.html"> -->
-                        <div class="nav_icon"></div>
-                        <li>五十嵐嚴選</li>
+                    <div class="nav_icon"></div>
+                    <li>五十嵐嚴選</li>
                     <!-- </a> -->
                 </div>
                 <div class="item">
                     <!-- <a href="news.html"> -->
-                        <div class="nav_icon"></div>
-                        <li class="letterSpace">最新消息</li>
+                    <div class="nav_icon"></div>
+                    <li class="letterSpace">最新消息</li>
                     <!-- </a> -->
                 </div>
                 <div class="item">
                     <!-- <a href="top.html"> -->
-                        <div class="nav_icon"></div>
-                        <li class="letterSpace">精選飲品</li>
+                    <div class="nav_icon"></div>
+                    <li class="letterSpace">精選飲品</li>
                     <!-- </a> -->
                 </div>
                 <div class="item">
                     <!-- <a href="store_location.html"> -->
-                        <div class="nav_icon"></div>
-                        <li class="letterSpace">門市據點</li>
+                    <div class="nav_icon"></div>
+                    <li class="letterSpace">門市據點</li>
                     <!-- </a> -->
                 </div>
 
                 <div class="item">
                     <!-- <a href="contact.html"> -->
-                        <div class="nav_icon"></div>
-                        <li class="letterSpace" style="padding-bottom: 0;">聯絡我們</li>
+                    <div class="nav_icon"></div>
+                    <li class="letterSpace" style="padding-bottom: 0;">聯絡我們</li>
                     <!-- </a> -->
                 </div>
 
@@ -703,6 +748,20 @@
             $('.cornerlogo').addClass("active");
             $(".enter").hide();
         });
+
+        // 手機版navbar的每個項目hover會有一個icon
+        var arr_mobile_http = ['about.html', 'featured.html', 'news.html', 'top.html', 'store_location_mobile.html', 'contact.html']
+
+        // 此处是 jQuery 事件...
+        var nav_items = document.querySelectorAll(".mobile_navbar_fully .mobile_items .item");
+        nav_items.forEach(function (item, index) {
+
+            $(item).on('click touch', function () {
+                window.location.href = arr_mobile_http[index];
+            });
+
+        });
+
     </script>
 </body>
 
