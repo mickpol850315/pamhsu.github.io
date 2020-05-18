@@ -184,6 +184,7 @@
 
 .right_content .contact_box_out .mar_top .textarea_border {
   border: 2px solid #3b465d;
+  padding-left: 20px;
 }
 
 .right_content .btn_box {
@@ -214,5 +215,17 @@
   color: #eee;
   border-color: #000;
   background-color: #3b465d;
+}
+
+.right_content .btn_box .btn-outline-secondary:hover {
+  background-color: #FFFF17;
+  border-color: #FEFEFD;
+  color: #005CA1;
+}
+
+.right_content .btn_box .btn-outline-secondary:active {
+  background-color: #EA83B2 !important;
+  border-color: #E84E96 !important;
+  color: #FFEE00 !important;
 }
 /*# sourceMappingURL=contact.css.map */
