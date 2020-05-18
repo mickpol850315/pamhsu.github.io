@@ -438,6 +438,7 @@
             }
         }
 
+  
         .enter {
             position: absolute;
             left: 50%;
@@ -749,18 +750,23 @@
             $(".enter").hide();
         });
 
-        // 手機版navbar的每個項目hover會有一個icon
-        var arr_mobile_http = ['about.html', 'featured.html', 'news.html', 'top.html', 'store_location_mobile.html', 'contact.html']
+ 
+$(document).on("click touchstart tap", ".mobile_navbar_fully .mobile_items .item:nth-child(1)", function (){
+    window.location.href="./about.html"     
+});
 
-        // 此处是 jQuery 事件...
-        var nav_items = document.querySelectorAll(".mobile_navbar_fully .mobile_items .item");
-        nav_items.forEach(function (item, index) {
+        // // 手機版navbar的每個項目hover會有一個icon
+        // var arr_mobile_http = ['about.html', 'featured.html', 'news.html', 'top.html', 'store_location_mobile.html', 'contact.html']
 
-            $(item).on('click touch', function () {
-                window.location.href = arr_mobile_http[index];
-            });
+        // // 此处是 jQuery 事件...
+        // var nav_items = document.querySelectorAll(".mobile_navbar_fully .mobile_items .item");
+        // nav_items.forEach(function (item, index) {
 
-        });
+        //     $(item).on('click touch', function () {
+        //         window.location.href = arr_mobile_http[index];
+        //     });
+
+        // });
 
     </script>
 </body>
