@@ -48,7 +48,7 @@ nav_items.forEach(function (item, index) {
 
 
 // 手機版navbar的每個項目hover會有一個icon
-var arr_mobile_http=['about.html','featured.html','news.html','top.html','contact.html']
+var arr_mobile_http=['about.html','featured.html','news.html','top.html','store_location_mobile.html','contact.html']
 // $(document).on("pageinit", ".mobile_navbar_fully .mobile_items", function () {
 
 	// 此处是 jQuery 事件...
