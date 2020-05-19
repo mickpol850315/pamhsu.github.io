@@ -111,3 +111,18 @@ $(".main").click(function () {
 
 });
 
+        //menuicon hover
+        $(".menu_icon").hover(function () {
+            $(".icon_img").attr("src", "./img/menu/menu-icon_hover.png");
+           
+        },function(){
+            $(".icon_img").attr("src", "./img/menu/menu-icon.png");
+		});
+		//menuicon drink
+		$(".menu_icon").click(function () {
+			$(".icon_img").attr("src", "./img/menu/menu-icon2.png");
+			$(".drink").css("animation","out 1s");
+			setTimeout(function(){
+				window.location.href = 'Menu.html';
+				},700);
+		});
