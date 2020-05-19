@@ -228,6 +228,7 @@
 @media all and (max-width: 375px) {
   .right_content .btn_box {
     margin-top: 20px;
+    margin-bottom: 20px;
   }
 }
 
