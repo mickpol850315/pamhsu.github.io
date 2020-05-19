@@ -259,11 +259,12 @@ a{
 footer{
 
     height:50px;
+    width:calc(100% - 100px);;
     background-color: gray;
     text-align: center;
     font-size:16px;
     line-height: 50px;
-    margin-left: 50px;
+    margin-left: 100px;
     background-color: #3b465d;
     color:white;
 
