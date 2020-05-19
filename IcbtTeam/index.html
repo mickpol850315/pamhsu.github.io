@@ -8,7 +8,7 @@
     <!-- bootstrap -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
         integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
-        <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
     <!-- swiper css -->
     <link rel="stylesheet" href="https://unpkg.com/swiper/css/swiper.min.css">
     <!-- 樣版css -->
@@ -549,7 +549,7 @@
 
         @media(max-width: 768px) {
             .centerlogo {
-
+                display: none;
                 width: 200px;
             }
 
@@ -564,6 +564,13 @@
             .cornerlogo {
                 display: none;
             }
+
+            .icon_img {
+                width: 50px;
+            }
+
+
+
 
 
         }
@@ -600,7 +607,7 @@
                     </a>
                 </div>
                 <div class="item">
-                    <a href="store_location.html">
+                    <a href="store_location_mobile.html">
                         <div class="nav_icon"></div>
                         <li class="letterSpace">門市據點</li>
                     </a>
@@ -654,7 +661,7 @@
                 <div class="item">
                     <!-- <a href="about.html"> -->
                     <div class="nav_icon"></div>
-                    <li >關於五十嵐</li>
+                    <li>關於五十嵐</li>
                     <!-- </a> -->
                 </div>
                 <div class="item">
@@ -792,18 +799,18 @@
 //     window.location.href="./about.html"     
 // });
 
-        // 手機版navbar的每個項目hover會有一個icon
-        var arr_mobile_http = ['about.html', 'featured.html', 'news.html', 'top.html', 'store_location_mobile.html', 'contact.html']
+        // // 手機版navbar的每個項目hover會有一個icon
+        // var arr_mobile_http = ['about.html', 'featured.html', 'news.html', 'top.html', 'store_location_mobile.html', 'contact.html']
 
-        // 此处是 jQuery 事件...
-        var nav_items = document.querySelectorAll(".mobile_navbar_fully .mobile_items .item");
-        nav_items.forEach(function (item, index) {
+        // // 此处是 jQuery 事件...
+        // var nav_items = document.querySelectorAll(".mobile_navbar_fully .mobile_items .item");
+        // nav_items.forEach(function (item, index) {
 
-            $(item).on('click touchstart tap', function () {
-                window.location.href = arr_mobile_http[index];
-            });
+        //     $(item).on('click touchstart tap', function () {
+        //         window.location.href = arr_mobile_http[index];
+        //     });
 
-        });
+        // });
 
     </script>
 </body>
