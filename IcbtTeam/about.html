@@ -954,9 +954,16 @@ if(/(android|bb\d+|meego).+mobile|avantgo|bada\/|blackberry|blazer|compal|elaine
     isMobile = true;
 }
 
+ 
+
 if (isMobile){
+
         window.addEventListener('scroll', function() {
-            console.log("yes");
+             if($(window).scrollTop() >280){
+                changeImg(imgIndex, iheight)
+                    imgIndex += 1;
+             }
+
             
          });
 
