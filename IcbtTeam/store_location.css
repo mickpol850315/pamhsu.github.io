@@ -17,6 +17,7 @@
 
 .right_content .store_out .row {
   height: 100%;
+  overflow: hidden;
 }
 
 @media all and (max-width: 768px) {
@@ -157,6 +158,10 @@
   .right_content .store_out .right_box {
     padding: 2vh 0 0 0;
   }
+}
+
+.right_content .store_out .shopBox .row {
+  overflow: hidden;
 }
 
 @media all and (max-width: 768px) {
