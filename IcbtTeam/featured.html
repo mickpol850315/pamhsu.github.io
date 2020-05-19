@@ -481,11 +481,11 @@
 
             if (delta > 0) {
                 console.log("down");
-                if (iTopWheel != 0) {
-                    iTopWheel = 0;
+                // if (iTopWheel != 0) {
+                //     iTopWheel = 0;
 
                 }
-                if (iDownWheel % 5 == 0) {
+                // if (iDownWheel % 5 == 0) {
                     if (img_index < 4) {
                         img_index += 1;
 
@@ -508,16 +508,16 @@
                     }
                 }
 
-                iDownWheel += 1;
+                // iDownWheel += 1;
 
-            } // going down
+            // } // going down
             else {// going up
                 console.log("up");
                 if (iDownWheel != 0) {
                     iDownWheel = 0;
 
                 }
-                if (iTopWheel % 5 == 0) {
+                // if (iTopWheel % 5 == 0) {
                     if (img_index > 1) {
                         img_index -= 1;
                 
@@ -541,9 +541,10 @@
 
 
 
-                iTopWheel += 1;
+                // iTopWheel += 1;
             }
-        });
+        // }
+        );
     </script>
 
 </body>
