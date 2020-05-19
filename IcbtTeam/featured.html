@@ -144,11 +144,29 @@
             display: flex;
             flex-direction: column;
         }
+        .right_content .a_box_2 {
+            list-style: none;
+            font-size: 20px;
+            display: none;
+        }
+        .a_box_2 li {
+            color: #969696;
+            text-decoration: none;
+            font-family: "微軟正黑體";
+        }
 
         .a_box li {
             color: #969696;
             text-decoration: none;
             font-family: "微軟正黑體";
+        }
+        .a_box_2 li .icon {
+            width: 30px;
+            height: 30px;
+            float: right;
+            background-image: url(./img/featured/珍奶ICON.png);
+            background-size: cover;
+            background-position: center;
         }
 
         .a_box li .icon {
@@ -178,11 +196,33 @@
             display: block;
         } */
         @media screen and (max-width: 1110px) {
-            
+            .big_box {
+            top: 20%;
+            right: 15%;
+        }
+        .right_content .a_box {
+            display: none;
+        }
+        .right_content .a_box_2 {
+            position: absolute;
+            top: 90%;
+            left: 5%;
+            display: flex;
+            margin: 0;
+            padding: 0;
+        }
+        .right_content .a_box_2 li {
+        margin-right: 65px;
+        }
+
+        .black_box {
+            width: 646.8px;
+            height: 630px;
         }
         @media screen and (max-width: 768px) {
             
         }
+    }
     </style>
 
 
@@ -346,6 +386,16 @@
                 <p>希望我們創造出友善及熱情的環境，將每位客人視為<br>家人般真誠對待，儘管在繁忙的日子裡，只要駐足於<br>店門口享受每一杯客製化的飲料，啜飲著我們真摯對<br>待的溫暖，即可深刻感受被茶香簇擁的幸福。
                 </p>
             </div>
+            <ul class="a_box_2">
+                <li class="btn1 myMOUSE color_atv">嚴選原料 <div class="btnicon1 icon"></div>
+                </li>
+                <li class="btn2 myMOUSE">職人製茶 <div class="btnicon2"></div>
+                </li>
+                <li class="btn3 myMOUSE">精準口感 <div class="btnicon3"></div>
+                </li>
+                <li class="btn4 myMOUSE">熱情服務 <div class="btnicon4"></div>
+                </li>
+            </ul>
         </div>
         <ul class="a_box">
             <li class="btn1 myMOUSE color_atv">嚴選原料 <div class="btnicon1 icon"></div>
