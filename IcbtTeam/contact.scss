@@ -14,36 +14,33 @@ $letter-spacing:0.05em;
     height: 100vh;
     overflow: hidden;
 
+    @media all and (max-width: 768px) {
+        background-image: unset !important;
+        background-color: #f7b9a4;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+
     .container-fluid {
         width: 100%;
-        height: 100vh;
 
-        @media all and (max-width: 768px) {
-            background-image: unset !important;
-            background-color: #f7b9a4;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-        }
+        // height: 100vh;  
+        .row {
+            @media all and (max-width: 414px) {
+                margin-top: 30px;
 
-        @media all and (max-width: 414px) {
-            padding-top: 30px;
+            }
 
-        }
+            @media all and (max-width: 320px) {
+               
+               margin-top: 50px;
 
-        @media all and (max-width: 320px) {
-            padding-top: 60px;
-
+            }
         }
 
     }
-
-    .left {
-        @media all and (max-width: 768px) {
-            display: none;
-        }
-    }
-
     .display {
         display: flex;
         align-items: center;
@@ -53,7 +50,7 @@ $letter-spacing:0.05em;
             width: 100%;
             flex: 0 0 100%;
             max-width: 100%;
-            height: 100%;
+            // height: 100%;
         }
     }
 
@@ -117,7 +114,7 @@ $letter-spacing:0.05em;
                 @media all and (max-width: 320px) {
                     margin-bottom: 0;
                 }
-               
+
             }
 
             .form-control {
@@ -149,6 +146,8 @@ $letter-spacing:0.05em;
         margin-top: 40PX;
         display: flex;
         justify-content: flex-end;
+        overflow: hidden;
+        z-index: 3;
 
         @media all and (max-width: 320px) {
             display: flex;
@@ -162,16 +161,18 @@ $letter-spacing:0.05em;
             color: #eee;
             border-color: #000;
             background-color: $color;
+            z-index: 2;
 
-            &:hover{
+            &:hover {
                 background-color: #FFFF17;
                 border-color: #FEFEFD;
                 color: #005CA1;
             }
-            &:active{
-                background-color: #EA83B2!important;
-                border-color: #E84E96!important;
-                color: #FFEE00!important;
+
+            &:active {
+                background-color: #EA83B2 !important;
+                border-color: #E84E96 !important;
+                color: #FFEE00 !important;
             }
         }
     }
