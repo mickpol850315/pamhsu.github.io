@@ -915,25 +915,27 @@
             }
         });
 
-        //click
+        //水波紋click
         $(".rim").on('click', function (e) {
+            $(".rim").off("click");//關閉click，避免按2次，造成圖片讀取error
             //取大於這個數的最小整數Math.ceil(3.14) ==> 4
-            imgIndex = Math.ceil(imgIndex / 3);
+            console.log("Math.ceil(" + imgIndex + "/3 ) = " + Math.ceil(imgIndex / 3));
+            
+            imgIndex = Math.ceil(imgIndex / 3);//imgIndex>0代表已有滑動或滾動過，已喝過飲料
+            var itimes=0
             for (let index = imgIndex; index < 10; index++) {
 
                 setTimeout(function () {
                     var i = index * 3;
                     changeImg(i, iheight);
                 }, index * 300);
+                itimes +=1;
             }
             TweenLite.to($('.rim'), 6, { css: { cursor: "unset", opacity: 0 }, ease: Power2.easeOut });
-            // document.getElementsByClassName("rim").style['pointer-events'] = 'none';
-            // $(".rim").hide();
 
         });
 
         function changeImg(imgIndex, iheight) {
-
             //滾軸滾3次才會下一個動畫
             if (imgIndex % 3 == 0) {
                 console.log(imgIndex + "/3=", imgIndex / 3);
