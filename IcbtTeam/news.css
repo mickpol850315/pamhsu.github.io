@@ -136,9 +136,9 @@ box-shadow: 7px 7px 8px #333333;
                 right: 3%;
                 }
 }
-@media screen and (max-width: 769px) {
+@media screen and (max-width: 768px) {
     .swiper-slide {      
-        padding-bottom: calc(100% - 0px);
+        padding-bottom: calc(100% - 50px);
         }
         .swiper-button-prev{
            left: 3%;
