@@ -253,7 +253,7 @@
         }
 
         .timeline{
-            overflow:hideen;
+            overflow:hidden;
         }
 
         .timeline .imgbox3 {
@@ -778,21 +778,16 @@
             }
         });
 
-        function sleep(sec) {
-            var time = new Date().getTime();
-            while (new Date().getTime() - time < sec * 1000);
-        }
-
         //click
         $(".imgbox3").on('click', function (e) {
+
             for (let index = 0; index < 10; index++) {
-                var i = index * 3;
-                changeImg(i, iheight);
-                sleep(10);
-            }
+                setTimeout(function (){
+                    var i = index * 3;
+                    changeImg(i, iheight);
+                },index*300); 
+            } 
         });
-
-
 
         function changeImg(imgIndex, iheight) {
 
