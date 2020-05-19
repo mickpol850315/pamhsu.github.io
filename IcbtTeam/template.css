@@ -118,6 +118,7 @@ body{
 .left_navbar .navitems a:hover, .mobile_navbar_fully .mobile_items a:hover{
 
     text-decoration: none;
+    color:white;
 }
 
 .left_navbar .navitems .nav_icon.active{
