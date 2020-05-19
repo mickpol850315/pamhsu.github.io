@@ -137,8 +137,13 @@ box-shadow: 7px 7px 8px #333333;
                 }
 }
 @media screen and (max-width: 768px) {
+    .swiper-container {
+        top:55%;
+        left: 50%;
+        width: 70%;
+        }
     .swiper-slide {      
-        padding-bottom: calc(100% - 50px);
+        padding-bottom: calc(100% - 120px);
         }
         .swiper-button-prev{
            left: 3%;
@@ -146,4 +151,82 @@ box-shadow: 7px 7px 8px #333333;
         .swiper-pagination{
             left: 35%;
             }
+            .swiper-pagination{
+                left: 38%;
+                top:85%;
+                }
+                .swiper-pagination-bullet{
+                    height: 20px;
+                    width: 20px;
+                    }
+}
+@media screen and (max-width: 520px) {
+    .swiper-container {
+        top:60%;
+        left: 50%;
+        width: 50%;
+        }
+        .swiper-button-prev{
+            top:55%;
+            left: 3%;
+         }
+         .swiper-button-next{
+            right: 3%;
+            top:55%;
+            }
+         .swiper-pagination{
+             left: 25%;
+             top:80%;
+             }
+             .swiper-pagination-bullet{
+                height: 15px;
+                width: 15px;
+                }
+    
+    .swiper-slide {      
+        padding-bottom: calc(100% - 0px);
+        }
+    .new{
+        width: 300px;
+    }
+    .border1{
+        width: 60px;
+    }    
+            .border2{
+                width: 60px;
+            }
+}
+@media screen and (max-width: 374px) {
+
+  .swiper-container {
+        top:65%;
+        width: 50%;
+        }
+        .swiper-button-prev{
+            top:60%;
+            left: 5%;
+         }
+         .swiper-button-next{
+            top:60%;
+            right: 5%;
+            }
+            .swiper-pagination{
+                width: 170px;
+            }
+            .swiper-pagination-bullet{
+                height: 10px;
+                width: 10px;
+                }
+                .new{
+                    width: 180px;
+                } 
+                h5{
+                    font-size: 15px;
+                }
+                .border1{
+                    width: 30px;
+                }    
+                        .border2{
+                            width: 30px;
+                        }
 }
