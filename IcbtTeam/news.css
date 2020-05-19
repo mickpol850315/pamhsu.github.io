@@ -196,7 +196,7 @@ box-shadow: 7px 7px 8px #333333;
                 width: 60px;
             }
 }
-@media screen and (max-width: 320px) {
+@media screen and (max-width: 375px) {
 
   .swiper-container {
         top:65%;
@@ -204,6 +204,7 @@ box-shadow: 7px 7px 8px #333333;
         }
         .swiper-button-prev{
             top:60%;
+            left: 5%;
          }
          .swiper-button-next{
             top:60%;
