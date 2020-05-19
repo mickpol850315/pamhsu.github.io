@@ -166,9 +166,17 @@
             color: #FFFFFF !important;
         }
 
-        .atv {
+        .background.atv {
             display: block;
         }
+
+        .box.atv {
+            display: block;
+        }
+
+        /* .atv {
+            display: block;
+        } */
         @media screen and (max-width: 1110px) {
             
         }
@@ -480,14 +488,21 @@
                 if (iDownWheel % 5 == 0) {
                     if (img_index < 4) {
                         img_index += 1;
-                        $('.right_content').css('background-image', `url("./img/featured/背景圖${img_index}.jpg")`);
+
                         var icon = document.querySelector(".icon");
                         icon.classList.remove("icon")
                         $('.btnicon' + img_index).addClass("icon");
-                        var atv = document.querySelector(".atv");
+
+                        var bgatv = document.querySelector(".background.atv");
+                        bgatv.classList.remove("atv");
+                        $('.background_image' + img_index).addClass("atv");
+
+                        var atv = document.querySelector(".box.atv");
                         atv.classList.remove("atv");
                         $('.box' + img_index).addClass("atv");
+
                         var color_atv = document.querySelector(".color_atv");
+
                         color_atv.classList.remove("color_atv");
                         $('.btn' + img_index).addClass("color_atv");
                     }
@@ -505,13 +520,19 @@
                 if (iTopWheel % 5 == 0) {
                     if (img_index > 1) {
                         img_index -= 1;
-                        $('.right_content').css('background-image', `url("./img/featured/背景圖${img_index}.jpg")`);
+                
                         var icon = document.querySelector(".icon");
                         icon.classList.remove("icon");
                         $('.btnicon' + img_index).addClass("icon");
-                        var atv = document.querySelector(".atv");
+
+                        var bgatv = document.querySelector(".background.atv");
+                        bgatv.classList.remove("atv");
+                        $('.background_image' + img_index).addClass("atv");
+
+                        var atv = document.querySelector(".box.atv");
                         atv.classList.remove("atv");
                         $('.box' + img_index).addClass("atv");
+
                         var color_atv = document.querySelector(".color_atv");
                         color_atv.classList.remove("color_atv");
                         $('.btn' + img_index).addClass("color_atv");
