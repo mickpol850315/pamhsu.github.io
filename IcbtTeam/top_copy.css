@@ -1,9 +1,4 @@
-*{
-    
-    font-family: "微軟正黑體";
-    font-weight: lighter;
-    color: white;
-}
+
 
 .row,
 .col {
@@ -114,6 +109,8 @@ transition: 1s;
     justify-content: center;
     position: absolute !important;
     color: white;
+    font-family: "微軟正黑體";
+    font-weight: lighter;
     opacity: 0;
     position: relative;
 }
@@ -121,6 +118,7 @@ transition: 1s;
     font-size: 40pt;
     font-family: "Noto Sans TC";
     text-align: center;
+    color: white;
 }
 
 .text p{
@@ -131,6 +129,9 @@ transition: 1s;
     text-align: justify;
     letter-spacing:0.15em;
     word-break: break-all;
+    font-family: "微軟正黑體";
+    font-weight: lighter;
+    color: white;
 }
 
 @media(max-width:768px){
