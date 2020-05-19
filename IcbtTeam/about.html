@@ -24,6 +24,8 @@
 
         }
 
+
+
         .titleColor {
             color: #3B465D;
             ;
@@ -284,6 +286,10 @@
 
         }
 
+        .box3{
+            overflow: hidden;
+        }
+
         .hidden {
             display: block;
         }
@@ -304,6 +310,8 @@
         }
 
         @media (max-width: 768px) {
+
+
             .about {
                 padding: 122px 0 60px 0;
             }
@@ -670,9 +678,12 @@
                 </div>
             </div>
 
-            <div class="imgbox3" data-aos="zoom-out-left">
-                <img src="./img/about/tea.png" style="width:657px" alt="">
+            <div class="box3">
+                <div class="imgbox3" data-aos="flip-down">
+                    <img src="./img/about/tea.png" style="width:657px" alt="">
+                </div>
             </div>
+
 
         </div>
 
@@ -759,20 +770,20 @@
         });
 
         function sleep(sec) {
-    var time = new Date().getTime();
-    while(new Date().getTime() - time < sec * 1000);
-}
+            var time = new Date().getTime();
+            while (new Date().getTime() - time < sec * 1000);
+        }
 
         //click
         $(".imgbox3").on('click', function (e) {
             for (let index = 0; index < 10; index++) {
-                var i= index * 3;
-                 changeImg(i, iheight) ;
-                 sleep(10);
+                var i = index * 3;
+                changeImg(i, iheight);
+                sleep(10);
             }
         });
 
-        
+
 
         function changeImg(imgIndex, iheight) {
 
