@@ -196,6 +196,7 @@ box-shadow: 7px 7px 8px #333333;
                 width: 60px;
             }
 }
+@media screen and (max-width: 374px) {
 
   .swiper-container {
         top:65%;
@@ -216,9 +217,15 @@ box-shadow: 7px 7px 8px #333333;
                 height: 10px;
                 width: 10px;
                 }
+                .new{
                     width: 180px;
                 } 
+                h5{
+                    font-size: 15px;
+                }
                 .border1{
+                    width: 30px;
+                }    
                         .border2{
                             width: 30px;
                         }
