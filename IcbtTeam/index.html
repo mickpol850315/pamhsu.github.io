@@ -549,7 +549,7 @@
 
         @media(max-width: 768px) {
             .centerlogo {
-
+                display:none;
                 width: 200px;
             }
 
@@ -600,7 +600,7 @@
                     </a>
                 </div>
                 <div class="item">
-                    <a href="store_location.html">
+                    <a href="store_location_mobile.html">
                         <div class="nav_icon"></div>
                         <li class="letterSpace">門市據點</li>
                     </a>
@@ -792,18 +792,18 @@
 //     window.location.href="./about.html"     
 // });
 
-        // 手機版navbar的每個項目hover會有一個icon
-        var arr_mobile_http = ['about.html', 'featured.html', 'news.html', 'top.html', 'store_location_mobile.html', 'contact.html']
+        // // 手機版navbar的每個項目hover會有一個icon
+        // var arr_mobile_http = ['about.html', 'featured.html', 'news.html', 'top.html', 'store_location_mobile.html', 'contact.html']
 
-        // 此处是 jQuery 事件...
-        var nav_items = document.querySelectorAll(".mobile_navbar_fully .mobile_items .item");
-        nav_items.forEach(function (item, index) {
+        // // 此处是 jQuery 事件...
+        // var nav_items = document.querySelectorAll(".mobile_navbar_fully .mobile_items .item");
+        // nav_items.forEach(function (item, index) {
 
-            $(item).on('click touchstart tap', function () {
-                window.location.href = arr_mobile_http[index];
-            });
+        //     $(item).on('click touchstart tap', function () {
+        //         window.location.href = arr_mobile_http[index];
+        //     });
 
-        });
+        // });
 
     </script>
 </body>
