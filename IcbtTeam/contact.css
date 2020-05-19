@@ -103,6 +103,7 @@
 }
 
 .right_content .contact_box_out .contact_size {
+  font-family: "Noto Sans TC";
   color: #3b465d;
   font-size: 120px;
   text-shadow: 7px -6px 10px #686868;
@@ -166,21 +167,25 @@
 .right_content .contact_box_out .mar_top ::-webkit-input-placeholder {
   color: #534741;
   opacity: 0.7;
+  font-family: "Noto Sans TC";
 }
 
 .right_content .contact_box_out .mar_top :-ms-input-placeholder {
   color: #534741;
   opacity: 0.7;
+  font-family: "Noto Sans TC";
 }
 
 .right_content .contact_box_out .mar_top ::-ms-input-placeholder {
   color: #534741;
   opacity: 0.7;
+  font-family: "Noto Sans TC";
 }
 
 .right_content .contact_box_out .mar_top ::placeholder {
   color: #534741;
   opacity: 0.7;
+  font-family: "Noto Sans TC";
 }
 
 .right_content .contact_box_out .mar_top .textarea_border {
