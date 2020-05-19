@@ -20,8 +20,8 @@
         /* 自訂樣式 */
         body {
             /* height: 600vh; */
-
-
+            perspective: 0px;
+            -webkit-perspective: 0px;
         }
 
 
@@ -64,7 +64,7 @@
             top: 26px;
             /* transform: rotate(15deg); */
             display: none;
-         
+
         }
 
         .about h1 {
@@ -89,7 +89,7 @@
             position: absolute;
             left: 100px;
             display: none;
-           
+
         }
 
         .about .margin_bottom_p {
@@ -119,6 +119,93 @@
             display: none;
         }
 
+        .bottomPart {
+            position: relative;
+        }
+
+        .rim {
+            position: absolute;
+            left: 50%;
+            top: 50px;
+            z-index: 99;
+            cursor: pointer;
+        }
+
+        .rim1,
+        .rim2,
+        .rim3 {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            border-radius: 50%;
+            width: 0em;
+            height: 0em;
+            border: white .5em solid;
+            background: skyblue;
+        }
+
+
+
+        .rim1 {
+            /* -webkit-animation: expand 2s linear infinite;
+ */
+            -webkit-animation: expand 2s linear infinite;
+            /* Safari 4+ */
+            -moz-animation: expand 2s linear infinite;
+            /* Fx 5+ */
+            -o-animation: expand 2s linear infinite;
+            /* Opera 12+ */
+            animation: expand 2s linear infinite;
+            /* IE 10+, Fx 29+ */
+        }
+
+        .rim2 {
+            /* -webkit-animation: expand 2s linear .5s infinite; */
+
+            -webkit-animation: expand 2s linear .5s infinite;
+            /* Safari 4+ */
+            -moz-animation: expand 2s linear .5s infinite;
+            /* Fx 5+ */
+            -o-animation: expand 2s linear .5s infinite;
+            /* Opera 12+ */
+            animation: expand 2s linear .5s infinite;
+            /* IE 10+, Fx 29+ */
+        }
+
+        .rim3 {
+            /* -webkit-animation: expand 2s linear 1s infinite; */
+
+            -webkit-animation: expand 2s linear 1s infinite;
+            /* Safari 4+ */
+            -moz-animation: expand 2s linear 1s infinite;
+            /* Fx 5+ */
+            -o-animation: expand 2s linear 1s infinite;
+            /* Opera 12+ */
+            animation: expand 2s linear 1s infinite;
+            /* IE 10+, Fx 29+ */
+        }
+
+        @-webkit-keyframes expand {
+            0% {
+                top: calc(50% - .5em);
+                left: calc(50% - .5em);
+                width: 1em;
+                height: 1em;
+                border: white .25em solid;
+                opacity: 1;
+            }
+
+            100% {
+                top: calc(50% - 5.5em);
+                left: calc(50% - 5.5em);
+                width: 11em;
+                height: 11em;
+                border: white .5em solid;
+                opacity: 0;
+            }
+        }
+
+
         .years {
             /* font-size: 26px */
             /* position: absolute; */
@@ -128,9 +215,7 @@
             /* right: -255px; */
             /* top: 0;
             z-index: 99; */
-
         }
-
 
         .year1994 {
             /* 1994 */
@@ -252,8 +337,8 @@
             display: none;
         }
 
-        .timeline{
-            overflow:hidden;
+        .timeline {
+            overflow: hidden;
         }
 
         .timeline .imgbox3 {
@@ -261,7 +346,7 @@
             right: 0px;
             bottom: 0px;
             display: none;
-           
+
         }
 
 
@@ -293,7 +378,7 @@
 
         }
 
-        .box3{
+        .box3 {
             overflow: hidden;
         }
 
@@ -321,7 +406,7 @@
 
             .about {
                 padding: 122px 0 60px 0;
-                overflow:hidden;
+                overflow: hidden;
             }
 
             .about .titlepart img {
@@ -573,7 +658,7 @@
 
 
     </div>
-      
+
     <!-- 手機版上方navbar滿版 -->
     <div class="mobile_navbar_fully  ">
         <a href="index.html">
@@ -581,45 +666,45 @@
                 <img src="./img/cornerLogo.svg" style="width:127px">
 
             </div>
-        
+
         </a>
         <div class="mobile_items">
             <ul class="fontSize16">
                 <div class="item">
                     <!-- <a href="about.html"> -->
-                        <div class="nav_icon"></div>
-                        <li>關於五十嵐</li>
+                    <div class="nav_icon"></div>
+                    <li>關於五十嵐</li>
                     <!-- </a> -->
                 </div>
                 <div class="item">
                     <!-- <a href="featured.html"> -->
-                        <div class="nav_icon"></div>
-                        <li>五十嵐嚴選</li>
+                    <div class="nav_icon"></div>
+                    <li>五十嵐嚴選</li>
                     <!-- </a> -->
                 </div>
                 <div class="item">
                     <!-- <a href="news.html"> -->
-                        <div class="nav_icon"></div>
-                        <li class="letterSpace">最新消息</li>
+                    <div class="nav_icon"></div>
+                    <li class="letterSpace">最新消息</li>
                     <!-- </a> -->
                 </div>
                 <div class="item">
                     <!-- <a href="top.html"> -->
-                        <div class="nav_icon"></div>
-                        <li class="letterSpace">精選飲品</li>
+                    <div class="nav_icon"></div>
+                    <li class="letterSpace">精選飲品</li>
                     <!-- </a> -->
                 </div>
                 <div class="item">
                     <!-- <a href="store_location.html"> -->
-                        <div class="nav_icon"></div>
-                        <li class="letterSpace">門市據點</li>
+                    <div class="nav_icon"></div>
+                    <li class="letterSpace">門市據點</li>
                     <!-- </a> -->
                 </div>
 
                 <div class="item">
                     <!-- <a href="contact.html"> -->
-                        <div class="nav_icon" ></div>
-                        <li class="letterSpace" style="padding-bottom: 0;">聯絡我們</li>
+                    <div class="nav_icon"></div>
+                    <li class="letterSpace" style="padding-bottom: 0;">聯絡我們</li>
                     <!-- </a> -->
                 </div>
 
@@ -640,7 +725,7 @@
                 <img src="./img/about/greenMilk.png" class="titleimg" data-aos="zoom-out-left" alt="">
             </div>
 
-            <div class="imgbox1"  data-aos="fade-down">
+            <div class="imgbox1" data-aos="fade-down">
                 <img src="./img/about/teaPowder2.png" style="width:700px;opacity: 0.6" alt="">
             </div>
 
@@ -658,43 +743,61 @@
 
         </div>
 
+        <!-- <div class="rim">
+            <div class="rim1"></div>
+            <div class="rim2"></div>
+            <div class="rim3"></div>
+        </div> -->
 
-        <div class="timeline ">
-            <div class="drinking">
-                <div class="years hidden">
-                    <img class="year year1994 t1" src="./img/about/t1.png" alt="">
-                    <img class="year year1997 t2" src="./img/about/t2.png" alt="">
-                    <img class="year year2000 t3" src="./img/about/t3.png" alt="">
-                    <img class="year year2002 t4" src="./img/about/t4.png" alt="">
-                    <img class="year year2003 t5" src="./img/about/t5.png" alt="">
-                    <img class="year year2005 t6" src="./img/about/t6.png" alt="">
-                    <img class="year year2006 t7" src="./img/about/t7.png" alt="">
-                    <img class="year year2012 t8" src="./img/about/t8.png" alt="">
-                    <img class="year year2016 t9" src="./img/about/t9.png" alt="">
-                    <img class="year year2017 t10" src="./img/about/t10.png" alt="">
+        <div class="bottomPart">
+            <!-- <div class="rim">
+                <div class="rim1"></div>
+                <div class="rim2"></div>
+                <div class="rim3"></div>
+            </div> -->
+            <div class="timeline ">
+                <div class="drinking">
+
+
+                    <div class="years hidden">
+                        <img class="year year1994 t1" src="./img/about/t1.png" alt="">
+                        <img class="year year1997 t2" src="./img/about/t2.png" alt="">
+                        <img class="year year2000 t3" src="./img/about/t3.png" alt="">
+                        <img class="year year2002 t4" src="./img/about/t4.png" alt="">
+                        <img class="year year2003 t5" src="./img/about/t5.png" alt="">
+                        <img class="year year2005 t6" src="./img/about/t6.png" alt="">
+                        <img class="year year2006 t7" src="./img/about/t7.png" alt="">
+                        <img class="year year2012 t8" src="./img/about/t8.png" alt="">
+                        <img class="year year2016 t9" src="./img/about/t9.png" alt="">
+                        <img class="year year2017 t10" src="./img/about/t10.png" alt="">
+                    </div>
+                    <div class="mobile_years ">
+                        <img class="year year1994 t1" src="./img/about/mobile_t1.png" alt="">
+                        <img class="year year1997 t2" src="./img/about/mobile_t2.png" alt="">
+                        <img class="year year2000 t3" src="./img/about/mobile_t3.png" alt="">
+                        <img class="year year2002 t4" src="./img/about/mobile_t4.png" alt="">
+                        <img class="year year2003 t5" src="./img/about/mobile_t5.png" alt="">
+                        <img class="year year2005 t6" src="./img/about/mobile_t6.png" alt="">
+                        <img class="year year2006 t7" src="./img/about/mobile_t7.png" alt="">
+                        <img class="year year2012 t8" src="./img/about/mobile_t8.png" alt="">
+                        <img class="year year2016 t9" src="./img/about/mobile_t9.png" alt="">
+                        <img class="year year2017 t10" src="./img/about/mobile_t10.png" alt="">
+                    </div>
                 </div>
-                <div class="mobile_years ">
-                    <img class="year year1994 t1" src="./img/about/mobile_t1.png" alt="">
-                    <img class="year year1997 t2" src="./img/about/mobile_t2.png" alt="">
-                    <img class="year year2000 t3" src="./img/about/mobile_t3.png" alt="">
-                    <img class="year year2002 t4" src="./img/about/mobile_t4.png" alt="">
-                    <img class="year year2003 t5" src="./img/about/mobile_t5.png" alt="">
-                    <img class="year year2005 t6" src="./img/about/mobile_t6.png" alt="">
-                    <img class="year year2006 t7" src="./img/about/mobile_t7.png" alt="">
-                    <img class="year year2012 t8" src="./img/about/mobile_t8.png" alt="">
-                    <img class="year year2016 t9" src="./img/about/mobile_t9.png" alt="">
-                    <img class="year year2017 t10" src="./img/about/mobile_t10.png" alt="">
+
+                <div class="box3">
+                    <div class="imgbox3" data-aos="zoom-out-left">
+                        <img src="./img/about/tea.png" style="width:657px;opacity: 0.6" alt="">
+                    </div>
                 </div>
             </div>
-
-            <div class="box3">
-                <div class="imgbox3" data-aos="zoom-out-left">
-                    <img src="./img/about/tea.png" style="width:657px;opacity: 0.6" alt="">
-                </div>
+            <div class="rim">
+                <div class="rim1"></div>
+                <div class="rim2"></div>
+                <div class="rim3"></div>
             </div>
-
-
         </div>
+
 
 
 
@@ -779,14 +882,18 @@
         });
 
         //click
-        $(".imgbox3").on('click', function (e) {
+        $(".rim").on('click', function (e) {
 
             for (let index = 0; index < 10; index++) {
-                setTimeout(function (){
+                setTimeout(function () {
                     var i = index * 3;
                     changeImg(i, iheight);
-                },index*300); 
-            } 
+                }, index * 300);
+            }
+            TweenLite.to($('.rim'), 6, { css: {  cursor: "unset",  opacity: 0 }, ease: Power2.easeOut });
+            // document.getElementsByClassName("rim").style['pointer-events'] = 'none';
+            // $(".rim").hide();
+           
         });
 
         function changeImg(imgIndex, iheight) {
