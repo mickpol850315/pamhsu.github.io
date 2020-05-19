@@ -129,7 +129,7 @@ $letter-spacing:0.05em;
                 margin-top: 20px;
             }
 
-            @media all and (max-width: 320px) {
+            @media all and (max-width: 360px) {
                 margin-top: 0;
             }
 
@@ -171,7 +171,9 @@ $letter-spacing:0.05em;
         justify-content: flex-end;
         overflow: hidden;
 
-
+        @media all and (max-width: 375px) {           
+            margin-top: 20px;
+        }
         @media all and (max-width: 320px) {
             display: flex;
             justify-content: center;

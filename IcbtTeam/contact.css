@@ -159,7 +159,7 @@
   }
 }
 
-@media all and (max-width: 320px) {
+@media all and (max-width: 360px) {
   .right_content .contact_box_out .mar_top {
     margin-top: 0;
   }
@@ -223,6 +223,12 @@
       -ms-flex-pack: end;
           justify-content: flex-end;
   overflow: hidden;
+}
+
+@media all and (max-width: 375px) {
+  .right_content .btn_box {
+    margin-top: 20px;
+  }
 }
 
 @media all and (max-width: 320px) {
