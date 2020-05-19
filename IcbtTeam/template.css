@@ -15,6 +15,7 @@ body{
 .icon_img {
     /* animation: zoom 2s 1 ease-in-out;
     animation-iteration-count: infinite; */
+ 
     -webkit-animation: zoom 2s ease-in-out 1s infinite ; /* Safari 4+ */
     -moz-animation:    zoom 2s ease-in-out 1s infinite ; /* Fx 5+ */
     -o-animation:      zoom 2s ease-in-out 1s infinite ; /* Opera 12+ */
@@ -200,7 +201,10 @@ a{
 
 .mobile_navbar{
     display: none!important;
+   
 }
+
+
 
 .mobile_navbar_fully{
     width:100%;
@@ -287,6 +291,10 @@ footer{
         background-color: #3B465D;
     }
 
+    .mobile_navbar .logo{
+        pointer-events: none;
+    }
+
     .main{
         position: absolute;
         z-index: 999999;
@@ -310,6 +318,10 @@ footer{
     -webkit-transform: translateY(0);
     transform: translateY(0);
     transition: all .6s;
+    }
+
+    .icon_img {
+        width:50px;
     }
 
     /* .main:hover .hamburger:nth-child(1) {
