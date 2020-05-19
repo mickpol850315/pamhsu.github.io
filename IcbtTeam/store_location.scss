@@ -45,13 +45,14 @@ $letter-spacing:1px;
 
         .row {
             height: 100%;
+            overflow: hidden;
 
             @media all and (max-width: 768px) {
                 display: flex;
                 justify-content: center;
                 align-items: center;
             }
-            
+
         }
 
         .left_box {
@@ -168,7 +169,10 @@ $letter-spacing:1px;
         }
 
         .shopBox {
-           
+            .row {
+                overflow: hidden;
+            }
+
 
             // .slide {
             //     &.active {
@@ -212,6 +216,7 @@ $letter-spacing:1px;
             //     }
             // }
             .padding_left {
+
                 // display: block;
                 @media all and (max-width: 768px) {
                     padding-left: 0;
@@ -247,6 +252,7 @@ $letter-spacing:1px;
                     font-size: $font_size;
                 }
             }
+
             .col-6:nth-last-child(-n+3) {
                 .shop {
                     border-bottom: none;
