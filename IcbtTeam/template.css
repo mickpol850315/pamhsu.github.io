@@ -1,7 +1,13 @@
 
-
+body{
+    cursor:url(./img/menu/cursor.png),auto;
+}
+a:hover{
+    cursor:url(./img/menu/cursor_hover.png),auto;
+}
 body{
     margin:0;
+    
     /* height:200vh; */
 }
 .menu_icon{
