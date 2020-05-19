@@ -169,7 +169,8 @@ $('#poly_top').hover(function () {
     $('.img_top,.img_center, .img_south, .img_east').removeClass('active');
     $('.img_top').addClass('active');
 }, function () {
-    // $('.img_top').removeClass('active');
+    $('.img_top').removeClass('active');
+    
 });
 
 
@@ -178,6 +179,7 @@ $('#poly_center').hover(function () {
     $('.img_center').addClass('active');
 }, function () {
     $('.img_center').removeClass('active');
+
 });
 
 
@@ -218,35 +220,13 @@ $("#poly_center").click(function () {
     var row = $('.shopBox .row').html();
     var store_array = stores.central;
     getStoreData(store_array);
-    AOS.init({
+    // AOS.init({
 
-        delay: 2,
-        duration: 1000,
-    });
-
-    // $('.slide:nth-child(1)').addClass('active');
-    // $('.slide:nth-child(2)').addClass('active');
-    // $('.slide:nth-child(3)').addClass('active');
-    // $('.slide:nth-child(4)').addClass('active');
-    // $('.slide:nth-child(5)').addClass('active');
-    // $('.slide:nth-child(6)').addClass('active');
-    // $('.slide:nth-child(7)').addClass('active');
-    // $('.slide:nth-child(8)').addClass('active');
-    // $('.slide:nth-child(9)').addClass('active');
-    // var slide = document.querySelector(".slide:nth-child(9)");
-    // slide.addEventListener('animationend', function () {
-    //     myStopFunction();
+    //     delay: 2,
+    //     duration: 1000,
     // });
+   
 });
-
-// function myStopFunction() {
-//     $('.shopBox .row').html('');
-//     $('.img_top, .img_center, .img_south, .img_east').removeClass('click_active');
-//     $('.img_center').addClass('click_active');
-//     var row = $('.shopBox .row').html();
-//     var store_array = stores.central;
-//     getStoreData(store_array);
-// }
 
 $("#poly_south").click(function () {
     $('.shopBox .row').html('');
@@ -277,14 +257,7 @@ function getStoreData(store_array) {
     $(store_array).each(function (index, item) {
         var row = document.querySelector('.shopBox .row');
         row.innerHTML +=
-            ` <div class="col-6 col-sm-4 col-md-4" data-aos="flip-left"
-            data-aos-delay="${index * 200 - 50}">
-                        <div class="shop">
-                            <h4>  ${item.shop_name}</h4>
-                            <p>  ${item.shop_number}</p>
-                            <p>${item.shop_address}</p>
-                        </div>
-                    </div>`
+        '<div class="col-6 col-sm-4 col-md-4" data-aos="flip-left" data-aos-delay="'+ (index * 200 - 50) + '"><div class="shop"><h4>' + item.shop_name + '</h4><p>' + item.shop_number + '</p><p>' + item.shop_address + '</p></div></div>'
     });
 
     // if (store_array.length < 7) {
