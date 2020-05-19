@@ -873,21 +873,21 @@
             // selectorName = 'mobile_t';
         }
 
-        //滾軸
-        $(window).on('wheel', function (e) {
-            if ($(window).scrollTop() + $(window).height() >= $("body").height()) {
+        // //滾軸
+        // $(window).on('wheel', function (e) {
+        //     if ($(window).scrollTop() + $(window).height() >= $("body").height()) {
 
-                var delta = e.originalEvent.deltaY;
-                if (delta > 0) {
-                    console.log("down");
-                    changeImg(imgIndex, iheight)
-                    imgIndex += 1;
-                }
-                else {// going up  
-                    console.log("up");
-                }
-            }
-        });
+        //         var delta = e.originalEvent.deltaY;
+        //         if (delta > 0) {
+        //             console.log("down");
+        //             changeImg(imgIndex, iheight)
+        //             imgIndex += 1;
+        //         }
+        //         else {// going up  
+        //             console.log("up");
+        //         }
+        //     }
+        // });
 
         //click
         $(".rim").on('click', function (e) {
@@ -957,7 +957,7 @@ if(/(android|bb\d+|meego).+mobile|avantgo|bada\/|blackberry|blazer|compal|elaine
  
 
 if (isMobile){
-    $(window).scroll(function(){
+    $(window).on('touchmove',function(e) {
      console.log($(window).scrollTop());
      console.log($(window).height());
      console.log($("body").height());
