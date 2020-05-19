@@ -40,7 +40,7 @@ body{
         opacity: 0.6;
     }
     50%{position: absolute;
-        bottom:50px;
+        bottom:100px;
         opacity: 1;}
 }
 .left_navbar{

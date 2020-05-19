@@ -124,5 +124,5 @@ $(".main").click(function () {
 			$(".drink").css("animation","out 1s");
 			setTimeout(function(){
 				window.location.href = 'Menu.html';
-				},700);
+				},1000);
 		});
