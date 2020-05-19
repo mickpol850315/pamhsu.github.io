@@ -957,19 +957,22 @@ if(/(android|bb\d+|meego).+mobile|avantgo|bada\/|blackberry|blazer|compal|elaine
  
 
 if (isMobile){
+    $(window).scroll(function(){
+     console.log($(window).scrollTop());
+     console.log($(window).height());
+     console.log($("body").height());
+     
+     
 
-        window.addEventListener('scroll', function() {
-             if($(window).scrollTop() >280){
+        if ($(window).scrollTop() + $(window).height() >= $("body").height() - 50 ) {
                 changeImg(imgIndex, iheight)
-                    imgIndex += 1;
-             }
-
-            
-         });
+                    imgIndex += 1;  
+        }
+   
+    }
 
 }
-
-
+ 
 
 
 
