@@ -46,23 +46,21 @@ h5{
 }
 .swiper-container {
 position: absolute;
-top: 50%;
+top:55%;
 left: 50%;
-transform: translate(-48%,-50%);
-width: 82%;
-padding-top: 126px;
-padding-bottom: 50px;
+transform: translate(-50%,-50%);
+width: 80%;
 }
 .swiper-slide {      
 background-position: center;
 background-size: cover;
-height: 400px;
+height: 0;
+padding-bottom: calc(100%/3 - 60px);
 }
 .swiper-pagination{
-position: absolute;
-bottom: 50px;
-left: 50%;
-transform: translate(-50%,-50%);
+position: fixed;
+top: 85%;
+left: 48%;
 display: flex;
 justify-content: space-around;
 width: 180px;
@@ -76,18 +74,16 @@ width: 20px;
 }
 .swiper-button-next{
 color: #3C586E;
-position: absolute;
-right: 50px;
+position: fixed;
+right: 5%;
 top: 50% ;
-padding-top: 80px;
 outline: none;
 }
 .swiper-button-prev{
  color: #3C586E;
-position: absolute;
-left: 50px;
+position: fixed;
+left: 10%;
 top: 50% ;
-padding-top: 80px;
 outline: none;
 }
 span:focus {
@@ -105,7 +101,7 @@ span:focus {
 }
 .img3:hover{
     background-image: url("./img/news/疾病退散\(圖\).jpg") !important;
-    background-position: initial;
+    background-position: center;
     background-size: cover;
 }
 .img4:hover{
@@ -128,4 +124,26 @@ span:focus {
 box-shadow: 7px 7px 8px #333333;
 -webkit-box-shadow: 7px 7px 8px #333333;
 -moz-box-shadow: 7px 7px 8px #333333;
+}
+@media screen and (max-width: 1200px) {
+    .swiper-slide {      
+        padding-bottom: calc(100%/2 - 60px);
+        }
+        .swiper-button-prev{
+            left: 12%;
+        }
+            .swiper-button-next{
+                right: 3%;
+                }
+}
+@media screen and (max-width: 769px) {
+    .swiper-slide {      
+        padding-bottom: calc(100% - 0px);
+        }
+        .swiper-button-prev{
+           left: 3%;
+        }
+        .swiper-pagination{
+            left: 35%;
+            }
 }
