@@ -86,7 +86,7 @@ body{
     color:white;
     -webkit-box-shadow: 7px 1px 10px #595858;
     box-shadow: 7px 1px 10px #595858;
-    font-family: "Noto Sans TC";
+    font-family: "Noto Sans TC"!important;
 }
 
 /* hover位置 */
@@ -118,6 +118,7 @@ body{
 .left_navbar .navitems a:hover, .mobile_navbar_fully .mobile_items a:hover{
 
     text-decoration: none;
+    color:white;
 }
 
 .left_navbar .navitems .nav_icon.active{
