@@ -1,7 +1,13 @@
-
-
+/* 鼠標 */
+body{
+    cursor:url(./img/menu/cursor.png),auto;
+}
+a:hover{
+    cursor:url(./img/menu/cursor_hover.png),auto;
+}   
 body{
     margin:0;
+    
     /* height:200vh; */
 }
 .menu_icon{
@@ -10,7 +16,9 @@ body{
     bottom: 20px;
     z-index: 99;
     opacity: 0.7;
-
+}
+.menu_icon:hover{
+    cursor:url(./img/menu/cursor_hover.png),auto;
 }
 .icon_img {
     /* animation: zoom 2s 1 ease-in-out;
@@ -40,7 +48,7 @@ body{
         opacity: 0.6;
     }
     50%{position: absolute;
-        bottom:50px;
+        bottom:100px;
         opacity: 1;}
 }
 .left_navbar{
