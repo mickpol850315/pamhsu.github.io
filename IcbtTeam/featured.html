@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>五十嵐嚴選</title>
     <!-- bootstrap -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
         integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
@@ -27,7 +27,7 @@
 
         .right_content {
             background-color: black;
-            height: calc(100vh - 50px);
+            height:100vh;
             position: relative;
             /* background-image: url(./img/featured/背景圖1.jpg); */
             /* background-size: cover;
@@ -35,7 +35,7 @@
         }
 
         .background {
-            height: calc(100vh - 50px);
+            height: 100vh;
             background-size: cover;
             background-position: center;
         }
@@ -61,17 +61,19 @@
         }
 
         .big_box {
-            width: 646.8px;
-            /* height: 550px; */
-            position: fixed;
-            top: 27.5%;
-            right: 17%;
+            width: 35vw;
+            height: 65vh;
+            position: absolute;
+            top: 58.5%;
+            left: 65%;
+            transform: translate(-50%,-50%);
             border-radius: 5%;
+            margin-right: 1;
         }
 
         .black_box {
-            width: 646.8px;
-            height: 550px;
+            width: 100%;
+            height: 100%;
             background-color: black;
             border-radius: 5%;
         }
@@ -105,6 +107,8 @@
             line-height: 40px;
             letter-spacing: 5px;
             font-family: "微軟正黑體";
+            margin-right: 4%;
+            text-align: justify;
         }
 
         .box {
@@ -130,19 +134,23 @@
             color: white;
             letter-spacing: 5px;
             font-family: "微軟正黑體";
+            margin-right: 4%;
+            text-align: justify;
         }
 
         .right_content .a_box {
             padding: 0;
             list-style: none;
             font-size: 20px;
-            position: fixed;
-            top: 60%;
-            right: 4%;
+            position: absolute;
+            top: 71%;
+            right:1%;
+            transform: translate(-20%,-50%);
             line-height: 40px;
             letter-spacing: 5px;
             display: flex;
             flex-direction: column;
+            margin: 0,1%;
         }
         .right_content .a_box_2 {
             list-style: none;
@@ -192,14 +200,28 @@
             display: block;
         }
 
-        /* .atv {
+        .atv {
             display: block;
-        } */
-        @media screen and (max-width: 1110px) {
-            .big_box {
-            top: 20%;
-            left:18%;
+        } 
+        /* 筆電板 */
+         @media screen and (max-width: 1536px){
+           .title h1{
+               font-size: 35px;
+           }
+           .title p{
+               font-size: 18px;
+               line-height: 30px;
+               letter-spacing: 5px;
+           }
+           .box h1{
+                font-size: 25px;
+            }
+            .box p{
+                font-size: 18px;
+            }
         }
+        /* 平板pro */
+        @media screen and (max-width: 1024px) {
         .right_content .a_box {
             display: none;
         }
@@ -209,24 +231,142 @@
             top: 90%;
             left: 5%;
             display: flex;
-            justify-content: space-between;
             margin: 0;
             padding: 0;
         }
-
-        .black_box {
-            width: 646.8px;
-            height: 630px;
+        .right_content li{
+            margin-right: 10%;
         }
-        @media screen and (max-width: 1000px) {
-            .big_box {
-            left:15%;
+        .big_box{
+            width: 80vw;
+            height: 50vh;
+            left: 50%;
+        }
+        .title h1{
+                font-size: 40px;
+            }
+            .title p{
+                font-size: 23px;
+                line-height: 50px;
+               letter-spacing: 4px;
+            }
+            .box h1{
+                font-size: 30px;
+            }
+            .box p{
+                font-size: 23px;
+            }
+            .a_box_2 li{
+              font-size: 28px;
+            }
+            /* ipad版 */
+        @media screen and (max-width: 768px) {
+            .big_box{
+                height: 70vh;
+            }
+            .title h1{
+                font-size: 40px;
+            }
+            .title p{
+                font-size: 20px;
+                line-height: 40px;
+               letter-spacing: 4px;
+            }
+            .box h1{
+                font-size: 30px;
+            }
+            .box p{
+                font-size: 20px;
+                line-height: 40px;
+            }
+            .a_box_2 li{
+              font-size: 20px;
+            }
+            /* iphoe plus版 */
+            @media screen and (max-width: 414px){
+                .big_box{
+                    top: 55%;
+                    height: 75vh;
+                }
+            .big_box h1{
+                top: 5%;
+                font-size: 28px;
+            }
+            .title p {
+            font-size: 14px;
+            top: 15%;
+            line-height: 30px;
+            letter-spacing: 4px;
+        }
+            .box p{
+                top: 46.5%;
+                font-size: 14px;
+                line-height: 30px;
+            letter-spacing: 4px;
+            }
+            .box h1{
+                top: 40%;
+                font-size: 20px;
+            }
+            .a_box_2 li{
+                font-size: 12px;
+                margin-right: 20px;
+            }
+            .a_box_2 li .icon{
+                width: 18px;
+                height: 18px;
+            }
+            .right_content .a_box_2{
+            top: 92%;
         }
         }
+        
+        @media screen and (max-width: 320px){
+            .big_box h1{
+                font-size: 28px;
+            }
+            .title p {
+            line-height: 25px;
+            letter-spacing: 0px;
+        }
+            .big_box p{
+                font-size: 12px;
+            }
+            .box h1{
+                top: 35%;
+                font-size: 20px;
+            }
+            .box p {
+            top: 45%;
+            line-height: 25px;
+            letter-spacing: 0px;
+        }
+        .right_content .a_box_2{
+            top: 85%;
+        }
+            .a_box_2 li{
+                font-size: 12px;
+                margin-right: 3%;
+            }
+            .a_box_2 li .icon{
+                width: 18px;
+                height: 18px;
+            }
+        }
+       
+    } 
     }
     </style>
 
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-167190227-1"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
 
+        gtag('config', 'UA-167190227-1');
+    </script>
 </head>
 
 <body>
@@ -373,24 +513,24 @@
             <div class="black_box div_opacity"></div>
             <div class="title">
                 <h1>手搖茶第一品牌</h1>
-                <p>五十嵐品牌文化著重在「原料的挑選」、「製茶的過<br>程」、「產品的精準口感」、以及「熱情的服務」。</p>
+                <p>五十嵐品牌文化著重在「原料的挑選」、「製茶的過程」、「產品的精準口感」、以及「熱情的服務」。</p>
             </div>
             <div class="box1 box atv">
                 <h1>嚴選原料</h1>
-                <p>茶葉，仔細逐一挑選每片茶葉，因為我們堅信，唯有<br>新鮮茶葉泡的茶，才能完全戰勝所有挑剔味蕾。<br>
-                    珍珠，為了保持每顆黃金珍珠的透明飽滿，堅持珍珠<br>以天然原料製成，並藉著不同水交替作用，確保每顆<br>珍珠都能快樂彈跳入口中。</p>
+                <p>茶葉，仔細逐一挑選每片茶葉，因為我們堅信，唯有新鮮茶葉泡的茶，才能完全戰勝所有挑剔味蕾。
+                    珍珠，為了保持每顆黃金珍珠的透明飽滿，堅持珍珠以天然原料製成，並藉著不同水交替作用，確保每顆珍珠都能快樂彈跳入口中。</p>
             </div>
             <div class="box2 box">
                 <h1>職人製茶</h1>
-                <p>堅持使用自製專屬茶壺煮茶，水量及茶葉的完美比例<br>皆控制固定的溫度，使調茶師能精準掌握每一口茶湯<br>的絕佳口感，即使身處世界各地也能在悠閒午後喝到<br>最傳統原始的好茶。</p>
+                <p>堅持使用自製專屬茶壺煮茶，水量及茶葉的完美比例皆控制固定的溫度，使調茶師能精準掌握每一口茶湯的絕佳口感，即使身處世界各地也能在悠閒午後喝到最傳統原始的好茶。</p>
             </div>
             <div class="box3 box">
                 <h1>精準口感</h1>
-                <p>為了達到從第一口到最後都能是令人愉悅，訓練調茶<br>師必須從冰塊量至舀糖手勢角度，多次皆能保持一致<br>不變，為了那能不失完美的襯托出如同徜徉於茶田中<br>的自然茶香，不斷在口中忘返留香。</p>
+                <p>為了達到從第一口到最後都能是令人愉悅，訓練調茶師必須從冰塊量至舀糖手勢角度，多次皆能保持一致不變，為了那能不失完美的襯托出如同徜徉於茶田中的自然茶香，不斷在口中忘返留香。</p>
             </div>
             <div class="box4 box">
                 <h1>熱情服務</h1>
-                <p>希望我們創造出友善及熱情的環境，將每位客人視為<br>家人般真誠對待，儘管在繁忙的日子裡，只要駐足於<br>店門口享受每一杯客製化的飲料，啜飲著我們真摯對<br>待的溫暖，即可深刻感受被茶香簇擁的幸福。
+                <p>希望我們創造出友善及熱情的環境，將每位客人視為家人般真誠對待，儘管在繁忙的日子裡，只要駐足於店門口享受每一杯客製化的飲料，啜飲著我們真摯對待的溫暖，即可深刻感受被茶香簇擁的幸福。
                 </p>
             </div>
             <ul class="a_box_2">

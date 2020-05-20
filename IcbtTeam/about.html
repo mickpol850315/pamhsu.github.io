@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>關於50嵐</title>
     <!-- bootstrap -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
         integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
@@ -43,7 +43,8 @@
             background-color: transparent;
             background-color: #F7B9A4;
             color: white;
-            font-family: "Noto Sans TC";
+            font-family: 'Noto Sans TC', sans-serif;
+            position: relative;
         }
 
         .about {
@@ -63,7 +64,21 @@
             right: 0px;
             top: 26px;
             /* transform: rotate(15deg); */
-            display: none;
+            /* display: none; */
+            /* max-width:700px; */
+
+        }
+
+        .about .rightCornerImg,
+        .about .leftCenterImg,
+        .about .rightBottomImg {
+            opacity: 0.7;
+        }
+
+
+
+        .about .rightCornerImg {
+            max-width: 700px;
 
         }
 
@@ -88,8 +103,8 @@
         .about .imgbox2 {
             position: absolute;
             left: 100px;
-            display: none;
-
+            /* display: none; */
+            /* width: 521px; */
         }
 
         .about .margin_bottom_p {
@@ -341,12 +356,11 @@
             overflow: hidden;
         }
 
-        .timeline .imgbox3 {
+        .box3 {
             position: absolute;
             right: 0px;
             bottom: 0px;
-            display: none;
-
+            overflow: hidden;
         }
 
 
@@ -378,27 +392,80 @@
 
         }
 
-        .box3 {
-            overflow: hidden;
-        }
+     
 
         .hidden {
             display: block;
         }
 
         @media(min-width: 1920px) {
-            .about .imgbox1 {
+            .about .rightCornerImg {
 
-                display: block;
+                width: 700px;
+            }
+
+            .about .leftCenterImg {
+
+                width: 521px;
+            }
+
+             .rightBottomImg {
+                width: 657px;
+            }
+
+
+        }
+
+        @media (max-width: 1919px) {
+            .about .rightCornerImg {
+
+                width: 30vw;
+            }
+
+            .about .leftCenterImg {
+
+                width: 30vw;
+            }
+
+            .rightBottomImg {
+
+                width: 30vw;
+            }
+
+            .imgbox3 {
+                /* right: -150px; */
+            }
+
+        }
+
+        @media (max-width: 1500px) {
+
+            .about .imgbox1 {
+                top: 120px;
+            }
+
+            .about .rightCornerImg {
+
+                width: 25vw;
             }
 
             .about .imgbox2 {
-                display: block;
+                left: 35px;
             }
 
-            .timeline .imgbox3 {
-                display: block;
+
+
+            .imgbox3 {
+                /* right: -150px; */
             }
+
+            .rightBottomImg {
+
+                width: 30vw;
+            }
+
+
+
         }
 
         @media (max-width: 768px) {
@@ -414,8 +481,22 @@
 
             }
 
+            .about .imgbox1 {
+                display: none;
+
+            }
+
+
+            .about .imgbox2 {
+                display: none;
+            }
+
             .about .titleimg {
                 margin-top: -12px;
+            }
+
+            .imgbox3 {
+                display: none;
             }
 
             .about h1 {
@@ -581,34 +662,42 @@
                 top: 262px;
             }
 
-            .rim{
+            .rim {
                 top: 16px;
             }
 
             @-webkit-keyframes expand {
-            0% {
-                top: calc(50% - .25em);
-                left: calc(50% - .25em);
-                width: 0.5em;
-                height: 0.5em;
-                border: white .05em solid;
-                opacity: 1;
-            }
+                0% {
+                    top: calc(50% - .25em);
+                    left: calc(50% - .25em);
+                    width: 0.5em;
+                    height: 0.5em;
+                    border: white .05em solid;
+                    opacity: 1;
+                }
 
-            100% {
-                top: calc(50% - 2em);
-                left: calc(50% - 2em);
-                width: 4em;
-                height: 4em;
-                border: white .25em solid;
-                opacity: 0;
+                100% {
+                    top: calc(50% - 2em);
+                    left: calc(50% - 2em);
+                    width: 4em;
+                    height: 4em;
+                    border: white .25em solid;
+                    opacity: 0;
+                }
             }
-        }
 
 
         }
     </style>
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-167190227-1"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
 
+        gtag('config', 'UA-167190227-1');
+    </script>
 
 </head>
 
@@ -749,6 +838,12 @@
     </div>
 
     <section class="right_content">
+        <div class="box3">
+            <div class="imgbox3" data-aos="zoom-out-left">
+                <img src="./img/about/tea.png" class="rightBottomImg" alt="">
+            </div>
+        </div>
+
         <div class="about text-center">
             <div class="titlepart d-flex justify-content-center">
                 <img src="./img/about/cocoMilk.png" class="titleimg" data-aos="zoom-out-right" alt="">
@@ -757,7 +852,7 @@
             </div>
 
             <div class="imgbox1" data-aos="fade-down">
-                <img src="./img/about/teaPowder2.png" style="width:700px;opacity: 0.6" alt="">
+                <img src="./img/about/teaPowder2.png" class="rightCornerImg" alt="">
             </div>
 
             <h6 class="subtitleColor">連鎖體系</h6>
@@ -769,7 +864,7 @@
                     class="hidden">
                 目前仍在陸續佈局中。</p>
             <div class="imgbox2" data-aos="fade-right">
-                <img src="./img/about/boba.png" style="width:521px;opacity: 0.6" alt="">
+                <img src="./img/about/boba.png" class="leftCenterImg" alt="">
             </div>
 
         </div>
@@ -816,21 +911,20 @@
                     </div>
                 </div>
 
-                <div class="box3">
+                <!-- <div class="box3">
                     <div class="imgbox3" data-aos="zoom-out-left">
-                        <img src="./img/about/tea.png" style="width:657px;opacity: 0.6" alt="">
+                        <img src="./img/about/tea.png" class="rightBottomImg" alt="">
                     </div>
-                </div>
+                </div> -->
             </div>
+
             <div class="rim">
                 <div class="rim1"></div>
                 <div class="rim2"></div>
                 <div class="rim3"></div>
             </div>
+
         </div>
-
-
-
 
     </section>
 
@@ -919,16 +1013,16 @@
             $(".rim").off("click");//關閉click，避免按2次，造成圖片讀取error
             //取大於這個數的最小整數Math.ceil(3.14) ==> 4
             console.log("Math.ceil(" + imgIndex + "/3 ) = " + Math.ceil(imgIndex / 3));
-            
+
             imgIndex = Math.ceil(imgIndex / 3);//imgIndex>0代表已有滑動或滾動過，已喝過飲料
-            var itimes=0
+            var itimes = 0
             for (let index = imgIndex; index < 10; index++) {
 
                 setTimeout(function () {
                     var i = index * 3;
                     changeImg(i, iheight);
                 }, index * 300);
-                itimes +=1;
+                itimes += 1;
             }
             TweenLite.to($('.rim'), 6, { css: { cursor: "unset", opacity: 0 }, ease: Power2.easeOut });
 
@@ -945,6 +1039,8 @@
                 console.log("posvalue=", posValue);
 
                 if (posValue > iheight) {
+                    //水波紋消失		
+                    TweenLite.to($('.rim'), 1, { css: { 'visibility': 'hidden' }, ease: Power2.easeOut });
                     // 直到飲料喝完才顯示footer
                     isStop = true;
                     //取得目前未有footer的高度
