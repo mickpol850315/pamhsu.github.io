@@ -164,7 +164,6 @@ var stores = {
     ]
 }
 
-
 $('#poly_top').hover(function () {
     $('.img_top').addClass('active');
 }, function () {    
@@ -259,10 +258,6 @@ $("#poly_east").click(function () {
 //     var store_array = stores.east;
 //     getStoreData(store_array);
 // });
-
-
-
-
 
 function getStoreData(store_array) {
     $(store_array).each(function (index, item) {
