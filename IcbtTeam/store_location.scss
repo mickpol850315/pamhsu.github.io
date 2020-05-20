@@ -1,7 +1,6 @@
 $font_size_shopName:26px;
 $font_size:20px;
-
-$font_family: "Noto Sans TC";
+$font_family: "Noto Sans TC', sans-serif";
 $font_family_2:"微軟正黑體";
 $color:#3b465d;
 $background-color:#f7b9a4;
@@ -46,6 +45,9 @@ $letter-spacing:1px;
         .row {
             height: 100%;
             overflow: hidden;
+            display: flex;
+            justify-content:space-around;
+            align-items: center;
 
             @media all and (max-width: 768px) {
                 display: flex;
@@ -57,7 +59,7 @@ $letter-spacing:1px;
 
         .left_box {
             display: flex;
-            justify-content: center;
+            justify-content:flex-start;
             align-items: center;
 
             @media all and (max-width: 768px) {
@@ -71,7 +73,6 @@ $letter-spacing:1px;
 
             .map_border {
                 width: 395px;
-
             }
 
             .img_top {
@@ -87,10 +88,10 @@ $letter-spacing:1px;
                     opacity: 1;
                     pointer-events: default;
                 }
-
+               
                 &.click_active {
-                    opacity: 1;
-                    pointer-events: default;
+                    opacity: 1 !important;
+                    pointer-events: default !important;
                 }
             }
 
@@ -157,20 +158,25 @@ $letter-spacing:1px;
         }
 
         .right_box {
-            padding-top: 12vh;
+            // padding-top: 12vh;
+            
 
             @media all and (max-width: 1024px) {
-                padding-top: 20vh;
+                // padding-top: 20vh;
             }
 
             @media all and (max-width: 768px) {
-                padding: 2vh 0 0 0;
+                // padding: 2vh 0 0 0;
             }
         }
 
         .shopBox {
             .row {
                 overflow: hidden;
+                display: flex;
+                justify-content:space-around;
+                align-items: flex-start;
+                
             }
 
 
@@ -215,34 +221,25 @@ $letter-spacing:1px;
             //         animation-delay: 1.6s;
             //     }
             // }
-            .padding_left {
-
-                // display: block;
-                @media all and (max-width: 768px) {
-                    padding-left: 0;
-
-                }
-            }
+           
 
             .shop {
-                padding: 30px 10px 50px;
-                margin-bottom: 30px;
+               
+                margin-bottom: 30px;                
                 border-bottom: 2px solid $color;
 
-                @media all and (max-width: 1024px) {
-                    padding: 30px 10px 50px;
+                @media all and (max-width: 1024px) {                   
                     margin-bottom: 30px;
                     border-bottom: 2px solid #3b465d;
                 }
 
-                @media all and (max-width: 768px) {
-                    padding: 0;
+                @media all and (max-width: 768px) {                  
                     margin-bottom: 50px;
 
                 }
 
                 h4 {
-                    // font-family: $font_family;
+                    font-family: $font_family;
                     font-size: $font_size_shopName;
                     margin-bottom: 30px;
                 }
