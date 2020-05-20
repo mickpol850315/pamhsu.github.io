@@ -115,10 +115,10 @@ $(".main").click(function () {
 
         //menuicon hover
         $(".menu_icon").hover(function () {
-            $(".icon_img").attr("src", "url(./img/menu/cursor_hover.png)");
+            $(".icon_img").attr("src","./img/menu/menu-icon_hover.png");
            
         },function(){
-            $(".icon_img").attr("src", "./img/menu/menu-icon.png");
+            $(".icon_img").attr("src","./img/menu/menu-icon.png");
 		});
 		//menuicon drink
 		$(".menu_icon").click(function () {
