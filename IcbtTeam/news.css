@@ -40,7 +40,7 @@ h5{
     color: #3B465D;
 }
 .right_content{
-    height:calc(100vh - 50px);
+    height:100vh;
     position: relative;
     background-color:#F7B9A4;
 }
