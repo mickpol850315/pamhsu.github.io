@@ -430,14 +430,14 @@
     <!-- <div class="box" style="background-color: red;">
         <img src="./img/leaves.svg" alt="">
     </div> -->
-        <!-- menu icon -->
-        <div class="menu_icon">
-            <img class="icon_img" src="./img/menu/menu-icon.png" alt="">
-        </div>
-        <!-- drink -->
-        <div class="drink">
-            <img class="drinkimg" src="./img/menu/menu-icon(DRINK).png" alt="">
-        </div>
+    <!-- menu icon -->
+    <div class="menu_icon">
+        <img class="icon_img" src="./img/menu/menu-icon.png" alt="">
+    </div>
+    <!-- drink -->
+    <div class="drink">
+        <img class="drinkimg" src="./img/menu/menu-icon(DRINK).png" alt="">
+    </div>
     <div class="left_navbar  ">
         <a href="index.html">
             <div class="logo">
@@ -859,17 +859,17 @@
 
                         btns.forEach(function (item, index) {
 
-                            
-                            if ((device.mobile() || device.tablet()) ){
-                                if($(item).hasClass( "mobile" )){
+
+                            if ((device.mobile() || device.tablet())) {
+                                if ($(item).hasClass("mobile")) {
                                     myfunction(img_index, item);
                                 }
-                            }else{
-                                if(!$(item).hasClass( "mobile" )){
+                            } else {
+                                if (!$(item).hasClass("mobile")) {
                                     myfunction(img_index, item);
                                 }
                             }
-            
+
                         })
 
 
@@ -911,17 +911,17 @@
 
                         btns.forEach(function (item, index) {
 
-                            
-                            if ((device.mobile() || device.tablet()) ){
-                                if($(item).hasClass( "mobile" )){
+
+                            if ((device.mobile() || device.tablet())) {
+                                if ($(item).hasClass("mobile")) {
                                     myfunction(img_index, item);
                                 }
-                            }else{
-                                if(!$(item).hasClass( "mobile" )){
+                            } else {
+                                if (!$(item).hasClass("mobile")) {
                                     myfunction(img_index, item);
                                 }
                             }
-            
+
                         })
                     }
                 }
@@ -932,6 +932,102 @@
             }
         }
         );
+
+        // $(window).on('touchmove', function (e) {
+
+        //     var delta = e.originalEvent.deltaY;
+
+        //     if (delta > 0) {
+        //         console.log("down");
+        //         if (iTopWheel != 0) {
+        //             iTopWheel = 0;
+
+        //         }
+        //         if (iDownWheel % 5 == 0) {
+        //             if (img_index < 4) {
+        //                 img_index += 1;
+
+
+        //                 var btns = document.querySelectorAll(".btn" + img_index);
+
+
+        //                 btns.forEach(function (item, index) {
+
+
+        //                     if ((device.mobile() || device.tablet())) {
+        //                         if ($(item).hasClass("mobile")) {
+        //                             myfunction(img_index, item);
+        //                         }
+        //                     } else {
+        //                         if (!$(item).hasClass("mobile")) {
+        //                             myfunction(img_index, item);
+        //                         }
+        //                     }
+
+        //                 })
+
+
+        //                 // var icon = document.querySelector(".icon");
+        //                 // icon.classList.remove("icon")
+        //                 // $('.btnicon' + img_index).addClass("icon");
+
+        //                 // var bgatv = document.querySelector(".background.atv");
+        //                 // bgatv.classList.remove("atv");
+        //                 // $('.background_image' + img_index).addClass("atv");
+
+        //                 // var atv = document.querySelector(".box.atv");
+        //                 // atv.classList.remove("atv");
+        //                 // $('.box' + img_index).addClass("atv");
+
+        //                 // var color_atv = document.querySelector(".color_atv");
+
+        //                 // color_atv.classList.remove("color_atv");
+        //                 // $('.btn' + img_index).addClass("color_atv");
+        //             }
+        //         }
+
+        //         iDownWheel += 1;
+
+        //     } // going down
+        //     else {// going up
+        //         console.log("up");
+        //         if (iDownWheel != 0) {
+        //             iDownWheel = 0;
+
+        //         }
+        //         if (iTopWheel % 5 == 0) {
+        //             if (img_index > 1) {
+        //                 img_index -= 1;
+
+
+        //                 var btns = document.querySelectorAll(".btn" + img_index);
+
+
+        //                 btns.forEach(function (item, index) {
+
+
+        //                     if ((device.mobile() || device.tablet())) {
+        //                         if ($(item).hasClass("mobile")) {
+        //                             myfunction(img_index, item);
+        //                         }
+        //                     } else {
+        //                         if (!$(item).hasClass("mobile")) {
+        //                             myfunction(img_index, item);
+        //                         }
+        //                     }
+
+        //                 })
+        //             }
+        //         }
+
+
+
+        //         iTopWheel += 1;
+        //     }
+        // }
+        // );
+
+
     </script>
 
 </body>
