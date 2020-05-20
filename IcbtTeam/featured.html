@@ -107,6 +107,8 @@
             line-height: 40px;
             letter-spacing: 5px;
             font-family: "微軟正黑體";
+            margin-right: 4%;
+            text-align: justify;
         }
 
         .box {
@@ -132,6 +134,8 @@
             color: white;
             letter-spacing: 5px;
             font-family: "微軟正黑體";
+            margin-right: 4%;
+            text-align: justify;
         }
 
         .right_content .a_box {
@@ -252,112 +256,72 @@
             .box p{
                 font-size: 23px;
             }
-        @media screen and (max-width: 1005px){
-            .big_box {
-            left:20%;
-        }
-            .right_content .a_box_2{
-                top: 93%;
-            }
-            .title p{
-                top: 20%;
-            }
-            .box h1{
-                top: 45%;
-            }
-            .box p{
-                top: 53%;
-            }
             .a_box_2 li{
-                margin-right: 25px;
+              font-size: 28px;
             }
-        }
+            /* ipad版 */
         @media screen and (max-width: 768px) {
-            .big_box {
-            left:8%;
-        }
-        .big_box h1{
+            .big_box{
+                height: 70vh;
+            }
+            .title h1{
                 font-size: 40px;
             }
-            .title p {
-                top: 20%;
-                font-size: 25px;
-            line-height: 35px;
-            letter-spacing: 0px;
-        }
-        .box h1{
-                font-size: 35px;
+            .title p{
+                font-size: 20px;
+                line-height: 40px;
+               letter-spacing: 4px;
             }
-            .box p {
-            top: 55%;
-            left: 5%;
-            font-size: 23px;
-            line-height: 38px;
-            color: white;
-            letter-spacing: 0px;
-        }
-        .a_box_2 li{
-                font-size: 25px;
-                margin-right: 35px;
+            .box h1{
+                font-size: 30px;
             }
-            .a_box_2 li .icon{
-                width: 35px;
-                height: 35px;
+            .box p{
+                font-size: 20px;
+                line-height: 40px;
             }
+            .a_box_2 li{
+              font-size: 20px;
+            }
+            /* iphoe plus版 */
             @media screen and (max-width: 414px){
-            .big_box {
-            width: 325px;
-            height: 355px;
-            left: 43px;
-        }
-        .black_box {
-            width: 325px;
-            height: 355px;
-            left: 25px;
-        }
+                .big_box{
+                    top: 55%;
+                    height: 75vh;
+                }
             .big_box h1{
+                top: 5%;
                 font-size: 28px;
             }
             .title p {
-            line-height: 25px;
-            letter-spacing: 0px;
+            font-size: 14px;
+            top: 15%;
+            line-height: 30px;
+            letter-spacing: 4px;
         }
-            .big_box p{
-                font-size: 12px;
+            .box p{
+                top: 46.5%;
+                font-size: 14px;
+                line-height: 30px;
+            letter-spacing: 4px;
             }
             .box h1{
+                top: 40%;
                 font-size: 20px;
             }
-            .box p {
-            position: absolute;
-            top: 55%;
-            left: 5%;
-            line-height: 22px;
-            color: white;
-            letter-spacing: 0px;
-            font-family: "微軟正黑體";
-        }
             .a_box_2 li{
                 font-size: 12px;
-                margin-right: 25px;
+                margin-right: 20px;
             }
             .a_box_2 li .icon{
                 width: 18px;
                 height: 18px;
             }
+            .right_content .a_box_2{
+            top: 92%;
+        }
         }
         
-        @media screen and (max-width: 375px){
-            .big_box {
-            width: 325px;
-            height: 355px;
-            left: 25px;
-        }
-        .black_box {
-            width: 325px;
-            height: 355px;
-            left: 25px;
-        }
+        @media screen and (max-width: 320px){
             .big_box h1{
                 font-size: 28px;
             }
@@ -369,66 +333,27 @@
                 font-size: 12px;
             }
             .box h1{
+                top: 35%;
                 font-size: 20px;
             }
             .box p {
-            position: absolute;
-            top: 55%;
-            left: 5%;
-            line-height: 22px;
-            color: white;
-            letter-spacing: 0px;
-            font-family: "微軟正黑體";
-        }
-            .a_box_2 li{
-                font-size: 12px;
-                margin-right: 25px;
-            }
-            .a_box_2 li .icon{
-                width: 18px;
-                height: 18px;
-            }
-        }
-        @media screen and (max-width: 320px){
-            .big_box {
-            width: 270px;
-
-        }
-        .black_box {
-            width: 270px;
-            height: 390px;
-        }
-        .big_box h1{
-            top: 8%;
-                font-size: 20px;
-            }
-            .title p {
-                top: 20%;
-                font-size: 14px;
-            line-height: 20px;
-            letter-spacing: 5px;
-        }
-        .box h1{
-            top: 50%;
-            }
-            .box p {
-            top: 60%;
-            font-size: 14px;
-            line-height: 15px;
+            top: 45%;
+            line-height: 25px;
             letter-spacing: 0px;
         }
         .right_content .a_box_2{
-            top: 100%;
+            top: 85%;
         }
-        .a_box_2 li{
+            .a_box_2 li{
                 font-size: 12px;
-                margin-right: 10px;
+                margin-right: 3%;
             }
             .a_box_2 li .icon{
                 width: 18px;
                 height: 18px;
             }
         }
+       
     } 
     }
     </style>
