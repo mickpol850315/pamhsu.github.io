@@ -139,6 +139,24 @@ box-shadow: 7px 7px 8px #333333;
                     left: 43%;
                     }
 }
+@media screen and (max-width: 1536px){
+    .swiper-container {
+        top:60%;
+        }
+    .swiper-slide {     
+        padding-bottom: calc(100%/3 - 100px);
+        }
+        .swiper-button-prev{
+           top: 60;
+        }
+            .swiper-button-next{
+                top: 60%;
+                }
+        .swiper-pagination{
+            top: 90%;
+            left: 44%;
+            }
+}
 @media screen and (max-width: 768px) {
     .swiper-container {
         top:55%;
