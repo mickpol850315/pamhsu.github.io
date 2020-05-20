@@ -58,9 +58,9 @@ height: 0;
 padding-bottom: calc(100%/3 - 60px);
 }
 .swiper-pagination{
-position: fixed;
+position: absolute;
 top: 85%;
-left: 48%;
+left: 46%;
 display: flex;
 justify-content: space-around;
 width: 180px;
@@ -74,16 +74,16 @@ width: 20px;
 }
 .swiper-button-next{
 color: #3C586E;
-position: fixed;
+position: absolute;
 right: 5%;
-top: 50% ;
+top: 55% ;
 outline: none;
 }
 .swiper-button-prev{
  color: #3C586E;
-position: fixed;
-left: 10%;
-top: 50% ;
+position: absolute;
+left: 5%;
+top: 55% ;
 outline: none;
 }
 span:focus {
@@ -95,12 +95,12 @@ span:focus {
     background-size: cover;
 }
 .img2:hover{
-    background-image: url("./img/news/地球日\(圖\).jpg") !important;
+    background-image: url("./img/news/疾病退散\(圖\).jpg") !important;
     background-position: center;
     background-size: cover;
 }
 .img3:hover{
-    background-image: url("./img/news/疾病退散\(圖\).jpg") !important;
+    background-image: url("./img/news/地球日\(圖\).jpg") !important;
     background-position: center;
     background-size: cover;
 }
@@ -110,12 +110,12 @@ span:focus {
     background-size: cover;
 }
 .img5:hover{
-    background-image: url("./img/news/地球日\(圖\).jpg") !important;
+    background-image: url("./img/news/疾病退散\(圖\).jpg") !important;
     background-position: center;
     background-size: cover;
 }
 .img6:hover{
-    background-image: url("./img/news/疾病退散\(圖\).jpg") !important;
+    background-image: url("./img/news/地球日\(圖\).jpg") !important;
     background-position: initial;
     background-size: cover;
 }
@@ -130,31 +130,51 @@ box-shadow: 7px 7px 8px #333333;
         padding-bottom: calc(100%/2 - 60px);
         }
         .swiper-button-prev{
-            left: 12%;
+            left: 5%;
         }
             .swiper-button-next{
-                right: 3%;
+                right: 5%;
                 }
+                .swiper-pagination{
+                    left: 43%;
+                    }
+}
+@media screen and (max-width: 1536px){
+    .swiper-container {
+        top:60%;
+        }
+    .swiper-slide {     
+        padding-bottom: calc(100%/3 - 100px);
+        }
+        .swiper-button-prev{
+           top: 60;
+        }
+            .swiper-button-next{
+                top: 60%;
+                }
+        .swiper-pagination{
+            top: 90%;
+            left: 44%;
+            }
 }
 @media screen and (max-width: 768px) {
     .swiper-container {
         top:55%;
         left: 50%;
-        width: 70%;
+        width: 65%;
         }
     .swiper-slide {      
-        padding-bottom: calc(100% - 120px);
+        padding-bottom: calc(100% - 10px);
         }
         .swiper-button-prev{
-           left: 3%;
+           left: 5%;
         }
-        .swiper-pagination{
-            left: 35%;
+        .swiper-button-next{
+            right: 5%;
             }
-            .swiper-pagination{
-                left: 38%;
-                top:85%;
-                }
+        .swiper-pagination{
+            left: 39%;
+            }
                 .swiper-pagination-bullet{
                     height: 20px;
                     width: 20px;
@@ -196,10 +216,10 @@ box-shadow: 7px 7px 8px #333333;
                 width: 60px;
             }
 }
-@media screen and (max-width: 374px) {
+@media screen and (max-width: 375px) {
 
   .swiper-container {
-        top:65%;
+        top:60%;
         width: 50%;
         }
         .swiper-button-prev{
@@ -211,7 +231,9 @@ box-shadow: 7px 7px 8px #333333;
             right: 5%;
             }
             .swiper-pagination{
-                width: 170px;
+                width: 180px;
+                top: 85%;
+                left: 28%;
             }
             .swiper-pagination-bullet{
                 height: 10px;
@@ -229,4 +251,20 @@ box-shadow: 7px 7px 8px #333333;
                         .border2{
                             width: 30px;
                         }
+}
+@media screen and (max-width: 320px){
+    .swiper-container {
+        top: 65%;
+        }
+        .swiper-button-prev{
+            top:65%;
+           
+         }
+         .swiper-button-next{
+            top:65%;
+        
+            }
+    .swiper-pagination{
+        top: 90%;
+    }
 }
