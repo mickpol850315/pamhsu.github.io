@@ -91,7 +91,8 @@ $(".main").click(function () {
 		TweenLite.to($('.hamburger:nth-child(3)'), 0.5, { css: { transform: "translateY(-8px)rotate(0deg)" }, ease: Power2.easeOut });
 
 		TweenLite.to($('.mobile_navbar_fully'), 1, { css: { 'left': '-100%', 'display': 'none' }, ease: Power2.easeOut });
-		TweenLite.to($('.mobile_navbar .logo'), 0.5, { css: { 'opacity': 1 }, delay: 1, ease: Power2.easeOut });
+		TweenLite.to($('.mobile_navbar .logo'), 0.5, { css: { 'opacity': 1 ,'pointer-events':'auto'}, delay: 1, ease: Power2.easeOut });
+
 		$("footer").show();
 		$(".menu_icon").show();
 		// $(".rim").show().delay( 5000 );
