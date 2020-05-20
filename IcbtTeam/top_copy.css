@@ -116,7 +116,7 @@ transition: 1s;
 }
 .text h1{
     font-size: 40pt;
-    font-family: "Noto Sans TC";
+    font-family: 'Noto Sans TC', sans-serif;
     text-align: center;
     color: white;
 }

@@ -46,6 +46,9 @@ $letter-spacing:1px;
         .row {
             height: 100%;
             overflow: hidden;
+            display: flex;
+            justify-content:space-around;
+            align-items: center;
 
             @media all and (max-width: 768px) {
                 display: flex;
@@ -157,20 +160,24 @@ $letter-spacing:1px;
         }
 
         .right_box {
-            padding-top: 12vh;
+            // padding-top: 12vh;
+            
 
             @media all and (max-width: 1024px) {
-                padding-top: 20vh;
+                // padding-top: 20vh;
             }
 
             @media all and (max-width: 768px) {
-                padding: 2vh 0 0 0;
+                // padding: 2vh 0 0 0;
             }
         }
 
         .shopBox {
             .row {
                 overflow: hidden;
+                display: flex;
+                justify-content:space-around;
+                
             }
 
 
@@ -225,12 +232,12 @@ $letter-spacing:1px;
             }
 
             .shop {
-                padding: 30px 10px 50px;
-                margin-bottom: 30px;
+                // padding: 30px  50px;
+                margin-bottom: 30px;                
                 border-bottom: 2px solid $color;
 
                 @media all and (max-width: 1024px) {
-                    padding: 30px 10px 50px;
+                    // padding: 30px  50px;
                     margin-bottom: 30px;
                     border-bottom: 2px solid #3b465d;
                 }
