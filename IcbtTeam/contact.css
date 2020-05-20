@@ -146,6 +146,7 @@
 @media all and (max-width: 480px) {
   .right_content .contact_box_out .contact_size {
     font-size: 40px;
+    text-shadow: 2px -4px 3px #999999;
   }
 }
 
@@ -177,7 +178,6 @@
   padding: 20px 0;
   background-color: unset;
   border-radius: unset;
-  padding-left: 20px;
 }
 
 @media all and (max-width: 375px) {
@@ -190,29 +190,32 @@
   color: #534741;
   opacity: 0.7;
   font-family: "Noto Sans TC";
+  padding-left: 20px;
 }
 
 .right_content .contact_box_out .mar_top :-ms-input-placeholder {
   color: #534741;
   opacity: 0.7;
   font-family: "Noto Sans TC";
+  padding-left: 20px;
 }
 
 .right_content .contact_box_out .mar_top ::-ms-input-placeholder {
   color: #534741;
   opacity: 0.7;
   font-family: "Noto Sans TC";
+  padding-left: 20px;
 }
 
 .right_content .contact_box_out .mar_top ::placeholder {
   color: #534741;
   opacity: 0.7;
   font-family: "Noto Sans TC";
+  padding-left: 20px;
 }
 
 .right_content .contact_box_out .mar_top .textarea_border {
   border: 2px solid #3b465d;
-  padding-left: 20px;
 }
 
 .right_content .btn_box {

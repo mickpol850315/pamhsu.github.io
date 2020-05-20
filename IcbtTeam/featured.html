@@ -61,7 +61,7 @@
         }
 
         .big_box {
-            /* width: 646.8px; */
+            width: 646.8px;
             /* height: 550px; */
             position: fixed;
             top: 27.5%;
@@ -198,29 +198,30 @@
         @media screen and (max-width: 1110px) {
             .big_box {
             top: 20%;
-            right: 15%;
+            left:18%;
         }
         .right_content .a_box {
             display: none;
         }
         .right_content .a_box_2 {
+            width: 100%;
             position: absolute;
             top: 90%;
             left: 5%;
             display: flex;
+            justify-content: space-between;
             margin: 0;
             padding: 0;
-        }
-        .right_content .a_box_2 li {
-        margin-right: 65px;
         }
 
         .black_box {
             width: 646.8px;
             height: 630px;
         }
-        @media screen and (max-width: 768px) {
-            
+        @media screen and (max-width: 1000px) {
+            .big_box {
+            left:15%;
+        }
         }
     }
     </style>
@@ -232,8 +233,14 @@
     <!-- <div class="box" style="background-color: red;">
         <img src="./img/leaves.svg" alt="">
     </div> -->
-    <!-- menu icon -->
-    <div class="menu_icon"><a href="Menu.html"><img class="icon_img" src="./img/menu/menu-icon.png" alt=""></a></div>
+        <!-- menu icon -->
+        <div class="menu_icon">
+            <img class="icon_img" src="./img/menu/menu-icon.png" alt="">
+        </div>
+        <!-- drink -->
+        <div class="drink">
+            <img src="./img/menu/menu-icon(DRINK).png" alt="">
+        </div>
     <div class="left_navbar  ">
         <a href="index.html">
             <div class="logo">
