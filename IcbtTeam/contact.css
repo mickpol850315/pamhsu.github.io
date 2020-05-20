@@ -1,6 +1,6 @@
 .right_content {
   background-color: unset;
-  font-family: "Noto Sans TC";
+  font-family: "Noto Sans TC', sans-serif";
   font-size: 16px;
   background-position: center;
   background-size: cover;
@@ -124,7 +124,7 @@
 }
 
 .right_content .contact_box_out .contact_size {
-  font-family: "Noto Sans TC";
+  font-family: "Noto Sans TC', sans-serif";
   color: #3b465d;
   font-size: 120px;
   text-shadow: 7px -6px 10px #686868;
@@ -189,28 +189,28 @@
 .right_content .contact_box_out .mar_top ::-webkit-input-placeholder {
   color: #534741;
   opacity: 0.7;
-  font-family: "Noto Sans TC";
+  font-family: "Noto Sans TC', sans-serif";
   padding-left: 20px;
 }
 
 .right_content .contact_box_out .mar_top :-ms-input-placeholder {
   color: #534741;
   opacity: 0.7;
-  font-family: "Noto Sans TC";
+  font-family: "Noto Sans TC', sans-serif";
   padding-left: 20px;
 }
 
 .right_content .contact_box_out .mar_top ::-ms-input-placeholder {
   color: #534741;
   opacity: 0.7;
-  font-family: "Noto Sans TC";
+  font-family: "Noto Sans TC', sans-serif";
   padding-left: 20px;
 }
 
 .right_content .contact_box_out .mar_top ::placeholder {
   color: #534741;
   opacity: 0.7;
-  font-family: "Noto Sans TC";
+  font-family: "Noto Sans TC', sans-serif";
   padding-left: 20px;
 }
 
@@ -249,7 +249,7 @@
 }
 
 .right_content .btn_box .btn-outline-secondary {
-  font-family: "Noto Sans TC";
+  font-family: "Noto Sans TC', sans-serif";
   letter-spacing: 0.05em;
   color: #eee;
   border-color: #000;
