@@ -169,7 +169,7 @@ $('#poly_top').hover(function () {
     $('.img_top,.img_center, .img_south, .img_east').removeClass('active');
     $('.img_top').addClass('active');
 }, function () {
-    $('.img_top').removeClass('active');
+    // $('.img_top').removeClass('active');
     
 });
 
