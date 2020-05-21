@@ -917,82 +917,87 @@
         );
 
 
-        $(window).on('wheel', function (e) {
+        //手機滑動
+        var ts;
+        $(document).on('touchstart', function (e) {
+            ts = e.originalEvent.touches[0].clientY;
+        });
+        $(window).on('touchmove', function (e) {
+            var te = e.originalEvent.changedTouches[0].clientY;
+            var delta = e.originalEvent.deltaY;
 
-var delta = e.originalEvent.deltaY;
+            if (ts > te) {
+                console.log("down");
+                if (iTopWheel != 0) {
+                    iTopWheel = 0;
 
-if (delta > 0) {
-    console.log("touchmove");
-    if (iTopWheel != 0) {
-        iTopWheel = 0;
-
-    }
-    if (iDownWheel % 5 == 0) {
-        if (img_index < 4) {
-            img_index += 1;
+                }
+                if (iDownWheel % 5 == 0) {
+                    if (img_index < 4) {
+                        img_index += 1;
 
 
-            var btns = document.querySelectorAll(".btn" + img_index);
+                        var btns = document.querySelectorAll(".btn" + img_index);
 
 
-            btns.forEach(function (item, index) {
+                        btns.forEach(function (item, index) {
 
 
-                if ((device.mobile() || device.tablet())) {
-                    if ($(item).hasClass("mobile")) {
-                        myfunction(img_index, item);
-                    }
-                } else {
-                    if (!$(item).hasClass("mobile")) {
-                        myfunction(img_index, item);
+                            if ((device.mobile() || device.tablet())) {
+                                if ($(item).hasClass("mobile")) {
+                                    myfunction(img_index, item);
+                                }
+                            } else {
+                                if (!$(item).hasClass("mobile")) {
+                                    myfunction(img_index, item);
+                                }
+                            }
+
+                        })
+
                     }
                 }
 
-            })
+                iDownWheel += 1;
 
-        }
-    }
+            } 
+            else {
+                console.log("up");
+                if (iDownWheel != 0) {
+                    iDownWheel = 0;
 
-    iDownWheel += 1;
-
-} // going down
-else {// going up
-    console.log("up");
-    if (iDownWheel != 0) {
-        iDownWheel = 0;
-
-    }
-    if (iTopWheel % 5 == 0) {
-        if (img_index > 1) {
-            img_index -= 1;
+                }
+                if (iTopWheel % 5 == 0) {
+                    if (img_index > 1) {
+                        img_index -= 1;
 
 
-            var btns = document.querySelectorAll(".btn" + img_index);
+                        var btns = document.querySelectorAll(".btn" + img_index);
 
 
-            btns.forEach(function (item, index) {
+                        btns.forEach(function (item, index) {
 
 
-                if ((device.mobile() || device.tablet())) {
-                    if ($(item).hasClass("mobile")) {
-                        myfunction(img_index, item);
-                    }
-                } else {
-                    if (!$(item).hasClass("mobile")) {
-                        myfunction(img_index, item);
+                            if ((device.mobile() || device.tablet())) {
+                                if ($(item).hasClass("mobile")) {
+                                    myfunction(img_index, item);
+                                }
+                            } else {
+                                if (!$(item).hasClass("mobile")) {
+                                    myfunction(img_index, item);
+                                }
+                            }
+
+                        })
                     }
                 }
 
-            })
+
+
+                iTopWheel += 1;
+            }
         }
-    }
-
-
-
-    iTopWheel += 1;
-}
-}
-);
+        );
     </script>
 
 </body>
