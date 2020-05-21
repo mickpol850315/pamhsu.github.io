@@ -738,6 +738,15 @@
 
                 // btnitem.classList.add("icon");
             })
+
+            if (i == 4) {
+                //延遲1s，顯示footer，主要是讓user 滾動滑鼠時，不要一次到底，停留在喝完飲料的畫面
+                setTimeout(function () {
+                    $("footer").show();
+                }, 1000)
+            }else{
+                $("footer").hide();
+            }
         }
 
 
@@ -918,11 +927,23 @@
 
 
         //手機滑動
+        $("footer").hide();
         var ts;
         $(document).on('touchstart', function (e) {
             ts = e.originalEvent.touches[0].clientY;
         });
         $(window).on('touchmove', function (e) {
+            console.log($(window).scrollTop());
+            console.log($(window).height());
+            console.log($("body").height());
+
+            if ($(window).scrollTop() + $(window).height() >= $("body").height() - 150) {
+                //延遲1s，顯示footer，主要是讓user 滾動滑鼠時，不要一次到底，停留在喝完飲料的畫面
+                setTimeout(function () {
+                    $("footer").show();
+                }, 1000)
+
+            }
             var te = e.originalEvent.changedTouches[0].clientY;
             var delta = e.originalEvent.deltaY;
 
@@ -960,7 +981,7 @@
 
                 iDownWheel += 1;
 
-            } 
+            }
             else {
                 console.log("up");
                 if (iDownWheel != 0) {
