@@ -936,6 +936,7 @@
         var ts;
         $(document).on('touchstart', function (e) {
             ts = e.originalEvent.touches[0].clientY;
+            ts +=50;
         });
         $(window).on('touchmove', function (e) {
             console.log($(window).scrollTop());
@@ -953,7 +954,7 @@
             var te = e.originalEvent.changedTouches[0].clientY;
             var delta = e.originalEvent.deltaY;
 
-            if (ts > te) {
+            if (ts  > te) {
                 console.log("down");
                 if (iTopWheel != 0) {
                     iTopWheel = 0;
