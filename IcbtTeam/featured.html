@@ -354,7 +354,7 @@
                     .box h1 {
                         top: 40%;
                         font-size: 20px;
-                        
+
                     }
 
                     .a_box_2 li {
@@ -745,12 +745,12 @@
                 setTimeout(function () {
                     $("footer").show();
                 }, 1000)
-            }else{
+            } else {
                 $("footer").hide();
-                console.log("scrolltop()=",$(window).scrollTop());
-                console.log("$(window).height()=",$(window).height());
-                
-      
+                console.log("scrolltop()=", $(window).scrollTop());
+                console.log("$(window).height()=", $(window).height());
+
+
             }
         }
 
@@ -936,7 +936,7 @@
         var ts;
         $(document).on('touchstart', function (e) {
             ts = e.originalEvent.touches[0].clientY;
-            ts +=50;
+            ts += 50;
         });
         $(window).on('touchmove', function (e) {
             console.log($(window).scrollTop());
@@ -954,7 +954,7 @@
             var te = e.originalEvent.changedTouches[0].clientY;
             var delta = e.originalEvent.deltaY;
 
-            if (ts  > te) {
+            if (ts > te) {
                 console.log("down");
 
 
@@ -962,70 +962,68 @@
                     iTopWheel = 0;
 
                 }
-                if (iDownWheel % 5 == 0) {
-                    if (img_index < 4) {
-                        img_index += 1;
+                // if (iDownWheel % 5 == 0) {
+                if (img_index < 4) {
+                    img_index += 1;
 
 
-                        var btns = document.querySelectorAll(".btn" + img_index);
+                    var btns = document.querySelectorAll(".btn" + img_index);
 
 
-                        btns.forEach(function (item, index) {
+                    btns.forEach(function (item, index) {
 
 
-                            if ((device.mobile() || device.tablet())) {
-                                if ($(item).hasClass("mobile")) {
-                                    myfunction(img_index, item);
-                                }
-                            } else {
-                                if (!$(item).hasClass("mobile")) {
-                                    myfunction(img_index, item);
-                                }
+                        if ((device.mobile() || device.tablet())) {
+                            if ($(item).hasClass("mobile")) {
+                                myfunction(img_index, item);
                             }
+                        } else {
+                            if (!$(item).hasClass("mobile")) {
+                                myfunction(img_index, item);
+                            }
+                        }
 
-                        })
+                    })
 
-                    }
+                    iDownWheel += 1;
                 }
+                // }
 
-                iDownWheel += 1;
+
 
             }
             else {
                 console.log("up");
-                 //$(window).scrollTop($(window).height());
+                //$(window).scrollTop($(window).height());
                 if (iDownWheel != 0) {
                     iDownWheel = 0;
 
                 }
-                if (iTopWheel % 5 == 0) {
-                    if (img_index > 1) {
-                        img_index -= 1;
+                // if (iTopWheel % 5 == 0) {
+                if (img_index > 1) {
+                    img_index -= 1;
 
 
-                        var btns = document.querySelectorAll(".btn" + img_index);
+                    var btns = document.querySelectorAll(".btn" + img_index);
 
 
-                        btns.forEach(function (item, index) {
+                    btns.forEach(function (item, index) {
 
 
-                            if ((device.mobile() || device.tablet())) {
-                                if ($(item).hasClass("mobile")) {
-                                    myfunction(img_index, item);
-                                }
-                            } else {
-                                if (!$(item).hasClass("mobile")) {
-                                    myfunction(img_index, item);
-                                }
+                        if ((device.mobile() || device.tablet())) {
+                            if ($(item).hasClass("mobile")) {
+                                myfunction(img_index, item);
                             }
+                        } else {
+                            if (!$(item).hasClass("mobile")) {
+                                myfunction(img_index, item);
+                            }
+                        }
 
-                        })
-                    }
+                    })
+                    iTopWheel += 1;
                 }
-
-
-
-                iTopWheel += 1;
+                // }
             }
         }
         );
