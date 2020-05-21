@@ -14,10 +14,23 @@
   padding-bottom: 30px;
 }
 
+.right_content .container-fluid .box1_display {
+  display: none !important;
+}
+
+.right_content .container-fluid .box2_display {
+  display: none !important;
+}
+
+.right_content .container-fluid .box3_display {
+  display: none !important;
+}
+
 .right_content .container-fluid .box_temp {
   text-align: center;
   text-align: justify;
   border-right: 1px solid #eee;
+  margin-bottom: 20px;
 }
 
 .right_content .container-fluid .box_temp .big {
