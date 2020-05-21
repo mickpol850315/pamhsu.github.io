@@ -269,7 +269,7 @@ footer{
     }
 
     .mobile_navbar .logo{
-        pointer-events: none;
+        /* pointer-events: none; */
     }
 
     .main{
@@ -300,7 +300,11 @@ footer{
     .icon_img {
         width:50px;
     }
-
+    .drinkimg{
+        width: 40px;
+        height: 50px;
+        transform: translateX(15px);
+    }
     /* .main:hover .hamburger:nth-child(1) {
         transform: translateY(0) rotate(-45deg);   
     }

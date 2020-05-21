@@ -1,7 +1,7 @@
   /* 字體改變 */
-  *{
-    font-family: "Noto Sans TC";
-  }
+  /* *{
+    font-family: "Noto Sans TC', sans-serif";
+  } */
   /* 自訂樣式 */
   h1{
     text-align: center;
@@ -10,7 +10,7 @@
     font-size: 40px;
     padding:110px 0 34.5px 0;
     color: #132951;
-    font-family: "Noto Sans TC";
+    font-family: "Noto Sans TC', sans-serif";
 }
 .new{
     /* position: relative; */
