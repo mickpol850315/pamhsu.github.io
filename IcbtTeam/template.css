@@ -269,7 +269,7 @@ footer{
     }
 
     .mobile_navbar .logo{
-        pointer-events: none;
+        /* pointer-events: none; */
     }
 
     .main{
