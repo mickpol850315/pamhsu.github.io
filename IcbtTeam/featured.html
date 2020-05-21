@@ -749,7 +749,7 @@
                 $("footer").hide();
                 console.log("scrolltop()=",$(window).scrollTop());
                 console.log("$(window).height()=",$(window).height());
-                $(window).scrollTop($(window).height());
+                
       
             }
         }
@@ -956,6 +956,8 @@
 
             if (ts  > te) {
                 console.log("down");
+
+
                 if (iTopWheel != 0) {
                     iTopWheel = 0;
 
@@ -991,6 +993,7 @@
             }
             else {
                 console.log("up");
+                // $(window).scrollTop($(window).height());
                 if (iDownWheel != 0) {
                     iDownWheel = 0;
 
