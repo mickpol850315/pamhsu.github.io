@@ -944,13 +944,13 @@
             console.log($("body").height());
             // $(window).scrollTop($(window).scrollTop() - 50)
 
-            if ($(window).scrollTop() + $(window).height() >= $("body").height() - 150) {
-                //延遲1s，顯示footer，主要是讓user 滾動滑鼠時，不要一次到底，停留在喝完飲料的畫面
-                setTimeout(function () {
-                    $("footer").show();
-                }, 1000)
+            // if ($(window).scrollTop() + $(window).height() >= $("body").height() - 150) {
+            //     //延遲1s，顯示footer，主要是讓user 滾動滑鼠時，不要一次到底，停留在喝完飲料的畫面
+            //     setTimeout(function () {
+            //         $("footer").show();
+            //     }, 1000)
 
-            }
+            // }
             var te = e.originalEvent.changedTouches[0].clientY;
             var delta = e.originalEvent.deltaY;
 
