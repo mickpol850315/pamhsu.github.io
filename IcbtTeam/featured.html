@@ -747,7 +747,10 @@
                 }, 1000)
             }else{
                 $("footer").hide();
-                $(window).scrollTop($(window).scrollTop() - 50)
+                console.log("scrolltop()=",$(window).scrollTop());
+                console.log("$(window).height()=",$(window).height());
+                $(window).scrollTop($(window).height());
+      
             }
         }
 
@@ -938,7 +941,7 @@
             console.log($(window).scrollTop());
             console.log($(window).height());
             console.log($("body").height());
-            $(window).scrollTop($(window).scrollTop(oriTop) - 50)
+            // $(window).scrollTop($(window).scrollTop() - 50)
 
             if ($(window).scrollTop() + $(window).height() >= $("body").height() - 150) {
                 //延遲1s，顯示footer，主要是讓user 滾動滑鼠時，不要一次到底，停留在喝完飲料的畫面
