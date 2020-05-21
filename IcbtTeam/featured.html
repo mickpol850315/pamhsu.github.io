@@ -739,6 +739,15 @@
 
                 // btnitem.classList.add("icon");
             })
+
+            if (i == 4) {
+                //延遲1s，顯示footer，主要是讓user 滾動滑鼠時，不要一次到底，停留在喝完飲料的畫面
+                setTimeout(function () {
+                    $("footer").show();
+                }, 1000)
+            }else{
+                $("footer").hide();
+            }
         }
 
 
@@ -873,23 +882,6 @@
 
                         })
 
-
-                        // var icon = document.querySelector(".icon");
-                        // icon.classList.remove("icon")
-                        // $('.btnicon' + img_index).addClass("icon");
-
-                        // var bgatv = document.querySelector(".background.atv");
-                        // bgatv.classList.remove("atv");
-                        // $('.background_image' + img_index).addClass("atv");
-
-                        // var atv = document.querySelector(".box.atv");
-                        // atv.classList.remove("atv");
-                        // $('.box' + img_index).addClass("atv");
-
-                        // var color_atv = document.querySelector(".color_atv");
-
-                        // color_atv.classList.remove("color_atv");
-                        // $('.btn' + img_index).addClass("color_atv");
                     }
                 }
 
@@ -934,101 +926,100 @@
         }
         );
 
-        // $(window).on('touchmove', function (e) {
 
-        //     var delta = e.originalEvent.deltaY;
+        //手機滑動
+        $("footer").hide();
+        var ts;
+        $(document).on('touchstart', function (e) {
+            ts = e.originalEvent.touches[0].clientY;
+        });
+        $(window).on('touchmove', function (e) {
+            console.log($(window).scrollTop());
+            console.log($(window).height());
+            console.log($("body").height());
 
-        //     if (delta > 0) {
-        //         console.log("down");
-        //         if (iTopWheel != 0) {
-        //             iTopWheel = 0;
+            if ($(window).scrollTop() + $(window).height() >= $("body").height() - 150) {
+                //延遲1s，顯示footer，主要是讓user 滾動滑鼠時，不要一次到底，停留在喝完飲料的畫面
+                setTimeout(function () {
+                    $("footer").show();
+                }, 1000)
 
-        //         }
-        //         if (iDownWheel % 5 == 0) {
-        //             if (img_index < 4) {
-        //                 img_index += 1;
+            }
+            var te = e.originalEvent.changedTouches[0].clientY;
+            var delta = e.originalEvent.deltaY;
 
+            if (ts > te) {
+                console.log("down");
+                if (iTopWheel != 0) {
+                    iTopWheel = 0;
 
-        //                 var btns = document.querySelectorAll(".btn" + img_index);
-
-
-        //                 btns.forEach(function (item, index) {
-
-
-        //                     if ((device.mobile() || device.tablet())) {
-        //                         if ($(item).hasClass("mobile")) {
-        //                             myfunction(img_index, item);
-        //                         }
-        //                     } else {
-        //                         if (!$(item).hasClass("mobile")) {
-        //                             myfunction(img_index, item);
-        //                         }
-        //                     }
-
-        //                 })
-
-
-        //                 // var icon = document.querySelector(".icon");
-        //                 // icon.classList.remove("icon")
-        //                 // $('.btnicon' + img_index).addClass("icon");
-
-        //                 // var bgatv = document.querySelector(".background.atv");
-        //                 // bgatv.classList.remove("atv");
-        //                 // $('.background_image' + img_index).addClass("atv");
-
-        //                 // var atv = document.querySelector(".box.atv");
-        //                 // atv.classList.remove("atv");
-        //                 // $('.box' + img_index).addClass("atv");
-
-        //                 // var color_atv = document.querySelector(".color_atv");
-
-        //                 // color_atv.classList.remove("color_atv");
-        //                 // $('.btn' + img_index).addClass("color_atv");
-        //             }
-        //         }
-
-        //         iDownWheel += 1;
-
-        //     } // going down
-        //     else {// going up
-        //         console.log("up");
-        //         if (iDownWheel != 0) {
-        //             iDownWheel = 0;
-
-        //         }
-        //         if (iTopWheel % 5 == 0) {
-        //             if (img_index > 1) {
-        //                 img_index -= 1;
+                }
+                if (iDownWheel % 5 == 0) {
+                    if (img_index < 4) {
+                        img_index += 1;
 
 
-        //                 var btns = document.querySelectorAll(".btn" + img_index);
+                        var btns = document.querySelectorAll(".btn" + img_index);
 
 
-        //                 btns.forEach(function (item, index) {
+                        btns.forEach(function (item, index) {
 
 
-        //                     if ((device.mobile() || device.tablet())) {
-        //                         if ($(item).hasClass("mobile")) {
-        //                             myfunction(img_index, item);
-        //                         }
-        //                     } else {
-        //                         if (!$(item).hasClass("mobile")) {
-        //                             myfunction(img_index, item);
-        //                         }
-        //                     }
+                            if ((device.mobile() || device.tablet())) {
+                                if ($(item).hasClass("mobile")) {
+                                    myfunction(img_index, item);
+                                }
+                            } else {
+                                if (!$(item).hasClass("mobile")) {
+                                    myfunction(img_index, item);
+                                }
+                            }
 
-        //                 })
-        //             }
-        //         }
+                        })
+
+                    }
+                }
+
+                iDownWheel += 1;
+
+            }
+            else {
+                console.log("up");
+                if (iDownWheel != 0) {
+                    iDownWheel = 0;
+
+                }
+                if (iTopWheel % 5 == 0) {
+                    if (img_index > 1) {
+                        img_index -= 1;
+
+
+                        var btns = document.querySelectorAll(".btn" + img_index);
+
+
+                        btns.forEach(function (item, index) {
+
+
+                            if ((device.mobile() || device.tablet())) {
+                                if ($(item).hasClass("mobile")) {
+                                    myfunction(img_index, item);
+                                }
+                            } else {
+                                if (!$(item).hasClass("mobile")) {
+                                    myfunction(img_index, item);
+                                }
+                            }
+
+                        })
+                    }
+                }
 
 
 
-        //         iTopWheel += 1;
-        //     }
-        // }
-        // );
-
-
+                iTopWheel += 1;
+            }
+        }
+        );
     </script>
 
 </body>
