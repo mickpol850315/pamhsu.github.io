@@ -3,7 +3,7 @@ AOS.init({
     duration: 1000,
 });
 
-var button_more = document.querySelectorAll('button a');
+var button_more = document.querySelectorAll('button');
 var div_block0 = document.querySelector('.box1_display');
 var div_block1 = document.querySelector('.box2_display');
 var div_block2 = document.querySelector('.box3_display');
